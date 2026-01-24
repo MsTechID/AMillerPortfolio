@@ -1,3 +1,6 @@
+// Git test: verify commit + push works
+
+
 #include "mainwindow.h"
 
 #include <QApplication>
