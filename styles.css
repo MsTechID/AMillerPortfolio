@@ -1,7 +1,4 @@
-/* ========================
-   Reset & Base
-======================== */
-
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,25 +8,20 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
-  background: #ffffff;
   color: #111;
   line-height: 1.6;
+  background: #fff;
 }
 
-/* ========================
-   Navigation
-======================== */
-
+/* NAV */
 .nav {
-  border-bottom: 1px solid #cfcfcf;
-  padding: 1.5rem 0;
-  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,187 +36,126 @@ body {
   margin-left: 1.75rem;
   font-size: 0.85rem;
   text-decoration: none;
-  color: #333;
+  color: #444;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* ========================
-   Container (neutral wrapper)
-======================== */
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+/* FULL-WIDTH BANDS */
+.band {
+  width: 100%;
 }
 
-/* ========================
-   HERO — STRONG COLOR BLOCKS
-======================== */
+.band-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+/* HERO */
+.band-hero {
+  background: linear-gradient(
+    to right,
+    #efe4d4 0%,
+    #efe4d4 50%,
+    #d9e8f1 50%,
+    #d9e8f1 100%
+  );
+}
 
 .hero {
   display: flex;
-  align-items: stretch;
-
-  /* break out full width */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  gap: 4rem;
+  align-items: center;
 }
 
-/* Left hero block */
 .hero-left {
   flex: 1.2;
-  background: #e9dccb; /* warm sand */
-  padding: 6rem 5rem;
 }
 
-/* Right hero block */
 .hero-right {
   flex: 0.8;
-  background: #cfe0ec; /* visible blue */
-  padding: 6rem 5rem;
-
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .hero-left h1 {
   font-size: 3.2rem;
-  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .hero-sub {
-  font-size: 1.3rem;
-  color: #333;
+  font-size: 1.25rem;
+  color: #555;
   max-width: 520px;
 }
 
 .hero-right img {
-  width: 100%;
   max-width: 360px;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  width: 100%;
+  border-radius: 8px;
 }
 
-/* ========================
-   SECTION BASE (full-width blocks)
-======================== */
-
-.section {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 6rem 0;
+/* OTHER SECTIONS */
+.band-project {
+  background: #eef4ee;
 }
 
-.section-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+.band-about {
+  background: #f3eef7;
 }
 
-/* ========================
-   FEATURED PROJECT
-======================== */
-
-.section-project {
-  background: #f1f4e8; /* soft sage */
+.band-contact {
+  background: #f7f7f7;
+  text-align: center;
 }
 
-.section-project h2 {
-  margin-bottom: 1rem;
-}
-
-.project {
-  margin-top: 2rem;
-}
-
-/* ========================
-   ABOUT ME
-======================== */
-
-.section-about {
-  background: #efe8f3; /* light lavender */
-}
-
-/* ========================
-   CONTACT
-======================== */
-
-.section-contact {
-  background: #e6edf1; /* cool neutral */
-}
-
-/* ========================
-   Typography
-======================== */
-
+/* TYPOGRAPHY */
 h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.15rem;
-  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-p {
-  max-width: 680px;
-  color: #222;
-}
-
-/* ========================
-   Button
-======================== */
-
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 1.5rem;
-  padding: 0.7rem 1.8rem;
-  font-size: 0.85rem;
-  border: 2px solid #111;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #000;
   text-decoration: none;
-  color: #111;
-  background: transparent;
+  color: #000;
+  font-size: 0.85rem;
 }
 
 .btn:hover {
-  background: #111;
+  background: #000;
   color: #fff;
 }
 
-/* ========================
-   Footer
-======================== */
-
+/* FOOTER */
 .footer {
-  border-top: 1px solid #cfcfcf;
-  padding: 3rem 1.5rem;
+  border-top: 1px solid #e5e5e5;
+  padding: 2.5rem 1.5rem;
   text-align: center;
   font-size: 0.8rem;
-  color: #555;
-  background: #ffffff;
+  color: #777;
 }
 
-/* ========================
-   Responsive
-======================== */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
   }
 
-  .hero-left,
-  .hero-right {
-    padding: 4rem 2.5rem;
+  .band-hero {
+    background: #efe4d4;
   }
 
   .hero-left h1 {
