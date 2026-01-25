@@ -1,154 +1,148 @@
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: #000;
-  background: #fff;
-  line-height: 1.6;
+/* ----------------------------------
+   Root Variables
+----------------------------------- */
+
+:root {
+  --primary-bg: #ffffff;         /* page background */
+  --header-bg: #1a4a6a;          /* hero section */
+  --text-color: #222222;         /* global text */
+  --nav-link-color: #444444;     /* nav links */
+  --nav-link-hover: #000000;      /* nav hover */
+  --button-bg: #1a4a6a;           /* button color */
+  --button-text: #ffffff;         /* button text */
 }
 
-nav {
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
+/* ----------------------------------
+   General Body
+----------------------------------- */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-color);
+}
+
+/* ----------------------------------
+   Navigation
+----------------------------------- */
+
+.site-nav {
+  background: var(--primary-bg);
+  padding: 1rem 2rem;
   border-bottom: 1px solid #ddd;
 }
 
-nav a {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
   text-decoration: none;
-  color: #581E2A;
-  font-weight: 600;
+  color: var(--nav-link-color);
+  font-weight: bold;
 }
 
-h1, h2, h3 {
-  color: #581E2A;
+.nav-links a:hover {
+  color: var(--nav-link-hover);
 }
 
-header, section {
+.logo a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+
+/* ----------------------------------
+   Hero Section
+----------------------------------- */
+
+.hero-section {
+  background: var(--header-bg);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.hero-section .button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ----------------------------------
+   Featured Project
+----------------------------------- */
+
+.featured-project {
   padding: 3rem 2rem;
-  max-width: 800px;
+  text-align: center;
 }
 
-section {
-  padding: 3rem 2rem;
-  max-width: 800px;
+.featured-project h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
+/* ----------------------------------
+   About Section
+----------------------------------- */
 
-.button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 2px solid #581E2A;
-  text-decoration: none;
-  color: #581E2A;
-  font-weight: 600;
+.about-section {
+  padding: 2rem 2rem;
+  border-top: 1px solid #eee;
 }
 
-#contact-form {
-  max-width: 600px;
+/* ----------------------------------
+   Testimonials
+----------------------------------- */
+
+.testimonials-section {
+  padding: 2rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
 }
 
-form label {
-  display: block;
-  margin-bottom: 1rem;
-}
+/* ----------------------------------
+   Contact Section
+----------------------------------- */
 
-input, textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-  border: 1px solid #ccc;
-  font-family: inherit;
-}
-
-button {
-  background: none;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background: white;
-  margin: 10% auto;
+.contact-section {
   padding: 2rem;
-  max-width: 500px;
-  position: relative;
+  text-align: center;
 }
 
-.close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Buttons (shared styling) */
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border: 2px solid #581E2A;
-  color: #581E2A;
-  background: transparent;
-  font-weight: 600;
+.contact-section .button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
-  border-radius: 8px;
-  cursor: pointer;
+  font-weight: bold;
 }
 
-.button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
+/* ----------------------------------
+   Footer
+----------------------------------- */
 
-/* Modal overlay */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1000;
-}
-
-/* Modal window */
-.modal-content {
-  background: #fff;
-  margin: 10% auto;
-  padding: 2rem;
-  max-width: 520px;
-  position: relative;
-  border-radius: 12px;
-}
-
-/* Close (X) button */
-.close {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Form layout */
-form label {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: inherit;
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
 }
