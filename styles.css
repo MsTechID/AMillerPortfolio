@@ -28,6 +28,12 @@ header, section {
   max-width: 800px;
 }
 
+section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+}
+
+
 .button {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -35,4 +41,114 @@ header, section {
   text-decoration: none;
   color: #581E2A;
   font-weight: 600;
+}
+
+#contact-form {
+  max-width: 600px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 2rem;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Buttons (shared styling) */
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid #581E2A;
+  color: #581E2A;
+  background: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+/* Modal window */
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  max-width: 520px;
+  position: relative;
+  border-radius: 12px;
+}
+
+/* Close (X) button */
+.close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Form layout */
+form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
 }

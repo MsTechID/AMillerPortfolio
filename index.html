@@ -17,16 +17,16 @@
 
 <header id="hero">
   <h1>Hi, I’m Amanda.</h1>
-  <p>Instructional Designer focused on helping students use AI safely, thoughtfully, and responsibly.</p>
+  <p>Instructional Designer focused on developing meaningful learning experiences</p>
   <a class="button" href="#project">View my work</a>
 </header>
 
 <section id="project">
   <h2>Featured Project</h2>
-  <h3>AI & Me: Safe, Smart, Fair</h3>
+  <h3>AI & Me: Safe, Smart, Ethical</h3>
   <p>
-    This mini-unit was designed to be taught in the classroom across four 40-minute sessions.
-    Each lesson follows a consistent structure with guided discussion and hands-on activities.
+  This four lesson mini-unit engages students in meaningful scenario-based learning to help them use generative
+  AI in ways that promote digital citizenship and educational ethics.
   </p>
 </section>
 
@@ -38,15 +38,143 @@
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>
-    <a href="mailto:amanda@example.com">amanda@example.com</a>
-  </p>
+    <a class="button" href="javascript:void(0)" onclick="openModal()">
+      Contact Me
+    </a>
 </section>
+
+<div
+  id="contactModal"
+  class="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="contactTitle"
+>
+
+  <div class="modal-content">
+    <button
+      class="close"
+      aria-label="Close contact form"
+      onclick="closeModal()"
+    >
+      &times;
+    </button>
+
+    <h2 id="contactTitle">Contact Me</h2>
+
+    <form id="contactForm" aria-describedby="formHelp">
+      <p id="formHelp">
+        Fill out the form below and I’ll get back to you.
+      </p>
+
+      <label>
+        Name
+        <input type="text" name="name" required aria-required="true">
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required aria-required="true">
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="5" required aria-required="true"></textarea>
+      </label>
+
+      <input type="hidden" name="_subject" value="New portfolio contact">
+
+      <button
+        type="submit"
+        class="button"
+        id="submitButton"
+      >
+        Send Message
+      </button>
+    </form>
+
+    <p
+      id="formSuccess"
+      role="status"
+      aria-live="polite"
+      style="display:none;"
+    >
+      ✅ Thank you! Your message has been sent. I will be in contact with you soon.
+    </p>
+  </div>
+</div>
+
+
 
 <footer>
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
+
+
+<script>
+  const modal = document.getElementById("contactModal");
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("formSuccess");
+  const submitButton = document.getElementById("submitButton");
+
+  function openModal() {
+    modal.style.display = "block";
+    document.addEventListener("keydown", escListener);
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    document.removeEventListener("keydown", escListener);
+    resetForm();
+  }
+
+  function escListener(e) {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  }
+
+  // Click outside modal to close
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+
+  function resetForm() {
+    form.style.display = "block";
+    successMessage.style.display = "none";
+    submitButton.disabled = false;
+    form.reset();
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    submitButton.disabled = true;
+
+    const formData = new FormData(form);
+
+    const response = await fetch(
+      "https://formspree.io/f/xrepvldk",
+      {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      }
+    );
+
+    if (response.ok) {
+      form.style.display = "none";
+      successMessage.style.display = "block";
+    } else {
+      submitButton.disabled = false;
+      alert("Something went wrong. Please try again.");
+    }
+  });
+</script>
+
+
 
 </body>
 </html>

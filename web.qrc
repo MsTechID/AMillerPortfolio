@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>index.html</file>
         <file>styles.css</file>
+        <file>thanks.html</file>
     </qresource>
 </RCC>

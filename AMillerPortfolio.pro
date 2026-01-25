@@ -33,4 +33,5 @@ RESOURCES += \
 
 DISTFILES += \
     index.html \
-    styles.css
+    styles.css \
+    thanks.html
