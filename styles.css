@@ -21,7 +21,7 @@ body {
 ======================== */
 
 .nav {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #d8d8d8;
   padding: 1.5rem 0;
 }
 
@@ -43,7 +43,7 @@ body {
   margin-left: 1.75rem;
   font-size: 0.85rem;
   text-decoration: none;
-  color: #444;
+  color: #333;
 }
 
 .nav-links a:hover {
@@ -64,134 +64,4 @@ body {
   margin-top: 7rem;
 }
 
-/* ========================
-   HERO (EDGE-TO-EDGE COLOR)
-======================== */
-
-.hero {
-  display: flex;
-  gap: 0;
-  align-items: stretch;
-
-  /* break out of container */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-
-/* Left: text */
-.hero-left {
-  flex: 1.2;
-  background: #f4f1ec; /* warm linen */
-  padding: 5rem 4rem;
-}
-
-/* Right: portrait */
-.hero-right {
-  flex: 0.8;
-  background: #e7eef3; /* cool blue-gray */
-  padding: 5rem 4rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-left h1 {
-  font-size: 3.2rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-
-.hero-sub {
-  font-size: 1.25rem;
-  color: #555;
-  max-width: 520px;
-}
-
-/* Image */
-.hero-right img {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-}
-
-/* ========================
-   Typography
-======================== */
-
-h2 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  max-width: 640px;
-}
-
-/* ========================
-   Project
-======================== */
-
-.project {
-  margin-top: 2rem;
-}
-
-/* ========================
-   Button
-======================== */
-
-.btn {
-  display: inline-block;
-  margin-top: 1.2rem;
-  padding: 0.6rem 1.4rem;
-  font-size: 0.85rem;
-  border: 1px solid #000;
-  text-decoration: none;
-  color: #000;
-}
-
-.btn:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* ========================
-   Footer
-======================== */
-
-.footer {
-  border-top: 1px solid #e5e5e5;
-  margin-top: 8rem;
-  padding: 3rem 1.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #777;
-}
-
-/* ========================
-   Responsive
-======================== */
-
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-left,
-  .hero-right {
-    padding: 3rem 2rem;
-  }
-
-  .hero-left h1 {
-    font-size: 2.4rem;
-  }
-}
+/* =====*
