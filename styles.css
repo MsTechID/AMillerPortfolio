@@ -1,148 +1,130 @@
-/* ----------------------------------
-   Root Variables
------------------------------------ */
-
-:root {
-  --primary-bg: #ffffff;         /* page background */
-  --header-bg: #1a4a6a;          /* hero section */
-  --text-color: #222222;         /* global text */
-  --nav-link-color: #444444;     /* nav links */
-  --nav-link-hover: #000000;      /* nav hover */
-  --button-bg: #1a4a6a;           /* button color */
-  --button-text: #ffffff;         /* button text */
-}
-
-/* ----------------------------------
-   General Body
------------------------------------ */
-
-body {
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--primary-bg);
-  color: var(--text-color);
+  padding: 0;
 }
 
-/* ----------------------------------
-   Navigation
------------------------------------ */
-
-.site-nav {
-  background: var(--primary-bg);
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
+/* ===== Base ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.6;
 }
 
-.nav-container {
+/* ===== Nav ===== */
+.nav {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1.25rem 0;
+}
+
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.nav-name {
+  font-weight: 600;
+}
+
 .nav-links a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: var(--nav-link-color);
-  font-weight: bold;
+  color: #444;
+  font-size: 0.95rem;
 }
 
 .nav-links a:hover {
-  color: var(--nav-link-hover);
+  text-decoration: underline;
 }
 
-.logo a {
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--nav-link-color);
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-/* ----------------------------------
-   Hero Section
------------------------------------ */
-
-.hero-section {
-  background: var(--header-bg);
-  color: #ffffff;
-  text-align: center;
-  padding: 5rem 2rem;
+.section {
+  margin-top: 4rem;
 }
 
-.hero-section h1 {
+/* ===== Hero ===== */
+.hero {
+  margin-top: 2rem;
+}
+
+.hero h1 {
   font-size: 2.8rem;
-  margin: 0.5rem 0;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.hero-section p {
-  font-size: 1.3rem;
-  margin: 0.5rem 0 1.5rem 0;
+.hero-sub {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
-.hero-section .button {
-  background: var(--button-bg);
-  color: var(--button-text);
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ----------------------------------
-   Featured Project
------------------------------------ */
-
-.featured-project {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.featured-project h2 {
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-/* ----------------------------------
-   About Section
------------------------------------ */
-
-.about-section {
-  padding: 2rem 2rem;
-  border-top: 1px solid #eee;
-}
-
-/* ----------------------------------
-   Testimonials
------------------------------------ */
-
-.testimonials-section {
-  padding: 2rem 2rem;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-/* ----------------------------------
-   Contact Section
------------------------------------ */
-
-.contact-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.contact-section .button {
-  background: var(--button-bg);
-  color: var(--button-text);
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ----------------------------------
-   Footer
------------------------------------ */
-
-.site-footer {
-  padding: 1rem;
-  text-align: center;
+/* ===== Buttons ===== */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   font-size: 0.9rem;
-  border-top: 1px solid #eee;
+  text-decoration: none;
+}
+
+.btn-primary {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid #000;
+  color: #000;
+}
+
+/* ===== Typography ===== */
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Testimonial ===== */
+.testimonial {
+  font-style: italic;
+  color: #444;
+}
+
+.testimonial-name {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
 }
