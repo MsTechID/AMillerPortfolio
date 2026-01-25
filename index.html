@@ -5,7 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amanda Miller | Instructional Designer</title>
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Page-specific overrides -->
+  <style>
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      padding: 1.25rem 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Hero header */
+    #hero {
+      background-color: #0f4c5c; /* dark teal */
+      color: #ffffff;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    #hero h1 {
+      font-size: 3.25rem; /* ~30% larger */
+      margin-bottom: 1rem;
+    }
+
+    #hero p {
+      font-size: 1.3rem; /* scaled proportionally */
+      max-width: 720px;
+      margin: 0 auto 2rem auto;
+    }
+
+    #hero .button {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
+
 <body>
 
 <nav>
@@ -25,8 +65,8 @@
   <h2>Featured Project</h2>
   <h3>AI & Me: Safe, Smart, Ethical</h3>
   <p>
-  This four lesson mini-unit engages students in meaningful scenario-based learning to help them use generative
-  AI in ways that promote digital citizenship and educational ethics.
+    This four lesson mini-unit engages students in meaningful scenario-based learning to help them use generative
+    AI in ways that promote digital citizenship and educational ethics.
   </p>
 </section>
 
@@ -38,9 +78,9 @@
 </section>
 
 <section id="contact">
-    <a class="button" href="javascript:void(0)" onclick="openModal()">
-      Contact Me
-    </a>
+  <a class="button" href="javascript:void(0)" onclick="openModal()">
+    Contact Me
+  </a>
 </section>
 
 <div
@@ -50,7 +90,6 @@
   aria-modal="true"
   aria-labelledby="contactTitle"
 >
-
   <div class="modal-content">
     <button
       class="close"
@@ -104,12 +143,9 @@
   </div>
 </div>
 
-
-
 <footer>
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
-
 
 <script>
   const modal = document.getElementById("contactModal");
@@ -134,7 +170,6 @@
     }
   }
 
-  // Click outside modal to close
   window.onclick = function(event) {
     if (event.target === modal) {
       closeModal();
@@ -173,8 +208,6 @@
     }
   });
 </script>
-
-
 
 </body>
 </html>
