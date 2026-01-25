@@ -1,4 +1,7 @@
-/* Reset */
+/* ========================
+   Reset & Base
+======================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,12 +11,15 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
-  background: #fff;
+  background: #ffffff;
   color: #111;
   line-height: 1.6;
 }
 
-/* Navigation */
+/* ========================
+   Navigation
+======================== */
+
 .nav {
   border-bottom: 1px solid #e5e5e5;
   padding: 1.5rem 0;
@@ -44,7 +50,10 @@ body {
   text-decoration: underline;
 }
 
-/* Layout */
+/* ========================
+   Layout
+======================== */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -55,23 +64,35 @@ body {
   margin-top: 7rem;
 }
 
-/* HERO – flex instead of grid (more reliable) */
+/* ========================
+   HERO (Two-column with subtle color blocks)
+======================== */
+
 .hero {
   display: flex;
-  align-items: center;
   gap: 4rem;
+  align-items: stretch;
 }
 
+/* Left: text block */
 .hero-left {
   flex: 1.2;
+  background: #faf9f7; /* warm, very subtle */
+  padding: 3.5rem 3rem;
 }
 
+/* Right: portrait block */
 .hero-right {
   flex: 0.8;
+  background: #f3f6f8; /* cool, soft blue-gray */
+  padding: 3.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-left h1 {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -82,14 +103,19 @@ body {
   max-width: 520px;
 }
 
+/* Image */
 .hero-right img {
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
-/* Typography */
+/* ========================
+   Typography
+======================== */
+
 h2 {
   font-size: 1.4rem;
   font-weight: 600;
@@ -106,7 +132,18 @@ p {
   max-width: 640px;
 }
 
-/* Button */
+/* ========================
+   Project
+======================== */
+
+.project {
+  margin-top: 2rem;
+}
+
+/* ========================
+   Button
+======================== */
+
 .btn {
   display: inline-block;
   margin-top: 1.2rem;
@@ -122,7 +159,10 @@ p {
   color: #fff;
 }
 
-/* Footer */
+/* ========================
+   Footer
+======================== */
+
 .footer {
   border-top: 1px solid #e5e5e5;
   margin-top: 8rem;
@@ -132,10 +172,18 @@ p {
   color: #777;
 }
 
-/* Responsive */
+/* ========================
+   Responsive
+======================== */
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
+  }
+
+  .hero-left,
+  .hero-right {
+    padding: 2.5rem 2rem;
   }
 
   .hero-left h1 {
