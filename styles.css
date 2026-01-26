@@ -1,4 +1,6 @@
-/* RESET */
+/* ========================
+   Reset & Base
+======================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,59 +10,59 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
+  background: #ffffff;
   color: #111;
   line-height: 1.6;
 }
 
-/* NAV */
+/* ========================
+   Navigation
+======================== */
 .nav {
   background: #2f3e46;
+  color: #fff;
 }
 
 .nav-inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-name {
-  font-size: 1.4rem;
   font-weight: 600;
-  color: #fff;
 }
 
 .nav-links a {
-  margin-left: 2rem;
-  font-size: 1.05rem;
-  color: #e0e6e9;
+  margin-left: 1.5rem;
+  color: #fff;
   text-decoration: none;
+  font-size: 0.85rem;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* ========================
+   Layout Containers
+======================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-/* BANDS */
-.band {
+.section-block {
   width: 100%;
 }
 
-.band-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
+/* ========================
+   Hero
+======================== */
+.hero-bg {
+  background: #f3f6f4;
 }
 
-/* COLORS */
-.band-hero { background: #f3e8d9; }
-.band-project { background: #eef4ef; }
-.band-testimonials { background: #f2f2f8; }
-.band-contact { background: #e6edf3; }
-
-/* HERO */
 .hero {
   display: flex;
   gap: 4rem;
@@ -73,47 +75,85 @@ body {
 
 .hero-right {
   flex: 0.8;
-  display: flex;
-  justify-content: center;
 }
 
 .hero-left h1 {
   font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-sub {
-  font-size: 1.25rem;
-  color: #444;
-  max-width: 520px;
-}
-
-.hero-right img {
-  max-width: 340px;
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* HEADINGS */
-h2 {
-  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
+.hero-sub {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-/* BUTTON */
+.hero-right img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 6px;
+  display: block;
+}
+
+/* ========================
+   Featured Project
+======================== */
+.project-bg {
+  background: #eef2f3;
+}
+
+.project-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.project-text {
+  flex: 1;
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 6px;
+}
+
+/* ========================
+   Contact
+======================== */
+.contact-bg {
+  background: #f7f7f7;
+}
+
+.contact-container {
+  max-width: 600px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+/* ========================
+   Button
+======================== */
 .btn {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.6rem;
-  border: 2px solid #000;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #000;
   text-decoration: none;
-  color: #000;
+  background: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -121,47 +161,26 @@ h3 {
   color: #fff;
 }
 
-/* TESTIMONIALS */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.testimonial {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-/* CONTACT */
-.contact-inner {
-  text-align: center;
-}
-
-/* FOOTER */
+/* ========================
+   Footer
+======================== */
 .footer {
-  background: #f0f0f0;
-  padding: 3rem 2rem;
   text-align: center;
-  font-size: 0.85rem;
-  color: #666;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: #777;
 }
 
-/* RESPONSIVE */
+/* ========================
+   Responsive
+======================== */
 @media (max-width: 900px) {
-  .hero {
+  .hero,
+  .project-layout {
     flex-direction: column;
   }
 
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-inner {
-    flex-direction: column;
-    gap: 1rem;
+  .hero-left h1 {
+    font-size: 2.2rem;
   }
 }

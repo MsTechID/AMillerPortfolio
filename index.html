@@ -5,28 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amanda Miller | Instructional Designer</title>
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* ===== Featured Project Image ===== */
-    .project-image {
-      max-width: 520px;
-      margin: 2rem auto;
-    }
-
-    .project-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-    }
-
-    /* ===== Section grouping ===== */
-    .section-block {
-      background: #f4f7f6;
-      padding: 4rem 0;
-      margin-top: 4rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -38,8 +16,8 @@
   <div class="nav-inner">
     <div class="nav-name">Amanda Miller</div>
     <div class="nav-links">
-      <a href="#hero">Home</a>
-      <a href="#project">Project</a>
+      <a href="index.html">Home</a>
+      <a href="ai-and-me.html">Project</a>
       <a href="about.html">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -47,9 +25,9 @@
 </nav>
 
 <!-- ========================
-     Hero (CONSTRAINED)
+     Hero
 ======================== -->
-<section id="hero" class="section-block">
+<section id="hero" class="section-block hero-bg">
   <div class="container hero">
 
     <div class="hero-left">
@@ -70,11 +48,19 @@
 <!-- ========================
      Featured Project
 ======================== -->
-<section id="project" class="section-block">
-  <div class="container">
+<section id="project" class="section-block project-bg">
+  <div class="container project-layout">
 
-    <h2>Featured Project</h2>
-    <h3>AI &amp; Me: Safe, Smart, Ethical</h3>
+    <div class="project-text">
+      <h2>Featured Project</h2>
+      <h3>AI &amp; Me: Safe, Smart, Ethical</h3>
+      <p>
+        This four lesson mini-unit engages students in meaningful scenario-based
+        learning to help them use generative AI in ways that promote digital
+        citizenship and educational ethics.
+      </p>
+      <a class="btn" href="ai-and-me.html">View project</a>
+    </div>
 
     <div class="project-image">
       <img
@@ -82,64 +68,39 @@
         alt="Student using AI tools in a classroom setting">
     </div>
 
-    <p>
-      This four lesson mini-unit engages students in meaningful scenario-based
-      learning to help them use generative AI in ways that promote digital
-      citizenship and educational ethics.
-    </p>
-
-    <a class="btn" href="ai-and-me.html">View project</a>
-
   </div>
 </section>
 
 <!-- ========================
      Contact
 ======================== -->
-<section id="contact" class="section-block">
-  <div class="container">
-    <a class="btn" href="javascript:void(0)" onclick="openModal()">
-      Contact Me
-    </a>
-  </div>
-</section>
-
-<!-- ========================
-     Contact Modal
-======================== -->
-<div
-  id="contactModal"
-  class="modal"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="contactTitle"
->
-  <div class="modal-content">
-
-    <button class="close" aria-label="Close" onclick="closeModal()">&times;</button>
-
-    <h2 id="contactTitle">Contact Me</h2>
-
+<section id="contact" class="section-block contact-bg">
+  <div class="container contact-container">
+    <h2>Contact Me</h2>
     <form id="contactForm">
-      <label>Name <input type="text" name="name" required></label>
-      <label>Email <input type="email" name="email" required></label>
-      <label>Message <textarea name="message" rows="5" required></textarea></label>
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
 
       <button type="submit" class="btn">Send Message</button>
     </form>
-
   </div>
-</div>
+</section>
 
 <footer class="footer">
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
-
-<script>
-  const modal = document.getElementById("contactModal");
-  function openModal() { modal.style.display = "block"; }
-  function closeModal() { modal.style.display = "none"; }
-</script>
 
 </body>
 </html>
