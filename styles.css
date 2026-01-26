@@ -1,4 +1,7 @@
-/* RESET */
+/* ========================
+   Reset & Base
+======================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,36 +13,49 @@ body {
                Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
-/* NAV */
+/* ========================
+   Navigation (STRONG + DISTINCT)
+======================== */
+
 .nav {
-  border-bottom: 1px solid #e5e5e5;
+  background: #2f3e46;            /* deep blue-gray */
+  padding: 1.5rem 0;
 }
 
 .nav-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-name {
-  font-size: 0.9rem;
+  font-size: 1.4rem;              /* MUCH bigger */
   font-weight: 600;
+  color: #ffffff;
 }
 
 .nav-links a {
-  margin-left: 1.5rem;
-  font-size: 0.85rem;
+  margin-left: 2rem;
+  font-size: 1.05rem;             /* MUCH bigger */
+  font-weight: 500;
   text-decoration: none;
-  color: #333;
+  color: #e0e6e9;
 }
 
-/* BANDS */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Layout Containers
+======================== */
+
 .band {
   width: 100%;
 }
@@ -47,109 +63,136 @@ body {
 .band-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem;
+  padding: 5rem 2rem;
 }
 
-/* HERO */
+/* ========================
+   Color Bands
+======================== */
+
 .band-hero {
-  background: linear-gradient(
-    to right,
-    #efe4d4 0%,
-    #efe4d4 50%,
-    #d9e8f1 50%,
-    #d9e8f1 100%
-  );
+  background: #f3e8d9; /* warm sand */
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.hero-right img {
-  max-width: 320px;
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* SECTIONS */
 .band-project {
-  background: #eef4ee;
+  background: #eef4ef; /* soft sage */
 }
 
 .band-testimonials {
-  background: #f6f2fb;
+  background: #f7f7fb; /* light neutral lavender */
 }
 
 .band-contact {
-  background: #f7f7f7;
+  background: #e6edf3; /* pale blue */
   text-align: center;
 }
 
-/* HEADINGS */
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1.25rem;
+/* ========================
+   HERO (Two-column)
+======================== */
+
+.hero {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
 }
 
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 2.5rem;
+.hero-left {
+  flex: 1.2;
 }
 
-h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
+.hero-right {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .hero-sub {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  color: #444;
   max-width: 520px;
 }
 
-/* TESTIMONIALS */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+.hero-right img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.testimonial-card {
-  background: #ffffff;
-  padding: 2.5rem;
-  border: 1px solid #ddd;
-  min-height: 360px; /* forces visible column height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+/* ========================
+   Typography
+======================== */
 
-.testimonial-card p {
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.testimonial-author {
-  font-size: 0.85rem;
-  color: #555;
-  font-style: italic;
+h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* CONTACT */
-.contact-inner p {
-  max-width: 520px;
-  margin: 0 auto 1.5rem;
+p {
+  max-width: 700px;
+  margin-bottom: 1rem;
 }
 
-/* BUTTON */
+/* ========================
+   Lists
+======================== */
+
+ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ========================
+   Testimonials
+======================== */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+}
+
+/* ========================
+   Buttons
+======================== */
+
 .btn {
   display: inline-block;
-  margin-top: 1.25rem;
-  padding: 0.6rem 1.4rem;
-  border: 1.5px solid #000;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.95rem;
+  border: 2px solid #000;
   text-decoration: none;
   color: #000;
+  background: #ffffff;
 }
 
 .btn:hover {
@@ -157,26 +200,33 @@ h3 {
   color: #fff;
 }
 
-/* FOOTER */
+/* ========================
+   Footer
+======================== */
+
 .footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 2.5rem 1.5rem;
+  background: #f0f0f0;
+  padding: 3rem 2rem;
   text-align: center;
-  font-size: 0.8rem;
-  color: #777;
+  font-size: 0.85rem;
+  color: #666;
 }
 
-/* RESPONSIVE */
+/* ========================
+   Responsive
+======================== */
+
 @media (max-width: 900px) {
   .hero {
+    flex-direction: column;
+  }
+
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
-  .band-hero {
-    background: #efe4d4;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .nav-inner {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
