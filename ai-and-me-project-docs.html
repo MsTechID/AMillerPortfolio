@@ -4,13 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI & Me – Project Documents</title>
+
+  <!-- Shared site styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Page-specific fixes for PDF layout -->
+  <style>
+    /* ========================
+       Project Docs Layout Fix
+    ======================== */
+
+    .page-header {
+      max-width: 720px;
+      margin-bottom: 2.5rem;
+    }
+
+    .pdf-wrapper {
+      width: 100%;
+      margin-top: 3rem;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .pdf-wrapper iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+      display: block;
+    }
+
+    /* Ensure container does NOT constrain iframe */
+    .container {
+      max-width: 1100px;
+    }
+
+    @media (max-width: 900px) {
+      .pdf-wrapper iframe {
+        height: 650px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- ========================
-     Navigation (MATCHES SITE)
+     Navigation (site-wide)
 ======================== -->
 <nav class="nav">
   <div class="nav-inner">
