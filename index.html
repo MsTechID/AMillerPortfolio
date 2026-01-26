@@ -25,129 +25,119 @@
 </nav>
 
 <!-- ========================
-     Hero
+     HERO
 ======================== -->
-<section id="hero" class="section-block hero-bg">
-  <div class="container hero">
-
-    <div class="hero-left">
-      <h1>Hi, I’m Amanda.</h1>
-      <p class="hero-sub">
-        I solve problems, clear up confusion, and facilitate increased productivity.
-      </p>
-      <a class="btn" href="about.html">Learn more about me</a>
-    </div>
-
-    <div class="hero-right">
-      <img src="portrait.png" alt="Portrait of Amanda Miller">
-    </div>
-
+<header class="hero">
+  <div class="hero-left">
+    <h1>Hi, I’m Amanda.</h1>
+    <p class="hero-sub">
+      I solve problems, clear up confusion, and facilitate increased productivity.
+    </p>
+    <a class="btn" href="about.html">Learn more about me</a>
   </div>
-</section>
+
+  <div class="hero-right">
+    <img src="portrait.png" alt="Amanda Miller portrait">
+  </div>
+</header>
 
 <!-- ========================
-     Featured Project
+     FEATURED PROJECT
 ======================== -->
-<section id="project" class="section-block project-bg">
-  <div class="container project-layout">
-
-    <div class="project-text">
-      <h2>Featured Project</h2>
-      <h3>AI &amp; Me: Safe, Smart, Ethical</h3>
-      <p>
-        This four lesson mini-unit engages students in meaningful scenario-based
-        learning to help them use generative AI in ways that promote digital
-        citizenship and educational ethics.
-      </p>
-      <a class="btn" href="ai-and-me.html">View project</a>
-    </div>
-
-    <div class="project-image">
-      <div class="project-image-frame">
-        <img
-          src="Student_using_AI.j.avif"
-          alt="Student using AI tools in a classroom setting">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ========================
-     Testimonials (RESTORED)
-======================== -->
-<section class="section-block">
+<section style="background:#f2f4f6;">
   <div class="container">
 
+    <h2>Featured Project</h2>
+
+    <div style="
+      display:flex;
+      gap:3rem;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-top:2.5rem;
+    ">
+
+      <!-- Text -->
+      <div style="flex:1; min-width:260px;">
+        <h3>AI &amp; Me: Safe, Smart, Ethical</h3>
+
+        <p>
+          A four-lesson mini-unit designed to help upper elementary students
+          engage with generative AI safely, ethically, and responsibly.
+        </p>
+
+        <a class="btn" href="ai-and-me.html">View project</a>
+      </div>
+
+      <!-- Image -->
+      <div style="flex:1; min-width:260px; text-align:center;">
+        <img
+          src="Student_using_AI.j.avif"
+          alt="Student using AI on a laptop"
+          style="
+            width:100%;
+            max-width:420px;
+            height:auto;
+            border-radius:8px;
+          "
+        >
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================
+     TESTIMONIALS
+======================== -->
+<section style="background:#e3e8eb;">
+  <div class="container">
     <h2>Testimonials</h2>
 
     <div style="
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:2.5rem;
+      margin-top:3rem;
     ">
-
-      <div style="background:#f5f7f8; padding:1.8rem; border-radius:6px;">
-        <p>
-          Amanda is a really good teacher. She’s a really good teacher who
-          explains complex ideas clearly. She’s a really good teacher who
-          supports students thoughtfully.
-        </p>
+      <div style="background:#ffffff; padding:2rem; border-radius:10px;">
+        <p>I'm a really good teacher. I'm a really good teacher. I'm a really good teacher.</p>
       </div>
-
-      <div style="background:#f5f7f8; padding:1.8rem; border-radius:6px;">
-        <p>
-          Amanda is a really good teacher. She’s a really good teacher who
-          designs lessons with care. She’s a really good teacher who
-          understands learners.
-        </p>
+      <div style="background:#ffffff; padding:2rem; border-radius:10px;">
+        <p>I'm a really good teacher. I'm a really good teacher. I'm a really good teacher.</p>
       </div>
-
-      <div style="background:#f5f7f8; padding:1.8rem; border-radius:6px;">
-        <p>
-          Amanda is a really good teacher. She’s a really good teacher who
-          brings empathy into learning. She’s a really good teacher who
-          improves outcomes.
-        </p>
+      <div style="background:#ffffff; padding:2rem; border-radius:10px;">
+        <p>I'm a really good teacher. I'm a really good teacher. I'm a really good teacher.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- ========================
-     Contact
+     CONTACT
 ======================== -->
-<section id="contact" class="section-block contact-bg">
-  <div class="container contact-container">
-    <h2>Contact Me</h2>
-
-    <form id="contactForm">
-      <label>
-        Name
-        <input type="text" name="name" required>
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-
-      <label>
-        Message
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+<section id="contact">
+  <div class="container">
+    <a class="btn" href="javascript:void(0)" onclick="openModal()">Contact Me</a>
   </div>
 </section>
 
+<!-- ========================
+     FOOTER
+======================== -->
 <footer class="footer">
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
+
+<!-- ========================
+     MODAL SCRIPT (unchanged)
+======================== -->
+<script>
+  function openModal() {
+    alert("Contact modal placeholder");
+  }
+</script>
 
 </body>
 </html>
