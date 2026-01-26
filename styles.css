@@ -1,6 +1,12 @@
 /* ========================
+   Google Fonts
+======================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap');
+
+/* ========================
    Reset & Base
 ======================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,66 +14,41 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111;
-  line-height: 1.65;
-}
-
-/* ========================
-   Typography Scale (Maggie-style)
-======================== */
-h1 {
-  font-size: clamp(2.8rem, 5vw, 3.6rem);
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-}
-
-p {
-  font-size: 1.05rem;
-  max-width: 720px;
+  line-height: 1.6;
 }
 
 /* ========================
    Navigation
 ======================== */
+
 .nav {
-  background: #1f2d36;
-  color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1.5rem 0;
 }
 
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.4rem 1.5rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-name {
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
 }
 
 .nav-links a {
   margin-left: 1.75rem;
-  color: #ffffff;
+  font-size: 0.85rem;
   text-decoration: none;
-  font-size: 0.9rem;
+  color: #444;
 }
 
 .nav-links a:hover {
@@ -75,191 +56,102 @@ p {
 }
 
 /* ========================
-   Layout Containers
+   Layout
 ======================== */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 5rem 1.5rem;
+  padding: 6rem 1.5rem;
 }
 
-.section-block {
-  width: 100%;
+.section {
+  margin-top: 7rem;
 }
 
 /* ========================
-   HERO (bold, clean)
+   Hero
 ======================== */
-.hero-bg {
-  background: #e7f0f4;
-}
 
 .hero {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
+  padding: 5rem 0;
 }
 
-.hero-left {
-  flex: 1.2;
-}
-
-.hero-right {
-  flex: 0.8;
-  display: flex;
-  justify-content: center;
+.hero-left h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-sub {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-.hero-right img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 8px;
-  display: block;
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 520px;
 }
 
 /* ========================
-   Featured Project (strong band)
+   Typography
 ======================== */
-.project-bg {
-  background: #1f2d36;
-  color: #ffffff;
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', serif;
 }
 
-.project-layout {
-  display: flex;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.project-text h2,
-.project-text h3,
-.project-text p {
-  color: #ffffff;
-}
-
-.project-text h3 {
-  font-size: 1.6rem;
-}
-
-.project-text p {
-  font-size: 1.05rem;
-  opacity: 0.95;
-}
-
-.project-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.project-image-frame {
-  max-width: 320px;
-  width: 100%;
-}
-
-.project-image-frame img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-/* ========================
-   Testimonials (card-style)
-======================== */
-.section-block .container > h2 + div {
-  margin-top: 2.5rem;
-}
-
-.section-block div[style*="grid"] > div {
-  background: #ffffff;
-  padding: 2.2rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ========================
-   Contact (clear CTA)
-======================== */
-.contact-bg {
-  background: #f2f4f6;
-}
-
-.contact-container {
-  max-width: 620px;
-}
-
-form label {
-  display: block;
+h2 {
+  font-size: 2.2rem;
   margin-bottom: 1.2rem;
-  font-weight: 500;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 0.65rem;
-  margin-top: 0.35rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.95rem;
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  max-width: 640px;
+  margin-bottom: 1.2rem;
 }
 
 /* ========================
-   Buttons (modern, confident)
+   Buttons
 ======================== */
+
 .btn {
   display: inline-block;
-  padding: 0.7rem 1.6rem;
-  border-radius: 30px;
-  background: #111;
-  color: #ffffff;
-  text-decoration: none;
+  margin-top: 1.4rem;
+  padding: 0.65rem 1.6rem;
   font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  border: none;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .btn:hover {
   background: #000;
-  transform: translateY(-1px);
+  color: #fff;
 }
 
 /* ========================
    Footer
 ======================== */
+
 .footer {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 8rem;
+  padding: 3rem 1.5rem;
   text-align: center;
-  padding: 2.5rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #777;
-  background: #ffffff;
 }
 
 /* ========================
    Responsive
 ======================== */
+
 @media (max-width: 900px) {
-  .hero,
-  .project-layout {
-    flex-direction: column;
-  }
-
-  .container {
-    padding: 4rem 1.5rem;
-  }
-
-  h1 {
+  .hero-left h1 {
     font-size: 2.4rem;
   }
 }
