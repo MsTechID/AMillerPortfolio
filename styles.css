@@ -1,4 +1,4 @@
-/* RESET */
+/* ---- Reset & Base ---- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,159 +6,174 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
-  color: #111;
-  line-height: 1.6;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1a1a1a;
   background: #fff;
+  line-height: 1.65;
 }
 
-/* NAV */
+/* ---- Navigation ---- */
 .nav {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
 }
 
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-name {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .nav-links a {
-  margin-left: 1.75rem;
-  font-size: 0.85rem;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  color: #333;
   text-decoration: none;
-  color: #444;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* FULL-WIDTH BANDS */
+/* ---- Full Width Bands ---- */
 .band {
   width: 100%;
+  padding: 2rem 0;
 }
 
 .band-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 5rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
-/* HERO */
-.band-hero {
-  background: linear-gradient(
-    to right,
-    #efe4d4 0%,
-    #efe4d4 50%,
-    #d9e8f1 50%,
-    #d9e8f1 100%
-  );
+/* ---- Project Header ---- */
+.band-project-detail {
+  background: #f7f4ef;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.hero {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
-}
-
-.hero-left {
-  flex: 1.2;
-}
-
-.hero-right {
-  flex: 0.8;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-left h1 {
-  font-size: 3.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-sub {
-  font-size: 1.25rem;
-  color: #555;
-  max-width: 520px;
-}
-
-.hero-right img {
-  max-width: 360px;
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* OTHER SECTIONS */
-.band-project {
-  background: #eef4ee;
-}
-
-.band-about {
-  background: #f3eef7;
-}
-
-.band-contact {
-  background: #f7f7f7;
-  text-align: center;
-}
-
-/* TYPOGRAPHY */
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.15rem;
+.project-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #222;
   margin-bottom: 0.5rem;
 }
 
-/* BUTTON */
+.synopsis {
+  font-size: 1.25rem;
+  color: #444;
+  border-left: 4px solid #aaa;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+/* ---- Meta Section ---- */
+.band-meta {
+  background: #eef3f1;
+}
+
+.band-meta h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.band-meta p {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Problem & Solution ---- */
+.band-problem {
+  background: #faf9f8;
+}
+
+.band-problem h2 {
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* ---- Process ---- */
+.band-process {
+  background: #f5f4fb;
+}
+
+.band-process h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.band-process h3 {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.band-process ul {
+  margin-left: 1.25rem;
+  list-style-type: disc;
+}
+
+/* ---- Back Band ---- */
+.band-back {
+  text-align: center;
+  background: #eef0f5;
+}
+
+/* ---- Buttons ---- */
 .btn {
   display: inline-block;
-  margin-top: 1.5rem;
   padding: 0.6rem 1.4rem;
-  border: 1px solid #000;
+  border: 2px solid #333;
   text-decoration: none;
-  color: #000;
-  font-size: 0.85rem;
+  color: #111;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 .btn:hover {
-  background: #000;
+  background: #333;
   color: #fff;
 }
 
-/* FOOTER */
+/* ---- Footer ---- */
 .footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 2.5rem 1.5rem;
   text-align: center;
-  font-size: 0.8rem;
-  color: #777;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 2rem 1rem;
+  border-top: 1px solid #ddd;
 }
 
-/* RESPONSIVE */
+/* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .band-hero {
-    background: #efe4d4;
-  }
-
-  .hero-left h1 {
+  .project-header h1 {
     font-size: 2.4rem;
+  }
+
+  .band-process h2,
+  .band-meta h2,
+  .band-problem h2 {
+    font-size: 1.6rem;
   }
 }
