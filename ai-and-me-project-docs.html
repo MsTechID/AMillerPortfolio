@@ -14,7 +14,12 @@
 
     .page-header {
       max-width: 720px;
-      margin-bottom: 2.5rem;
+      margin: 0 auto 2.5rem auto; /* CENTER BLOCK */
+      text-align: center;         /* CENTER TEXT */
+    }
+
+    .page-header h1 {
+      margin-bottom: 0.75rem;
     }
 
     .pdf-wrapper {
@@ -36,6 +41,7 @@
       margin: 1rem auto 0 auto;
       font-size: 0.9rem;
       color: #555;
+      text-align: center;
     }
 
     @media (max-width: 900px) {
@@ -84,9 +90,8 @@
   </section>
 
   <p class="pdf-note">
-    Note: Links within the embedded diagram will open in the same browser tab due to
-    PDF viewer behavior. To avoid losing your place, you may right-click a link and
-    choose <em>Open in new tab</em>.
+    Links inside the embedded diagram open in the same tab due to PDF viewer behavior.
+    You may right-click and choose <em>Open in new tab</em> if needed.
   </p>
 
 </main>
