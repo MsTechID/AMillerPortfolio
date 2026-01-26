@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI & Me – Project Documents</title>
 
-  <!-- Shared site styles -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Page-specific fixes for PDF layout -->
   <style>
     /* ========================
-       Project Docs Layout Fix
+       Page-specific layout
     ======================== */
 
     .page-header {
@@ -20,8 +18,8 @@
     }
 
     .pdf-wrapper {
-      width: 100%;
-      margin-top: 3rem;
+      max-width: 1000px;
+      margin: 3rem auto 1.5rem auto; /* CENTERED */
       border: 1px solid #ddd;
       background: #fff;
     }
@@ -33,9 +31,11 @@
       display: block;
     }
 
-    /* Ensure container does NOT constrain iframe */
-    .container {
-      max-width: 1100px;
+    .pdf-note {
+      max-width: 720px;
+      margin: 1rem auto 0 auto;
+      font-size: 0.9rem;
+      color: #555;
     }
 
     @media (max-width: 900px) {
@@ -49,7 +49,7 @@
 <body>
 
 <!-- ========================
-     Navigation (site-wide)
+     Navigation
 ======================== -->
 <nav class="nav">
   <div class="nav-inner">
@@ -76,18 +76,21 @@
     </p>
   </section>
 
-  <section id="diagram" class="pdf-wrapper">
+  <section class="pdf-wrapper">
     <iframe
       src="ai-and-me-project-docs-diagram.pdf"
       title="AI & Me Project Documents Diagram">
     </iframe>
   </section>
 
+  <p class="pdf-note">
+    Note: Links within the embedded diagram will open in the same browser tab due to
+    PDF viewer behavior. To avoid losing your place, you may right-click a link and
+    choose <em>Open in new tab</em>.
+  </p>
+
 </main>
 
-<!-- ========================
-     Footer
-======================== -->
 <footer class="footer">
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
