@@ -14,19 +14,22 @@
 
     .page-header {
       max-width: 720px;
-      margin: 0 auto 2.5rem auto; /* CENTER BLOCK */
-      text-align: center;         /* CENTER TEXT */
+      margin: 0 auto 2.5rem auto;
+      text-align: center;
     }
 
-    .page-header h1 {
-      margin-bottom: 0.75rem;
-    }
-
+    /*
+      Break the PDF out of the container padding
+      so it cannot be clipped on the right edge
+    */
     .pdf-wrapper {
       max-width: 1000px;
-      margin: 3rem auto 1.5rem auto; /* CENTERED */
+      margin: 3rem auto 1.5rem auto;
       border: 1px solid #ddd;
       background: #fff;
+
+      /* critical fix */
+      box-sizing: border-box;
     }
 
     .pdf-wrapper iframe {
@@ -42,6 +45,18 @@
       font-size: 0.9rem;
       color: #555;
       text-align: center;
+    }
+
+    /* Ensure no horizontal clipping anywhere */
+    main,
+    body {
+      overflow-x: visible;
+    }
+
+    @media (max-width: 1100px) {
+      .pdf-wrapper {
+        max-width: calc(100vw - 3rem);
+      }
     }
 
     @media (max-width: 900px) {
