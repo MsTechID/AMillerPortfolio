@@ -1,6 +1,4 @@
-/* ========================
-   RESET
-======================== */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,9 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* ========================
-   NAVIGATION
-======================== */
+/* NAV */
 .nav {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -43,13 +39,7 @@ body {
   color: #333;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* ========================
-   LAYOUT HELPERS
-======================== */
+/* LAYOUT */
 .band {
   width: 100%;
 }
@@ -60,9 +50,7 @@ body {
   padding: 4.5rem 1.5rem;
 }
 
-/* ========================
-   HERO
-======================== */
+/* HERO */
 .band-hero {
   background: linear-gradient(
     to right,
@@ -80,32 +68,13 @@ body {
   align-items: center;
 }
 
-.hero-left h1 {
-  font-size: 2.9rem;
-  margin-bottom: 1.25rem;
-}
-
-.hero-sub {
-  font-size: 1.15rem;
-  color: #555;
-  max-width: 480px;
-}
-
-.hero-right {
-  display: flex;
-  justify-content: center;
-}
-
 .hero-right img {
   max-width: 320px;
   width: 100%;
-  height: auto;
   border-radius: 10px;
 }
 
-/* ========================
-   SECTIONS
-======================== */
+/* SECTIONS */
 .band-project {
   background: #eef4ee;
 }
@@ -119,6 +88,7 @@ body {
   text-align: center;
 }
 
+/* HEADINGS */
 h2 {
   font-size: 1.6rem;
   margin-bottom: 2rem;
@@ -129,9 +99,7 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* ========================
-   TESTIMONIALS
-======================== */
+/* TESTIMONIALS GRID — THIS IS THE FIX */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -144,19 +112,15 @@ h3 {
   border: 1px solid #ddd;
 }
 
-.testimonial-card p {
-  margin-bottom: 1rem;
-}
-
 .testimonial-author {
+  display: block;
+  margin-top: 1rem;
   font-size: 0.85rem;
   color: #555;
   font-style: italic;
 }
 
-/* ========================
-   BUTTON
-======================== */
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 1.25rem;
@@ -164,7 +128,6 @@ h3 {
   border: 1.5px solid #000;
   text-decoration: none;
   color: #000;
-  font-size: 0.85rem;
 }
 
 .btn:hover {
@@ -172,9 +135,7 @@ h3 {
   color: #fff;
 }
 
-/* ========================
-   FOOTER
-======================== */
+/* FOOTER */
 .footer {
   border-top: 1px solid #e5e5e5;
   padding: 2.5rem 1.5rem;
@@ -183,9 +144,7 @@ h3 {
   color: #777;
 }
 
-/* ========================
-   RESPONSIVE
-======================== */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -193,10 +152,6 @@ h3 {
 
   .band-hero {
     background: #efe4d4;
-  }
-
-  .hero-left h1 {
-    font-size: 2.3rem;
   }
 
   .testimonials-grid {
