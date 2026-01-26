@@ -6,9 +6,6 @@
   <title>AI & Me – Project Documents</title>
 
   <style>
-    /* ========================
-       Base
-    ======================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -33,9 +30,6 @@
       text-decoration: underline;
     }
 
-    /* ========================
-       Navigation
-    ======================== */
     header {
       border-bottom: 1px solid #e5e5e5;
       padding: 1.25rem 0;
@@ -55,4 +49,93 @@
       font-weight: 600;
     }
 
-    .
+    .nav-links a {
+      margin-left: 1.5rem;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    .page-header {
+      max-width: 720px;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header p {
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    .pdf-wrapper {
+      margin-top: 3rem;
+      border: 1px solid #ddd;
+    }
+
+    .pdf-wrapper iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+    }
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-name">Amanda Miller</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="ai-and-me.html">Project</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="page-header">
+    <h1>AI &amp; Me: Project Documents</h1>
+    <p>
+      This page contains the instructional design artifacts created in support of
+      the <strong>AI &amp; Me: Safe, Smart, and Ethical</strong> mini-unit.
+      Go <a href="#diagram">here</a> to view the project artifact flow diagram
+      and access linked materials.
+    </p>
+  </section>
+
+  <section id="diagram" class="pdf-wrapper">
+    <iframe
+      src="ai-and-me-project-docs-diagram.pdf"
+      title="AI & Me Project Documents Diagram">
+    </iframe>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Amanda Miller
+</footer>
+
+</body>
+</html>
