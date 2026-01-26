@@ -75,6 +75,8 @@ body {
 
 .hero-right {
   flex: 0.8;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-left h1 {
@@ -91,8 +93,9 @@ body {
 .hero-right img {
   width: 100%;
   max-width: 320px;
-  border-radius: 6px;
+  height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 /* ========================
@@ -112,13 +115,22 @@ body {
   flex: 1;
 }
 
+/* --- HARD image containment --- */
 .project-image {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.project-image img {
+.project-image-frame {
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
+}
+
+.project-image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 6px;
 }
 
@@ -138,7 +150,8 @@ form label {
   margin-bottom: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.3rem;
@@ -151,8 +164,8 @@ input, textarea {
   display: inline-block;
   padding: 0.6rem 1.4rem;
   border: 1px solid #000;
-  text-decoration: none;
   background: none;
+  text-decoration: none;
   cursor: pointer;
 }
 
