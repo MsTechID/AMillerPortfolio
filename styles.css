@@ -21,8 +21,9 @@ body {
 ======================== */
 
 .nav {
-  border-bottom: 1px solid #e5e5e5;
-  padding: 1.5rem 0;
+  background: #0f3d3a;          /* dark teal band */
+  border-bottom: 0;             /* remove light divider */
+  padding: 1.1rem 0;            /* slightly tighter than before */
 }
 
 .nav-inner {
@@ -35,19 +36,28 @@ body {
 }
 
 .nav-name {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1.35rem;           /* bigger */
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .nav-links a {
   margin-left: 1.75rem;
-  font-size: 0.85rem;
+  font-size: 1.0rem;            /* bigger */
+  font-weight: 600;
   text-decoration: none;
-  color: #444;
+  color: #ffffff;
+  opacity: 0.92;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
+  opacity: 1;
+}
+
+.nav-links a:visited {
+  color: #ffffff;
 }
 
 /* ========================
