@@ -61,7 +61,7 @@ body {
 }
 
 /* ========================
-   HERO (INDEX ONLY)
+   HERO
 ======================== */
 .band-hero {
   background: linear-gradient(
@@ -97,7 +97,7 @@ body {
 }
 
 .hero-right img {
-  max-width: 320px;      /* HARD CAP */
+  max-width: 320px;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -110,8 +110,8 @@ body {
   background: #eef4ee;
 }
 
-.band-about {
-  background: #f3eef7;
+.band-testimonials {
+  background: #f6f2fb;
 }
 
 .band-contact {
@@ -120,13 +120,38 @@ body {
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+/* ========================
+   TESTIMONIALS
+======================== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+}
+
+.testimonial-card p {
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
 }
 
 /* ========================
@@ -145,33 +170,6 @@ h3 {
 .btn:hover {
   background: #000;
   color: #fff;
-}
-
-/* ========================
-   PROJECT PAGE STYLES
-======================== */
-.band-project-detail {
-  background: #f7f4ef;
-}
-
-.band-meta {
-  background: #e7f1ec;
-}
-
-.band-problem {
-  background: #f0f0fb;
-}
-
-.band-process {
-  background: #fdf2c8;
-}
-
-.band-project-detail h1,
-.band-meta h2,
-.band-problem h2,
-.band-process h2,
-.band-process h3 {
-  font-family: Georgia, "Times New Roman", serif;
 }
 
 /* ========================
@@ -199,5 +197,9 @@ h3 {
 
   .hero-left h1 {
     font-size: 2.3rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
