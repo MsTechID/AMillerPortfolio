@@ -28,16 +28,22 @@
      HERO
 ======================== -->
 <header class="hero">
-  <div class="hero-left">
-    <h1>Hi, I’m Amanda.</h1>
-    <p class="hero-sub">
-      I solve problems, clear up confusion, and facilitate increased productivity.
-    </p>
-    <a class="btn" href="about.html">Learn more about me</a>
-  </div>
+  <div class="container">
+    <div style="display:flex; gap:4rem; align-items:center; flex-wrap:wrap;">
 
-  <div class="hero-right">
-    <img src="portrait.png" alt="Amanda Miller portrait">
+      <div class="hero-left" style="flex:1;">
+        <h1>Hi, I’m Amanda.</h1>
+        <p class="hero-sub">
+          I solve problems, clear up confusion, and facilitate increased productivity.
+        </p>
+        <a class="btn" href="about.html">Learn more about me</a>
+      </div>
+
+      <div class="hero-right" style="flex:0.8; text-align:center;">
+        <img src="portrait.png" alt="Amanda Miller portrait">
+      </div>
+
+    </div>
   </div>
 </header>
 
@@ -130,9 +136,6 @@
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
 
-<!-- ========================
-     MODAL SCRIPT (unchanged)
-======================== -->
 <script>
   function openModal() {
     alert("Contact modal placeholder");
