@@ -10,7 +10,7 @@ body {
                Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* NAV */
@@ -39,7 +39,7 @@ body {
   color: #333;
 }
 
-/* LAYOUT */
+/* BANDS */
 .band {
   width: 100%;
 }
@@ -89,35 +89,57 @@ body {
 }
 
 /* HEADINGS */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.25rem;
+}
+
 h2 {
   font-size: 1.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* TESTIMONIALS GRID — THIS IS THE FIX */
+.hero-sub {
+  font-size: 1.1rem;
+  max-width: 520px;
+}
+
+/* TESTIMONIALS */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .testimonial-card {
   background: #ffffff;
-  padding: 2rem;
+  padding: 2.5rem;
   border: 1px solid #ddd;
+  min-height: 360px; /* forces visible column height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card p {
+  margin-bottom: 1rem;
 }
 
 .testimonial-author {
-  display: block;
-  margin-top: 1rem;
   font-size: 0.85rem;
   color: #555;
   font-style: italic;
+}
+
+/* CONTACT */
+.contact-inner p {
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
 }
 
 /* BUTTON */
