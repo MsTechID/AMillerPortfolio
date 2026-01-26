@@ -12,35 +12,66 @@ body {
                Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111;
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+/* ========================
+   Typography Scale (Maggie-style)
+======================== */
+h1 {
+  font-size: clamp(2.8rem, 5vw, 3.6rem);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  font-size: 1.05rem;
+  max-width: 720px;
 }
 
 /* ========================
    Navigation
 ======================== */
 .nav {
-  background: #2f3e46;
-  color: #fff;
+  background: #1f2d36;
+  color: #ffffff;
 }
 
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.2rem 1.5rem;
+  padding: 1.4rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-name {
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .nav-links a {
-  margin-left: 1.5rem;
-  color: #fff;
+  margin-left: 1.75rem;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 /* ========================
@@ -49,7 +80,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem;
 }
 
 .section-block {
@@ -57,10 +88,10 @@ body {
 }
 
 /* ========================
-   Hero
+   HERO (bold, clean)
 ======================== */
 .hero-bg {
-  background: #f3f6f4;
+  background: #e7f0f4;
 }
 
 .hero {
@@ -79,43 +110,49 @@ body {
   justify-content: center;
 }
 
-.hero-left h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
 .hero-sub {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 2rem;
 }
 
 .hero-right img {
   width: 100%;
   max-width: 320px;
   height: auto;
+  border-radius: 8px;
   display: block;
-  border-radius: 6px;
 }
 
 /* ========================
-   Featured Project
+   Featured Project (strong band)
 ======================== */
 .project-bg {
-  background: #eef2f3;
+  background: #1f2d36;
+  color: #ffffff;
 }
 
 .project-layout {
   display: flex;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: center;
 }
 
-.project-text {
-  flex: 1;
+.project-text h2,
+.project-text h3,
+.project-text p {
+  color: #ffffff;
 }
 
-/* --- HARD image containment --- */
+.project-text h3 {
+  font-size: 1.6rem;
+}
+
+.project-text p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
 .project-image {
   flex: 1;
   display: flex;
@@ -123,55 +160,79 @@ body {
 }
 
 .project-image-frame {
-  width: 100%;
   max-width: 320px;
+  width: 100%;
 }
 
 .project-image-frame img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
   display: block;
-  border-radius: 6px;
 }
 
 /* ========================
-   Contact
+   Testimonials (card-style)
+======================== */
+.section-block .container > h2 + div {
+  margin-top: 2.5rem;
+}
+
+.section-block div[style*="grid"] > div {
+  background: #ffffff;
+  padding: 2.2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ========================
+   Contact (clear CTA)
 ======================== */
 .contact-bg {
-  background: #f7f7f7;
+  background: #f2f4f6;
 }
 
 .contact-container {
-  max-width: 600px;
+  max-width: 620px;
 }
 
 form label {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
+  padding: 0.65rem;
+  margin-top: 0.35rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 /* ========================
-   Button
+   Buttons (modern, confident)
 ======================== */
 .btn {
   display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border: 1px solid #000;
-  background: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  background: #111;
+  color: #ffffff;
   text-decoration: none;
-  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
 }
 
 .btn:hover {
   background: #000;
-  color: #fff;
+  transform: translateY(-1px);
 }
 
 /* ========================
@@ -179,9 +240,10 @@ textarea {
 ======================== */
 .footer {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.8rem;
+  padding: 2.5rem;
+  font-size: 0.85rem;
   color: #777;
+  background: #ffffff;
 }
 
 /* ========================
@@ -193,7 +255,11 @@ textarea {
     flex-direction: column;
   }
 
-  .hero-left h1 {
-    font-size: 2.2rem;
+  .container {
+    padding: 4rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
   }
 }
