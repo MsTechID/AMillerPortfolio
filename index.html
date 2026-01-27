@@ -97,7 +97,7 @@
 </section>
 
 <!-- ========================
-     CONTACT
+     CONTACT SECTION
 ======================== -->
 <section id="contact" style="background:var(--panel-accent);">
   <div class="container">
@@ -105,44 +105,74 @@
   </div>
 </section>
 
-<form
-  id="contactForm"
-  onsubmit="submitContactForm(event)"
+<!-- ========================
+     CONTACT MODAL
+======================== -->
+<div
+  id="contactModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="contactTitle"
+  style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    align-items:center;
+    justify-content:center;
+    padding:1.5rem;
+    z-index:1000;
+  "
 >
-
-  <label>
-    Name
-    <input
-      type="text"
-      name="name"
-      required
-      style="width:100%;"
+  <div
+    style="
+      background:#ffffff;
+      width:100%;
+      max-width:520px;
+      padding:2.5rem;
+      border-radius:12px;
+      box-sizing:border-box;
+      position:relative;
+    "
+  >
+    <button
+      aria-label="Close contact form"
+      onclick="closeModal()"
+      style="
+        background:none;
+        border:none;
+        font-size:1.5rem;
+        position:absolute;
+        top:1rem;
+        right:1rem;
+        cursor:pointer;
+      "
     >
-  </label>
+      &times;
+    </button>
 
-  <label>
-    Email
-    <input
-      type="email"
-      name="email"
-      required
-      style="width:100%;"
-    >
-  </label>
+    <h2 id="contactTitle">Contact Me</h2>
 
-  <label>
-    Message
-    <textarea
-      name="message"
-      rows="5"
-      required
-      style="width:100%;"
-    ></textarea>
-  </label>
+    <form id="contactForm" onsubmit="submitContactForm(event)">
+      <label>
+        Name
+        <input type="text" name="name" required style="width:100%;">
+      </label>
 
-  <button type="submit" class="btn">Send Message</button>
-</form>
+      <label>
+        Email
+        <input type="email" name="email" required style="width:100%;">
+      </label>
 
+      <label>
+        Message
+        <textarea name="message" rows="5" required style="width:100%;"></textarea>
+      </label>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</div>
 
 <!-- ========================
      FOOTER
@@ -167,34 +197,31 @@
       closeModal();
     }
   };
-</script>
-<script>
-function submitContactForm(event) {
-  event.preventDefault(); // stop page reload
 
-  const form = event.target;
-  const data = new FormData(form);
+  function submitContactForm(event) {
+    event.preventDefault();
 
-  fetch("https://formspree.io/f/xrepvldk", {
-    method: "POST",
-    body: data,
-    headers: {
-      "Accept": "application/json"
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      closeModal();
-      form.reset();
-      alert("Thanks! Your message has been sent.");
-    } else {
-      alert("Something went wrong. Please try again.");
-    }
-  })
-  .catch(() => {
-    alert("Network error. Please try again.");
-  });
-}
+    const form = event.target;
+    const data = new FormData(form);
+
+    fetch("https://formspree.io/f/xrepvldk", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    })
+    .then(response => {
+      if (response.ok) {
+        closeModal();
+        form.reset();
+        alert("Thanks! Your message has been sent.");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(() => {
+      alert("Network error. Please try again.");
+    });
+  }
 </script>
 
 </body>
