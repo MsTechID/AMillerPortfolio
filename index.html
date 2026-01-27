@@ -106,8 +106,8 @@
 </section>
 
 <form
-  action="https://formspree.io/f/xrepvldk"
-  method="POST"
+  id="contactForm"
+  onsubmit="submitContactForm(event)"
 >
 
   <label>
@@ -167,6 +167,34 @@
       closeModal();
     }
   };
+</script>
+<script>
+function submitContactForm(event) {
+  event.preventDefault(); // stop page reload
+
+  const form = event.target;
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/xrepvldk", {
+    method: "POST",
+    body: data,
+    headers: {
+      "Accept": "application/json"
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      closeModal();
+      form.reset();
+      alert("Thanks! Your message has been sent.");
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  })
+  .catch(() => {
+    alert("Network error. Please try again.");
+  });
+}
 </script>
 
 </body>
