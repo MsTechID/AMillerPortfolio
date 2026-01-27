@@ -1,9 +1,6 @@
 /* ========================
    Reset & Base
 ======================== */
-body {
-  background: red !important;
-}
 
 * {
   box-sizing: border-box;
@@ -14,11 +11,10 @@ body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
-  background: var(--panel-mid);
-  color: var(--ink-main);
+  background: #ffffff;
+  color: #111;
   line-height: 1.6;
 }
-
 :root {
   --bg-main: #ffffff;
 
@@ -38,6 +34,7 @@ body {
   /* Brand / emphasis */
   --brand-deep:   #0b4a6f;   /* professional navy-teal */
 }
+
 
 /* ========================
    Navigation
