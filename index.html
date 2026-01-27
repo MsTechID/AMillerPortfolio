@@ -105,74 +105,44 @@
   </div>
 </section>
 
-<!-- ========================
-     CONTACT MODAL
-======================== -->
-<div
-  id="contactModal"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="contactTitle"
-  style="
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.5);
-    align-items:center;
-    justify-content:center;
-    padding:1.5rem;
-    z-index:1000;
-  "
+<form
+  action="https://formspree.io/f/xrepvldk"
+  method="POST"
 >
-  <div
-    style="
-      background:#ffffff;
-      width:100%;
-      max-width:520px;
-      padding:2.5rem;
-      border-radius:12px;
-      box-sizing:border-box;
-      position:relative;
-    "
-  >
-    <button
-      aria-label="Close contact form"
-      onclick="closeModal()"
-      style="
-        background:none;
-        border:none;
-        font-size:1.5rem;
-        position:absolute;
-        top:1rem;
-        right:1rem;
-        cursor:pointer;
-      "
+
+  <label>
+    Name
+    <input
+      type="text"
+      name="name"
+      required
+      style="width:100%;"
     >
-      &times;
-    </button>
+  </label>
 
-    <h2 id="contactTitle">Contact Me</h2>
+  <label>
+    Email
+    <input
+      type="email"
+      name="email"
+      required
+      style="width:100%;"
+    >
+  </label>
 
-    <form>
-      <label>
-        Name
-        <input type="text" required style="width:100%;">
-      </label>
+  <label>
+    Message
+    <textarea
+      name="message"
+      rows="5"
+      required
+      style="width:100%;"
+    ></textarea>
+  </label>
 
-      <label>
-        Email
-        <input type="email" required style="width:100%;">
-      </label>
+  <button type="submit" class="btn">Send Message</button>
+</form>
 
-      <label>
-        Message
-        <textarea rows="5" required style="width:100%;"></textarea>
-      </label>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-</div>
 
 <!-- ========================
      FOOTER
