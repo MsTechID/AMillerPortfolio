@@ -19,9 +19,9 @@ body {
   --bg-main: #ffffff;
 
   /* Panel backgrounds */
-  --panel-light:  #f2f7fb;   /* very light blue-gray */
-  --panel-mid:    #dbe9f4;   /* soft blue */
-  --panel-accent: #c6ddf0;   /* clearer blue accent */
+  --panel-light:  #edf4fb;
+  --panel-mid:    #cfe0f1;
+  --panel-accent: #b4d1ea;
 
   /* Hero panels */
   --hero-left:    #f7fbff;   /* near-white, cool */
