@@ -109,14 +109,14 @@ body {
 /* Left: text block */
 .hero-left {
   flex: 1.2;
-  background: #faf9f7; /* warm, very subtle */
+  background: var(--hero-left);
   padding: 3.5rem 3rem;
 }
 
 /* Right: portrait block */
 .hero-right {
   flex: 0.8;
-  background: #f3f6f8; /* cool, soft blue-gray */
+  background: var(--hero-right);
   padding: 3.5rem 3rem;
   display: flex;
   align-items: center;
