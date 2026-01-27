@@ -1,6 +1,9 @@
 /* ========================
    Reset & Base
 ======================== */
+body {
+  background: red !important;
+}
 
 * {
   box-sizing: border-box;
