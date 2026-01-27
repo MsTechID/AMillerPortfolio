@@ -18,17 +18,21 @@ body {
 :root {
   --bg-main: #ffffff;
 
-  --panel-light: #f4f7f9;
-  --panel-mid:   #e1ecf2;
-  --panel-accent:#cfe3ee;
+  /* Panel backgrounds */
+  --panel-light:  #f2f7fb;   /* very light blue-gray */
+  --panel-mid:    #dbe9f4;   /* soft blue */
+  --panel-accent: #c6ddf0;   /* clearer blue accent */
 
-  --hero-left:   #fff6ee;
-  --hero-right:  #e7f1f7;
+  /* Hero panels */
+  --hero-left:    #f7fbff;   /* near-white, cool */
+  --hero-right:   #e3eff9;   /* gentle blue field */
 
-  --ink-main:    #111111;
-  --ink-muted:   #555555;
+  /* Text */
+  --ink-main:     #0f172a;   /* deep blue-black (better than pure black) */
+  --ink-muted:    #475569;   /* slate blue-gray */
 
-  --brand-deep:  #0d4f6c;
+  /* Brand / emphasis */
+  --brand-deep:   #0b4a6f;   /* professional navy-teal */
 }
 
 /* ========================
