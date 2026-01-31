@@ -173,6 +173,24 @@ p {
 }
 
 /* ========================
+   Process Section
+======================== */
+
+.process-section p,
+.process-section ul {
+  max-width: 100%;           /* Override the 640px limit */
+  line-height: 1.8;          /* More professional spacing */
+}
+
+.process-section ul {
+  margin-left: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.process-section li {
+  margin-bottom: 0.5rem;
+}
+/* ========================
    Project
 ======================== */
 
