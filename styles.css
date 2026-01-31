@@ -187,8 +187,8 @@ p {
 .btn {
   display: inline-block;
   margin-top: 1.2rem;
-  padding: 0.6rem 1.4rem;
-  font-size: 0.85rem;
+  padding: 0.75rem 1.75rem;    /* was 0.6rem 1.4rem, now 25% larger */
+  font-size: 1.0625rem;         /* was 0.85rem, now 25% larger */
 
   background: rgba(15, 61, 58, 0.85);  /* dark green, semi-opaque */
   color: #ffffff;
@@ -196,6 +196,17 @@ p {
   border: none;
   border-radius: 999px;
   text-decoration: none;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Large buttons (30% larger than regular buttons) */
+.btn-large {
+  padding: 0.975rem 2.275rem;   /* 30% larger than .btn */
+  font-size: 1.38125rem;         /* 30% larger than .btn */
 }
 
 
