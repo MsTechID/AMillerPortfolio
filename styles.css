@@ -14,7 +14,7 @@ body {
   background: #ffffff;
   color: #111;
   line-height: 1.7;
-  font-size: 1.125rem;
+  font-size: 1.294rem;    /* was 1.125rem, now 15% larger */
 }
 
 :root {
