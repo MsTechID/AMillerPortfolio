@@ -183,7 +183,9 @@ p {
   max-width: 100%;           /* Override the 640px limit */
   line-height: 1.8;          /* More professional spacing */
 }
-
+.process-section p {
+  margin-bottom: 1.5rem;   /* Add space between paragraphs */
+}
 .process-section ul {
   margin-left: 1.5rem;
   margin-top: 0.75rem;
