@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Staying Safe",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de883",
+    "_parentId": "697fd08587fdf4f9db2de881",
+    "_type": "article",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_isEnabled": true,
+      "_id": "AI and Me Assessment",
+      "_attempts": -1,
+      "_isPercentageBased": true,
+      "_scoreToPass": 70,
+      "_correctToPass": 60,
+      "_includeInTotalScore": true,
+      "_assessmentWeight": 1,
+      "_suppressMarking": false,
+      "_isResetOnRevisit": false,
+      "_allowResetIfPassed": false,
+      "_scrollToOnReset": false,
+      "_randomisation": {
+        "_isEnabled": false,
+        "_blockCount": -1
+      },
+      "_banks": {
+        "_isEnabled": false,
+        "_split": "",
+        "_randomisation": false
+      },
+      "_questions": {
+        "_resetType": "hard",
+        "_canShowFeedback": true,
+        "_canShowMarking": true,
+        "_canShowModelAnswer": true
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,612 @@
+[
+  {
+    "title": "Background image block",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 1,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de884",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "B0 Intro",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 2,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de885",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 1",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 3,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de886",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 2",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 4,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de887",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 3",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 5,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de888",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 4",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 6,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de889",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 5",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 7,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de88a",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 6",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 8,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de88b",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Scenario 7",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 9,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de88c",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  },
+  {
+    "title": "Results",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "_trackingId": 10,
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_isA11yCompletionDescriptionEnabled": true,
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de88d",
+    "_parentId": "697fd08587fdf4f9db2de883",
+    "_type": "block",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_assessment": {
+      "_quizBankID": 1
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      },
+      "_backgroundImage": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "no-repeat",
+        "_backgroundSize": "cover",
+        "_backgroundPosition": "center top"
+      },
+      "_minimumHeights": {
+        "_xlarge": null,
+        "_large": null,
+        "_medium": null,
+        "_small": null
+      },
+      "_responsiveClasses": {
+        "_xlarge": "",
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_isDividerBlock": false,
+      "_paddingTop": "standard",
+      "_paddingBottom": "standard",
+      "_componentVerticalAlignment": "top",
+      "_componentHorizontalAlignment": "left"
+    }
+  }
+]

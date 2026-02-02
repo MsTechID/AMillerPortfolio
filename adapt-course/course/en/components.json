@@ -1,0 +1,1333 @@
+[
+  {
+    "_component": "text",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "How this works:",
+    "displayTitle": "How this works:",
+    "body": "<p><strong>The students below have used AI on their school assignments and projects. Your job is to decide if this was a fair use or not a fair use. You can always ask an adult if you're not sure.&nbsp;</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de88e",
+    "_parentId": "697fd08587fdf4f9db2de885",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 75
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": ""
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Amelia Says:",
+    "displayTitle": "Amelia Says:",
+    "body": "<p><strong>“I was having trouble with my math homework, so I asked AI to explain the steps to solve an example problem. Then I used those steps to solve the one on my homework.”</strong></p><p><strong>Was this a fair use of AI?&nbsp;</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de88f",
+    "_parentId": "697fd08587fdf4f9db2de887",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 100
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 1
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      }
+    ],
+    "_attempts": -1,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>That's right! It's fair use to ask AI to explain an example, but not to tell you the answers to your homework questions.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. It is cheating to let AI do your work for you.&nbsp;</strong><br><strong>2. Ask AI for an example, but do the work yourself.</strong></p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, that's incorrect! Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset </strong></span><strong>and try again!</strong></p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says it's fair use to ask the AI for an example, as long as you do the homework problem on your own. Press reset and try again.&nbsp;</strong></p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "This is the correct answer!",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Oliver Says:",
+    "displayTitle": "Oliver Says:",
+    "body": "<p><strong>“I got home late because of football practice, and I realized I didn’t do my homework. I pasted the whole assignment into an AI and copied the answers on my paper.”</strong></p><p><strong>Was this a fair use of AI?&nbsp;</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de890",
+    "_parentId": "697fd08587fdf4f9db2de886",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      }
+    ],
+    "_attempts": 0,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>That's right! Even if you have a good reason for not doing your work, you still should not use AI to do your work for you. Remember, homework helps you practice what you need to know.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. It is cheating to let AI do your work for you.&nbsp;</strong></p><p>&nbsp;</p><p>&nbsp;</p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, that's incorrect! Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset </strong></span><strong>and try again!</strong></p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says that it was not fair for Oliver to use AI to complete his homework and that it is actually considered cheating. Press reset and try again.&nbsp;</strong></p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Ava says:",
+    "displayTitle": "Ava says:",
+    "body": "<p><strong>“I was worried that my essay wouldn't get a good grade, so I pasted it into an AI and asked it to make my writing sound smarter. Then I replaced my essay with the AI essay and turned it in.”</strong></p><p><strong>Was this a fair use of AI?</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de891",
+    "_parentId": "697fd08587fdf4f9db2de888",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 1
+      }
+    ],
+    "_attempts": 0,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>That's right! Any time you ask AI to do your work for an assignment, this is cheating. The teacher noticed Ava's writing was using words Ava might not know, so she asked Ava what they meant. When Ava said she did not know, her teacher knew that AI wrote her essay.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. Ask AI for an example, but do the work yourself.</strong><br><strong>2. It is cheating to let AI do your work for you.&nbsp;</strong><br><strong>3. It is cheating for AI to take your essay and re-write it for you.&nbsp;</strong></p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, That's incorrect! Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset </strong></span><strong>and try again!</strong></p>",
+        "notFinal": "<p><strong>Sorry, That's incorrect! Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset </strong></span><strong>and try again!</strong></p>"
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says that any time you are letting the AI do work for you and turn it in as your own, it is cheating. Press reset and try again.</strong><br>&nbsp;</p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Jon says:",
+    "displayTitle": "Jon says:",
+    "body": "<p><strong>“I was busy playing video games and forgot to study for my quiz today. I could just open a chatbot in a new tab and get it to give me the answers…”</strong></p><p><strong>Was this a fair use of AI?</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de892",
+    "_parentId": "697fd08587fdf4f9db2de889",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 1
+      }
+    ],
+    "_attempts": 0,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>Good job! &nbsp;Getting answers from an AI during a quiz is just like getting answers from a friend during a quiz - it is cheating.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. Ask AI for an example, but do the work yourself.</strong><br><strong>2. It is cheating to let AI do your work for you.</strong><br><strong>3. It is cheating for AI to take your essay and re-write it for you</strong><br><strong>4. Getting answers from an AI for a quiz or test is cheating.&nbsp;</strong></p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, That's incorrect! Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset </strong></span><strong>and try again!</strong></p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says if you are getting answers from anyone on a quiz or test, AI or not, that it would be cheating.&nbsp;</strong></p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Alan says:",
+    "displayTitle": "Alan says:",
+    "body": "<p><strong>“I was confused on what to do on an assignment, so I asked an AI chatbot to help me write an email to my teacher telling her what I was confused about.”</strong></p><p><strong>Was this fair use of AI?&nbsp;</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de893",
+    "_parentId": "697fd08587fdf4f9db2de88b",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 1
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      }
+    ],
+    "_attempts": 0,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>Correct! It is okay for you to ask an AI to help you write an email because this is not something you are being graded on. Plus, it's always good to communicate with your teacher when you are confused.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. Ask AI for an example, but do the work yourself.</strong><br><strong>2. It is cheating to let AI do your work for you.&nbsp;</strong><br><strong>3. Getting answers from an AI for a quiz or test is cheating.&nbsp;</strong><br><strong>4. It is cheating for AI to take your essay and re-write it for you.</strong><br><strong>5. Asking AI to help you study before a quiz or test is a fair use.&nbsp;</strong><br><strong>6. Use an AI to help you communicate, but only when it's not graded.</strong></p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, that's incorrect. Click reset and try again!</strong></p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says that using AI to help you communicate with your teacher is fine as long as it is not for a grade. Press reset and try again.&nbsp;</strong></p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Jakir says:",
+    "displayTitle": "Jakir says:",
+    "body": "<p><strong>“I wanted to get a good grade on my test, so I asked AI to help me study. It gave me some ideas for flash cards and asked me questions I might see on the test.”</strong></p><p><strong>Was this a fair use of AI?&nbsp;</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de894",
+    "_parentId": "697fd08587fdf4f9db2de88a",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 1
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      }
+    ],
+    "_attempts": 0,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>That's right! Asking an AI to help you study is a great idea, and is fair use. It's the same as studying with a friend or family member.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. It is cheating to let AI do your work for you.&nbsp;</strong><br><strong>2. Ask AI for an example, but do the work yourself.</strong><br><strong>3. It is cheating for AI to take your essay and re-write it for you</strong><br><strong>4. Getting answers from an AI for a quiz or test is cheating.&nbsp;</strong>&nbsp;<br><strong>5. Asking AI to help you study before a quiz or test is a fair use.&nbsp;</strong></p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, that's not correct. Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset</strong></span><strong> and try again!</strong></p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says that asking AI to help you study is just like asking a friend or family member to help you study - totally fine and a great idea! Press reset and try again.&nbsp;</strong></p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Lucas says:",
+    "displayTitle": "Lucas says:",
+    "body": "<p><strong>“I couldn’t think of an idea for my science project, so I asked AI for some ideas and what materials I would need. I picked my favorite idea and did the rest of the project myself.”</strong></p><p><strong>Was this a fair use of AI?</strong></p>",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de895",
+    "_parentId": "697fd08587fdf4f9db2de88c",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "Choose an answer, then press \"check\". ",
+    "ariaQuestion": "",
+    "_items": [
+      {
+        "text": "✅ Green (Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 1
+      },
+      {
+        "text": "❓ Yellow (Ask an Adult)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": true,
+        "feedback": "",
+        "_score": 0
+      },
+      {
+        "text": "❌ Red (Not Fair Use)",
+        "altText": "",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "",
+        "_score": 0
+      }
+    ],
+    "_attempts": 0,
+    "_canShowModelAnswer": true,
+    "_canShowCorrectness": true,
+    "_canShowFeedback": false,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": true,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback",
+      "correct": "<p><strong>Nice job! Asking an AI to help you come up with ideas is a great way to use it.&nbsp;</strong></p><p><strong>Rules:</strong></p><p><strong>1. It is cheating to let AI do your work for you.&nbsp;</strong><br><strong>2. Ask AI for an example, but do the work yourself.</strong><br><strong>3. It is cheating for AI to take your essay and re-write it for you</strong><br><strong>4. Getting answers from an AI for a quiz or test is cheating.&nbsp;</strong><br><strong>5. Asking AI to help you study before a quiz or test is a fair use.&nbsp;</strong><br><strong>6. Use an AI to help you communicate, but only when it's not graded.</strong><br><strong>7. Asking an AI to help you think of ideas is fair use.&nbsp;</strong></p>",
+      "_incorrect": {
+        "final": "<p><strong>Sorry, that's not correct. Click </strong><span style=\"color:hsl(0,0%,0%);\"><strong>Reset</strong></span><strong> and try again!</strong></p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "<p><strong>It's always good to ask an adult when you're not sure. Your adult says that using AI to come up with ideas is a fair way to use it. Press reset and try again.&nbsp;</strong></p>",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Check",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    }
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "hard",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Using AI Fairly in School",
+    "displayTitle": "Using AI Fairly in School",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de896",
+    "_parentId": "697fd08587fdf4f9db2de884",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 100
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/029b63659cee80c9fea210cf23c204e8c889e12f.png",
+      "small": "course/en/assets/029b63659cee80c9fea210cf23c204e8c889e12f.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Girl_1_Speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de899",
+    "_parentId": "697fd08587fdf4f9db2de887",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/ca753638f77893aceca0b55f091c2f4c9af06463.png",
+      "small": "course/en/assets/ca753638f77893aceca0b55f091c2f4c9af06463.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Boy_5_Speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de89c",
+    "_parentId": "697fd08587fdf4f9db2de886",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/bf241f3053cc8dc5831a3e4466caebdeb65c4d95.png",
+      "small": "course/en/assets/bf241f3053cc8dc5831a3e4466caebdeb65c4d95.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Boy_2_Speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de89f",
+    "_parentId": "697fd08587fdf4f9db2de889",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/bf878dd8592079a812d87a39992b59f22a43091c.png",
+      "small": "course/en/assets/bf878dd8592079a812d87a39992b59f22a43091c.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "girl_2_speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de8a2",
+    "_parentId": "697fd08587fdf4f9db2de888",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/b75c1093f00b5242d3bc19612145b3e64535e9a7.png",
+      "small": "course/en/assets/b75c1093f00b5242d3bc19612145b3e64535e9a7.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "boy_6_speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de8a5",
+    "_parentId": "697fd08587fdf4f9db2de88b",
+    "_type": "component",
+    "_layout": "right",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/2ae8de762161e37f07cdb3a7e7585be907ead9ee.png",
+      "small": "course/en/assets/2ae8de762161e37f07cdb3a7e7585be907ead9ee.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "boy_4_speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de8a8",
+    "_parentId": "697fd08587fdf4f9db2de88a",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/8a1b0c86c7bd7f747a298b204fffefb5ba7da273.png",
+      "small": "course/en/assets/8a1b0c86c7bd7f747a298b204fffefb5ba7da273.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "graphic",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Boy_3_speech",
+    "displayTitle": "",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de8ab",
+    "_parentId": "697fd08587fdf4f9db2de88c",
+    "_type": "component",
+    "_layout": "left",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_graphic": {
+      "alt": "",
+      "longdescription": "",
+      "large": "course/en/assets/1a8d55cb1ad55ea1ef4a393e2d0d8af521dfaa85.png",
+      "small": "course/en/assets/1a8d55cb1ad55ea1ef4a393e2d0d8af521dfaa85.png",
+      "attribution": "",
+      "_url": "",
+      "_target": "_blank"
+    },
+    "_isScrollable": false,
+    "_defaultScrollPercent": 0
+  },
+  {
+    "_component": "assessmentResults",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_isA11yCompletionDescriptionEnabled": true,
+    "title": "Your Results",
+    "displayTitle": "Your Results",
+    "body": "",
+    "_ariaLevel": 0,
+    "_id": "697fd08587fdf4f9db2de8ae",
+    "_parentId": "697fd08587fdf4f9db2de88d",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_tutor": {
+      "_isInherited": true,
+      "_type": "notify",
+      "_classes": "",
+      "_hasNotifyBottomButton": false,
+      "_autoScrollWhenInline": true,
+      "_button": {
+        "text": "{{_globals._extensions._tutor.hideFeedback}}",
+        "ariaLabel": "{{_globals._extensions._tutor.hideFeedback}}"
+      }
+    },
+    "_vanilla": {
+      "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+      }
+    },
+    "instruction": "",
+    "_isVisibleBeforeCompletion": true,
+    "_setCompletionOn": "inview",
+    "_resetType": "inherit",
+    "_assessmentId": "",
+    "_retry": {
+      "button": "Retry Assessment",
+      "feedback": "",
+      "_routeToAssessment": false
+    },
+    "_completionBody": "<p><strong>You have finished the assessment.</strong><br><strong>You scored {{score}} out of {{maxScore}}. {{{feedback}}}</strong></p>",
+    "_bands": []
+  }
+]

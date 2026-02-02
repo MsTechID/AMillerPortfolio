@@ -1,0 +1,101 @@
+{
+  "_defaultLanguage": "en",
+  "_defaultDirection": "ltr",
+  "_fixes": {
+    "_imgLazyLoad": true
+  },
+  "_questionWeight": 1,
+  "_generateSourcemap": false,
+  "_forceRouteLocking": true,
+  "_disableAnimationFor": [],
+  "_id": "697fd08587fdf4f9db2de880",
+  "_courseId": "697fd08587fdf4f9db2de87f",
+  "_drawer": {
+    "_showEasing": "easeOutQuart",
+    "_hideEasing": "easeInQuart",
+    "_duration": 400,
+    "_position": "auto",
+    "_iconClass": "icon-list"
+  },
+  "_accessibility": {
+    "_isEnabled": true,
+    "_isSkipNavigationEnabled": true,
+    "_ariaLevels": {
+      "_menu": "1",
+      "_menuGroup": "@menu+1",
+      "_menuItem": "@menu+1",
+      "_page": "1",
+      "_article": "@page+1",
+      "_block": "@article+1",
+      "_component": "@block+1",
+      "_componentItem": "@component+1",
+      "_notify": "1"
+    }
+  },
+  "__v": 0,
+  "_completionCriteria": {
+    "_requireContentCompleted": true,
+    "_requireAssessmentCompleted": false,
+    "_submitOnEveryAssessmentAttempt": false,
+    "_shouldSubmitScore": true
+  },
+  "_logging": {
+    "_isEnabled": true,
+    "_level": "info",
+    "_console": true,
+    "_warnFirstOnly": true
+  },
+  "_notify": {
+    "_duration": 400
+  },
+  "_scrollingContainer": {
+    "_isEnabled": false,
+    "_limitToSelector": ""
+  },
+  "screenSize": {
+    "small": 0,
+    "medium": 720,
+    "large": 960,
+    "xlarge": 1280
+  },
+  "_spoor": {
+    "_isEnabled": true,
+    "_tracking": {
+      "_shouldStoreResponses": true,
+      "_shouldStoreAttempts": true,
+      "_shouldRecordInteractions": true,
+      "_shouldRecordObjectives": true,
+      "_shouldCompress": true
+    },
+    "_reporting": {
+      "_onTrackingCriteriaMet": "passed",
+      "_onAssessmentFailure": "failed",
+      "_resetStatusOnLanguageChange": false
+    },
+    "_advancedSettings": {
+      "_scormVersion": "1.2",
+      "_showDebugWindow": false,
+      "_commitOnStatusChange": true,
+      "_commitOnAnyChange": true,
+      "_timedCommitFrequency": 1,
+      "_maxCommitRetries": 3,
+      "_commitRetryDelay": 2000,
+      "_suppressErrors": true,
+      "_commitOnVisibilityChangeHidden": true,
+      "_manifestIdentifier": "ai-traffic-light",
+      "_exitStateIfIncomplete": "suspend",
+      "_exitStateIfComplete": "normal",
+      "_setCompletedWhenFailed": false,
+      "_maxCharLimitOverride": 0,
+      "_connectionTest": {
+        "_isEnabled": false,
+        "_testOnSetValue": false,
+        "_silentRetryLimit": 0,
+        "_silentRetryDelay": 0
+      },
+      "_uniqueInteractionIds": true
+    },
+    "_showCookieLmsResetButton": false,
+    "_shouldPersistCookieLMSData": false
+  }
+}
