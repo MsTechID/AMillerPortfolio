@@ -14,7 +14,7 @@ public:
     ~MainWindow();
 
 private:
-    QWebEngineView *view;
+    //QWebEngineView *view;
 };
 
 #endif // MAINWINDOW_H

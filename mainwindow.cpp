@@ -1,14 +1,14 @@
 #include "mainwindow.h"
-#include <QWebEngineView>
+//#include <QWebEngineView>
 #include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    view = new QWebEngineView(this);
-    view->setUrl(QUrl("qrc:/index.html"));
+    //view = new QWebEngineView(this);
+    //view->setUrl(QUrl("qrc:/index.html"));
 
-    setCentralWidget(view);
+    //setCentralWidget(view);
     resize(1200, 800);
     setWindowTitle("Amanda Miller | Instructional Designer");
 }
