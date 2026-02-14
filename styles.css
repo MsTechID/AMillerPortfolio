@@ -71,6 +71,8 @@ body {
   text-decoration: none;
   color: #ffffff;
   opacity: 0.92;
+  position: relative;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -80,6 +82,22 @@ body {
 
 .nav-links a:visited {
   color: #ffffff;
+}
+
+/* Active page indicator - visible underline */
+.nav-links a.active {
+  opacity: 1;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #4fc3f7;  /* bright cyan/blue */
+  border-radius: 2px;
 }
 
 /* ========================
