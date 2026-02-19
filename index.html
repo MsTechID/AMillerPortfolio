@@ -9,6 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  section.fade-in, header.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  section.fade-in.visible, header.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 </head>
 
 <body>
@@ -35,7 +46,7 @@
 <!-- ========================
      HERO
 ======================== -->
-<header class="hero">
+<header class="hero fade-in">
   <div class="container">
     <div style="display:flex; gap:4rem; align-items:center; flex-wrap:wrap;">
 
@@ -57,7 +68,7 @@
 <!-- ========================
      FEATURED PROJECT
 ======================== -->
-<section style="background:var(--panel-light);">
+<section style="background:var(--panel-light);" class="fade-in">
   <div class="container">
     <h2>Featured Project</h2>
 
@@ -86,7 +97,7 @@
      TESTIMONIALS (hidden until ready)
 ======================== -->
 <!--
-<section style="background:var(--panel-mid);">
+<section style="background:var(--panel-mid);" class="fade-in">
   <div class="container">
     <h2>Testimonials</h2>
 
@@ -107,7 +118,7 @@
 <!-- ========================
      ABOUT ME BUTTON
 ======================== -->
-<section style="background:var(--panel-light); padding:3rem 0;">
+<section style="background:var(--panel-light); padding:3rem 0;" class="fade-in">
   <div class="container" style="text-align:center;">
     <a class="btn btn-large" href="about.html">Learn more about me</a>
   </div>
@@ -116,7 +127,7 @@
 <!-- ========================
      CONTACT SECTION
 ======================== -->
-<section id="contact" style="background:var(--panel-accent);">
+<section id="contact" style="background:var(--panel-accent);" class="fade-in">
   <div class="container"style="padding:3rem 1.5rem;">
     <a class="btn" href="javascript:void(0)" onclick="openModal()" style="display:block; width:100%; text-align:center;">Contact Me</a>
   </div>
@@ -239,6 +250,23 @@
       alert("Network error. Please try again.");
     });
   }
+</script>
+
+<script>
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section.fade-in, header.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
 </script>
 
 </body>

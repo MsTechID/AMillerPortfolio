@@ -8,6 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+<style>
+  section.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 </head>
 
 <body>
@@ -34,7 +45,7 @@
 <main>
 
   <!-- ===== About Me ===== -->
-  <section style="background:var(--panel-light);">
+  <section style="background:var(--panel-light);" class="fade-in">
     <div class="container process-section">
 
       <div style="display:flex; gap:3rem; align-items:flex-start; flex-wrap:wrap;">
@@ -75,7 +86,7 @@
   </section>
 
   <!-- ===== Toolbox ===== -->
-  <section style="background:var(--panel-mid);">
+  <section style="background:var(--panel-mid);" class="fade-in">
     <div class="container">
       <h2>My Toolbox</h2>
 
@@ -144,7 +155,7 @@
   </section>
 
   <!-- ===== LinkedIn Button ===== -->
-  <section style="background:var(--panel-light); padding:3rem 0;">
+  <section style="background:var(--panel-light); padding:3rem 0;" class="fade-in">
     <div class="container" style="text-align:center;">
       <a class="btn btn-large" href="https://www.linkedin.com/in/amanda-r-miller/" target="_blank" rel="noopener">View My LinkedIn Profile</a>
     </div>
@@ -158,6 +169,23 @@
 <footer class="footer">
   <p>&copy; 2026 Amanda Miller</p>
 </footer>
+
+<script>
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
 
 </body>
 </html>
