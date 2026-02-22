@@ -18,6 +18,30 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+
+  /* Arrowhead bullets for About Me */
+  .arrow-bullets {
+    list-style: none;          /* remove default dots */
+    padding-left: 0;
+    margin: 1.25rem 0 0;
+  }
+
+  .arrow-bullets li {
+    position: relative;
+    padding-left: 1.6rem;      /* space for the arrow */
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+  }
+
+  .arrow-bullets li::before {
+    content: "➤";              /* arrowhead bullet */
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    font-weight: 600;
+    opacity: 0.85;
+  }
 </style>
 </head>
 
@@ -54,21 +78,20 @@
         <div style="flex:1; min-width:300px;">
           <h1>About Me</h1>
 
-          <p>
-            My advantage? A 15-year foundation in classroom teaching and computer science education. I've created, modified, and implemented curriculum at every stage of the learning process. That real-world experience means I design for how people actually learn, not just how content should theoretically flow.
-          </p>
-
-          <p>
-            I move fast with technology. For the past three years, I've worked extensively with AI tools like ChatGPT and Claude, and I develop custom solutions in Python across Windows and Unix environments.
-          </p>
-
-          <p>
-            AI accelerates my workflow and boosts productivity—but I bring the human skills technology can't replace: understanding what stakeholders truly need (even when they struggle to articulate it), building trust with subject matter experts, and designing with cultural sensitivity and real-world context.
-          </p>
-
-          <p>
-            What I solve are the human problems AI can't. I design learning experiences that are thoughtful, age-appropriate, and rooted in empathy for both learners and educators—bridging the gap between what technology identifies and what people actually need.
-          </p>
+          <ul class="arrow-bullets">
+            <li>
+              My advantage? A 15-year foundation in classroom teaching and computer science education. I've created, modified, and implemented curriculum at every stage of the learning process. That real-world experience means I design for how people actually learn, not just how content should theoretically flow.
+            </li>
+            <li>
+              I move fast with technology. For the past three years, I've worked extensively with AI tools like ChatGPT and Claude, and I develop custom solutions in Python across Windows and Unix environments.
+            </li>
+            <li>
+              AI accelerates my workflow and boosts productivity—but I bring the human skills technology can't replace: understanding what stakeholders truly need (even when they struggle to articulate it), building trust with subject matter experts, and designing with cultural sensitivity and real-world context.
+            </li>
+            <li>
+              What I solve are the human problems AI can't. I design learning experiences that are thoughtful, age-appropriate, and rooted in empathy for both learners and educators—bridging the gap between what technology identifies and what people actually need.
+            </li>
+          </ul>
         </div>
 
         <!-- RIGHT: Professional photo -->
