@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TARDIS Onboarding | Amanda Miller</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  section.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ========================
+     Navigation
+======================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">Amanda Miller</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tardis.html" class="active">TARDIS Project</a>
+      <a href="ai-and-me.html">AI & Me Project</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/amanda-r-miller/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========================
+     Main Content
+======================== -->
+<main>
+
+  <!-- ===== Project Overview ===== -->
+  <section style="background:var(--panel-light);" class="fade-in">
+    <div class="container">
+
+      <div style="display:flex; gap:3rem; align-items:flex-start; flex-wrap:wrap;">
+
+        <!-- LEFT: text -->
+        <div style="flex:1; min-width:320px;">
+          <h1>TARDIS Engineering Onboarding</h1>
+
+          <p>
+            An interactive branching scenario designed to accelerate new software 
+            engineer onboarding by simulating realistic workplace challenges and 
+            decision-making processes.
+          </p>
+
+          <p><strong>Purpose:</strong> Address the extended onboarding timeline and 
+          knowledge gaps experienced by new engineering hires at TARDIS Corporation 
+          by providing hands-on practice with common workplace scenarios before they 
+          encounter them in production environments.</p>
+
+          <p><strong>Target Audience:</strong> Newly hired software engineers with 
+          varying levels of professional experience joining TARDIS Corporation's 
+          development teams.</p>
+
+          <p><strong>Project Objectives:</strong> By completing this module, new 
+          engineers will be able to navigate common workplace scenarios, apply company 
+          protocols for communication and problem-solving, and demonstrate readiness 
+          to contribute to team projects with minimal supervision.</p>
+
+          <p><strong>Responsibilities:</strong> Instructional designer (needs analysis, 
+          scenario design, branching logic, development, visual design)</p>
+
+          <p><strong>Format:</strong> Interactive e-learning module with branching scenarios</p>
+
+          <p><strong>Duration:</strong> Approximately 45-60 minutes (self-paced)</p>
+        </div>
+
+        <!-- RIGHT: screenshot -->
+        <div style="flex:1; min-width:320px; text-align:center;">
+          <img
+            src="Tardis-Storyline-screenshot.png"
+            alt="TARDIS Storyline module showing scenario feedback"
+            style="width:100%; max-width:500px; height:auto; border-radius:8px; border:1px solid #ccc;"
+          >
+        </div>
+
+      </div>
+
+      <!-- Interactive Module Box -->
+      <div style="
+        margin-top: 4rem;
+        padding: 2.5rem;
+        border: 4px solid #0d4f6c;
+        border-radius: 12px;
+        text-align: center;
+        background: #ffffff;
+      ">
+        <h2 style="margin-bottom: 2rem;">Created with Articulate Storyline 360</h2>
+        <a class="btn btn-large" href="tardis-module.html">
+          View Interactive Module<br>
+          <span style="font-size: 0.85em; font-weight: 400;">SCORM package available upon request</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Problem ===== -->
+  <section style="background:#ffffff;" class="fade-in">
+    <div class="container process-section">
+      <h2>The Problem</h2>
+
+      <p>
+        TARDIS Corporation's Human Resources department identified a recurring 
+        pattern: new software engineers consistently required 6-8 months to reach 
+        full productivity, significantly longer than the industry standard of 3-4 
+        months. Exit interviews and performance reviews revealed that new hires 
+        struggled with implicit company knowledge—unwritten protocols for 
+        communication, problem-solving approaches, and navigating the organizational 
+        culture.
+      </p>
+
+      <p>
+        While technical skills were strong, new engineers reported feeling uncertain 
+        about when to escalate issues, how to balance independent problem-solving 
+        with seeking help, and navigating cross-team communication. This resulted 
+        in duplicated effort, delayed project timelines, and frustration for both 
+        new hires and their team leads.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Solution ===== -->
+  <section style="background:var(--panel-mid);" class="fade-in">
+    <div class="container process-section">
+      <h2>The Solution</h2>
+
+      <p>
+        After conducting stakeholder interviews with engineering managers, team 
+        leads, and recently onboarded engineers, I designed a branching scenario 
+        module that simulates five common workplace situations new engineers 
+        encounter during their first 90 days.
+      </p>
+
+      <p>
+        Rather than presenting static information about company policies, the module 
+        places learners in realistic scenarios where they must make decisions, see 
+        the consequences of their choices, and receive immediate contextualized 
+        feedback. Each scenario includes multiple decision points, creating a safe 
+        environment to practice judgment without real-world consequences.
+      </p>
+
+      <p>
+        The branching structure allows learners to explore different approaches and 
+        understand why certain strategies are more effective than others in the 
+        TARDIS engineering culture.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <section style="background:#0d4f6c; color:#ffffff;" class="fade-in">
+    <div class="container process-section">
+
+      <h2 style="color:#ffffff;">My Process</h2>
+
+      <h3 style="color:#ffffff; font-size:1.35rem; margin-top:2.5rem; letter-spacing:0.04em;">
+        Analysis
+      </h3>
+      <p>
+        I began with a needs analysis, interviewing six engineering managers, four 
+        team leads, and eight engineers who had joined within the past year. I also 
+        reviewed onboarding documentation, performance review data, and exit interview 
+        summaries provided by HR.
+      </p>
+
+      <p>
+        Key findings revealed that technical training was adequate, but new hires 
+        lacked practical experience with soft skills and company-specific cultural 
+        norms. The most common challenges centered around communication timing, 
+        escalation protocols, documentation standards, and cross-functional collaboration.
+      </p>
+
+      <h3 style="color:#ffffff; font-size:1.35rem; margin-top:2.5rem; letter-spacing:0.04em;">
+        Design
+      </h3>
+      <p>
+        Based on the analysis, I identified five critical scenarios that would give 
+        new engineers practice with the most common decision points:
+      </p>
+
+      <ul>
+        <li>Handling an ambiguous bug report from QA</li>
+        <li>Managing competing priorities from multiple stakeholders</li>
+        <li>Deciding when to ask for help versus continue independent troubleshooting</li>
+        <li>Navigating communication with a difficult cross-functional partner</li>
+        <li>Responding to an urgent production issue during regular development work</li>
+      </ul>
+
+      <p>
+        Each scenario was designed with 3-5 decision points and multiple possible 
+        outcomes, including optimal paths, suboptimal but acceptable approaches, and 
+        clearly problematic choices. Feedback was calibrated to explain not just 
+        what was wrong, but why certain approaches work better in TARDIS's specific 
+        engineering culture.
+      </p>
+
+      <h3 style="color:#ffffff; font-size:1.35rem; margin-top:2.5rem; letter-spacing:0.04em;">
+        Development
+      </h3>
+      <p>
+        I developed the module in Articulate Storyline 360, creating realistic mockups 
+        of TARDIS's internal tools (Slack, Jira, email) to increase authenticity. Each 
+        scenario branch was reviewed by subject matter experts to ensure technical 
+        accuracy and cultural alignment.
+      </p>
+
+      <p>
+        Before full deployment, I conducted usability testing with three recent hires 
+        and two engineering managers, iterating on feedback clarity, scenario complexity, 
+        and pacing.
+      </p>
+
+      <h3 style="color:#ffffff; font-size:1.35rem; margin-top:2.5rem; letter-spacing:0.04em;">
+        Implementation & Evaluation
+      </h3>
+      <p>
+        The module was integrated into TARDIS's onboarding program and made available 
+        to all new engineering hires during their first two weeks. Initial feedback 
+        from the first cohort of 12 engineers was overwhelmingly positive, with 
+        participants reporting increased confidence in navigating workplace scenarios.
+      </p>
+
+      <p>
+        Evaluation metrics include scenario completion rates, decision pathway analysis, 
+        post-module surveys, and 90-day performance check-ins comparing cohorts who 
+        completed the module versus those who onboarded before its availability.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== Project Documents ===== -->
+  <section style="background:#ffffff;" class="fade-in">
+    <div class="container">
+      <h2>Project Documents</h2>
+
+      <p>View the supporting materials created for this project:</p>
+
+      <a class="btn btn-large" href="tardis-project-docs.html">View Project Documents</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========================
+     Footer
+======================== -->
+<footer class="footer">
+  <p>&copy; 2026 Amanda Miller</p>
+</footer>
+
+<script>
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
+
+</body>
+</html>
