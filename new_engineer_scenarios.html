@@ -1,82 +1,846 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TARDIS Decision Flowchart | Amanda Miller</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Software Engineer: Decision Paths</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #0f3d3a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .back-button:hover {
+            background: #000;
+        }
+        
+        .scenario-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            background: #e9ecef;
+        }
+        
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .scenario {
+            display: none;
+        }
+        
+        .scenario.active {
+            display: block;
+        }
+        
+        .scenario-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .scenario-header h2 {
+            margin: 0 0 10px 0;
+        }
+        
+        .scenario-header p {
+            margin: 5px 0;
+            opacity: 0.95;
+        }
+        
+        .tree-container {
+            position: relative;
+            width: 100%;
+            height: 900px;
+            margin-bottom: 30px;
+        }
+        
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .node {
+            position: absolute;
+            padding: 14px 18px;
+            border-radius: 8px;
+            border: 2px solid;
+            background: white;
+            min-width: 200px;
+            max-width: 240px;
+            font-size: 13px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .node:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            z-index: 10;
+        }
+        
+        .node-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .node-desc {
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .node-metrics {
+            font-size: 11px;
+            line-height: 1.5;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        /* Node types */
+        .node-start {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+            color: white;
+        }
+        
+        .node-decision {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-color: #4facfe;
+            color: white;
+        }
+        
+        /* Outcome quality levels */
+        .outcome-excellence {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+        }
+        
+        .outcome-recovery {
+            border-color: #17a2b8;
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+        }
+        
+        .outcome-adequate {
+            border-color: #ffc107;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        }
+        
+        .outcome-damage {
+            border-color: #fd7e14;
+            background: linear-gradient(135deg, #ffe5d0 0%, #ffd8b8 100%);
+        }
+        
+        .outcome-career-ending {
+            border-color: #dc3545;
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+        }
+        
+        .path-label {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 11px;
+            margin-top: 6px;
+        }
+        
+        .path-a { background: #ff6b6b; color: white; }
+        .path-b { background: #51cf66; color: white; }
+        
+        .legend {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .legend h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .legend-box {
+            width: 50px;
+            height: 35px;
+            border-radius: 5px;
+            border: 2px solid;
+            flex-shrink: 0;
+        }
+        
+        .insights {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e7f3ff;
+            border-radius: 10px;
+        }
+        
+        .insights h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .insights ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .insights li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- ========================
-     Navigation
-======================== -->
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="nav-name">Amanda Miller</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="tardis.html" class="active">TARDIS Project</a>
-      <a href="ai-and-me.html">AI & Me Project</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="https://www.linkedin.com/in/amanda-r-miller/" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="container">
+        <a href="tardis.html" class="back-button">← Back to TARDIS Project</a>
+        <h1>New Software Engineer: Decision Cascades</h1>
+        <p class="subtitle">How choices at each decision point compound to shape career trajectories</p>
+        
+        <div class="legend">
+            <h3>🎯 Outcome Paths</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-box outcome-excellence" style="border-color: #28a745;"></div>
+                    <span><strong>Excellence Path (B→B2):</strong> Right choice + systematic improvement = career acceleration</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box outcome-adequate" style="border-color: #ffc107;"></div>
+                    <span><strong>Minimum Path (B→B1):</strong> Right choice + surface learning = adequate but not impressive</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box outcome-recovery" style="border-color: #17a2b8;"></div>
+                    <span><strong>Recovery Path (A→B):</strong> Mistake + accountability = survivable with growth</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box outcome-damage" style="border-color: #fd7e14;"></div>
+                    <span><strong>Damage Path (A→A - moderate):</strong> Poor choices compound, reputation damaged</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box outcome-career-ending" style="border-color: #dc3545;"></div>
+                    <span><strong>Career-Ending Path (A→A - severe):</strong> Ego + no learning = termination risk</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scenario-tabs">
+            <button class="tab active" onclick="showScenario(0)">Scenario 1: Untested Login</button>
+            <button class="tab" onclick="showScenario(1)">Scenario 2: Copy-Paste Auth</button>
+            <button class="tab" onclick="showScenario(2)">Scenario 3: Works On My Machine</button>
+            <button class="tab" onclick="showScenario(3)">Scenario 4: Clever Code</button>
+        </div>
+        
+        <!-- SCENARIO 1: Untested Login Module -->
+        <div class="scenario active" id="scenario-0">
+            <div class="scenario-header">
+                <h2>🔐 Scenario 1: The Untested Login Module</h2>
+                <p><strong>Situation:</strong> Alex writes a login module, manually tests it once, commits without automated tests</p>
+                <p><strong>Key Learning:</strong> Testing isn't optional - untested code is unfinished code</p>
+            </div>
+            
+            <div class="tree-container">
+                <svg class="connections" data-scenario="0"></svg>
+                
+                <!-- START -->
+                <div class="node node-start" data-id="s1-start" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 STARTING POINT</div>
+                    <div class="node-desc">Login module works in manual test. Senior dev reviews PR - no tests found.</div>
+                </div>
+                
+                <!-- DECISION 1 -->
+                <div class="node node-decision" data-id="s1-d1" data-parent="s1-start" style="left: 700px; top: 140px;">
+                    <div class="node-title">Decision Point 1</div>
+                    <div class="node-desc">Senior dev: "Where are the tests?"</div>
+                </div>
+                
+                <div class="node" data-id="s1-d1-a" data-parent="s1-d1" style="left: 450px; top: 280px;">
+                    <div class="node-title">Action A: Defensive</div>
+                    <div class="node-desc">"The code works fine, I tested it myself"</div>
+                    <div class="path-label path-a">EGO PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Approved reluctantly<br>
+                        • Goes to production<br>
+                        • Special characters crash system<br>
+                        • 200 customers affected, 3hr outage
+                    </div>
+                </div>
+                
+                <div class="node" data-id="s1-d1-b" data-parent="s1-d1" style="left: 950px; top: 280px;">
+                    <div class="node-title">Action B: Humble</div>
+                    <div class="node-desc">"You're right. Can you show me the testing framework?"</div>
+                    <div class="path-label path-b">GROWTH PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Senior dev pairs for 30 min<br>
+                        • Alex writes 8 unit tests<br>
+                        • Discovers 2 bugs before production<br>
+                        • Zero production issues
+                    </div>
+                </div>
+                
+                <!-- DECISION 2A (from defensive) -->
+                <div class="node node-decision" data-id="s1-d2a" data-parent="s1-d1-a" style="left: 300px; top: 480px;">
+                    <div class="node-title">Decision Point 2A</div>
+                    <div class="node-desc">Production incident occurred. How to respond?</div>
+                </div>
+                
+                <div class="node outcome-career-ending" data-id="s1-end-aa" data-parent="s1-d2a" style="left: 100px; top: 620px;">
+                    <div class="node-title">🔥 A→A: Deflect Blame</div>
+                    <div class="node-desc">Blame senior dev or requirements</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $15k emergency fix<br>
+                        ⏱️ 2-day deadline slip<br>
+                        😞 47% satisfaction drop<br>
+                        🚫 Performance improvement plan<br>
+                        📉 Assigned only low-priority tasks
+                    </div>
+                </div>
+                
+                <div class="node outcome-recovery" data-id="s1-end-ab" data-parent="s1-d2a" style="left: 400px; top: 620px;">
+                    <div class="node-title">🩹 A→B: Own It</div>
+                    <div class="node-desc">Apologize, ask to learn TDD practices</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 Still $15k + 2-day slip<br>
+                        ✅ Senior dev mentors Alex<br>
+                        📈 Regains trust in 4 weeks<br>
+                        🌱 "Shows growth potential"<br>
+                        ✨ Assigned to next important feature
+                    </div>
+                </div>
+                
+                <!-- DECISION 2B (from humble) -->
+                <div class="node node-decision" data-id="s1-d2b" data-parent="s1-d1-b" style="left: 950px; top: 480px;">
+                    <div class="node-title">Decision Point 2B</div>
+                    <div class="node-desc">Tests caught bugs. How to handle this learning?</div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s1-end-ba" data-parent="s1-d2b" style="left: 750px; top: 620px;">
+                    <div class="node-title">✓ B→B1: Fix & Move On</div>
+                    <div class="node-desc">Fix bugs, don't document learnings</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ On schedule<br>
+                        😊 No customer impact<br>
+                        ⚠️ Repeats edge case errors in next 2 modules<br>
+                        📊 Pattern not broken
+                    </div>
+                </div>
+                
+                <div class="node outcome-excellence" data-id="s1-end-bb" data-parent="s1-d2b" style="left: 1050px; top: 620px;">
+                    <div class="node-title">🏆 B→B2: Systematic Growth</div>
+                    <div class="node-desc">Document learnings, share in standup, create checklist</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ On schedule<br>
+                        😊 Zero issues<br>
+                        🎯 Creates reusable auth template<br>
+                        🌟 "Multiplier" in quarterly review<br>
+                        👑 Go-to auth expert in 2 months
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCENARIO 2: Copy-Paste Authentication -->
+        <div class="scenario" id="scenario-1">
+            <div class="scenario-header">
+                <h2>🔒 Scenario 2: The Copy-Paste Authentication Code</h2>
+                <p><strong>Situation:</strong> Alex copies 150 lines of auth code from Stack Overflow instead of using company library</p>
+                <p><strong>Key Learning:</strong> Asking for help is strength - 15 minutes of mentorship prevents catastrophic security breaches</p>
+            </div>
+            
+            <div class="tree-container">
+                <svg class="connections" data-scenario="1"></svg>
+                
+                <div class="node node-start" data-id="s2-start" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 STARTING POINT</div>
+                    <div class="node-desc">Alex needs auth for API endpoint. Copies Stack Overflow code instead of using company library.</div>
+                </div>
+                
+                <div class="node node-decision" data-id="s2-d1" data-parent="s2-start" style="left: 700px; top: 140px;">
+                    <div class="node-title">Decision Point 1</div>
+                    <div class="node-desc">Code review flags unfamiliar auth pattern</div>
+                </div>
+                
+                <div class="node" data-id="s2-d1-a" data-parent="s2-d1" style="left: 450px; top: 280px;">
+                    <div class="node-title">Action A: Ego-Driven</div>
+                    <div class="node-desc">"I found a better way. Old library too complicated"</div>
+                    <div class="path-label path-a">EGO PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Code merged after insisting<br>
+                        • Works initially<br>
+                        • Security audit finds SQL injection<br>
+                        • 1,200 customer records exposed
+                    </div>
+                </div>
+                
+                <div class="node" data-id="s2-d1-b" data-parent="s2-d1" style="left: 950px; top: 280px;">
+                    <div class="node-title">Action B: Ask for Help</div>
+                    <div class="node-desc">"I wasn't sure how to use our auth library. Can someone show me?"</div>
+                    <div class="path-label path-b">GROWTH PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Senior dev shows library in 15 min<br>
+                        • Alex learns company patterns<br>
+                        • Secure code from day one<br>
+                        • Reusable knowledge gained
+                    </div>
+                </div>
+                
+                <div class="node node-decision" data-id="s2-d2a" data-parent="s2-d1-a" style="left: 300px; top: 480px;">
+                    <div class="node-title">Decision Point 2A</div>
+                    <div class="node-desc">Security breach discovered. Immediate response?</div>
+                </div>
+                
+                <div class="node outcome-career-ending" data-id="s2-end-aa" data-parent="s2-d2a" style="left: 100px; top: 620px;">
+                    <div class="node-title">🔥 A→A: Hide/Minimize</div>
+                    <div class="node-desc">Try to hide severity from management</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $50k+ incident + $100k fines<br>
+                        ⏱️ 2-week project halt<br>
+                        ⚖️ Legal involvement required<br>
+                        📧 Customer notifications<br>
+                        🚫 Terminated within 30 days
+                    </div>
+                </div>
+                
+                <div class="node outcome-damage" data-id="s2-end-ab" data-parent="s2-d2a" style="left: 400px; top: 620px;">
+                    <div class="node-title">🔥 A→B: Alert & Own It</div>
+                    <div class="node-desc">Immediately alert security, take responsibility, work overtime</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $50k incident cost<br>
+                        ⏱️ 1-week halt, contained faster<br>
+                        😞 Customer trust damaged<br>
+                        ⚠️ Keeps job with serious warning<br>
+                        📚 Mandatory security training<br>
+                        ⏳ 6-month probation
+                    </div>
+                </div>
+                
+                <div class="node node-decision" data-id="s2-d2b" data-parent="s2-d1-b" style="left: 950px; top: 480px;">
+                    <div class="node-title">Decision Point 2B</div>
+                    <div class="node-desc">Now understand library. Next steps?</div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s2-end-ba" data-parent="s2-d2b" style="left: 750px; top: 620px;">
+                    <div class="node-title">✓ B→B1: Fix This One</div>
+                    <div class="node-desc">Rewrite endpoint, move on</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ +30 min total time<br>
+                        🔒 This endpoint secure<br>
+                        ⚠️ Needs help on next auth task<br>
+                        📊 Dependency continues
+                    </div>
+                </div>
+                
+                <div class="node outcome-excellence" data-id="s2-end-bb" data-parent="s2-d2b" style="left: 1050px; top: 620px;">
+                    <div class="node-title">🏆 B→B2: Deep Learning</div>
+                    <div class="node-desc">Review other auth code, request security training</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ +2.5 hrs upfront investment<br>
+                        🔒 Can handle auth independently<br>
+                        📚 Updates team wiki with examples<br>
+                        🌟 Seen as security-conscious<br>
+                        🎯 Becomes auth resource for team
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCENARIO 3: Works On My Machine -->
+        <div class="scenario" id="scenario-2">
+            <div class="scenario-header">
+                <h2>💻 Scenario 3: The "Works on My Machine" Bug</h2>
+                <p><strong>Situation:</strong> Alex's data processing module works locally but fails in staging - hardcoded paths and missing dependencies</p>
+                <p><strong>Key Learning:</strong> Code is read/run in many environments - "works for me" is never enough</p>
+            </div>
+            
+            <div class="tree-container">
+                <svg class="connections" data-scenario="2"></svg>
+                
+                <div class="node node-start" data-id="s3-start" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 STARTING POINT</div>
+                    <div class="node-desc">Data processing module works on Alex's laptop. Commits without testing staging.</div>
+                </div>
+                
+                <div class="node node-decision" data-id="s3-d1" data-parent="s3-start" style="left: 700px; top: 140px;">
+                    <div class="node-title">Decision Point 1</div>
+                    <div class="node-desc">QA reports feature broken in staging</div>
+                </div>
+                
+                <div class="node" data-id="s3-d1-a" data-parent="s3-d1" style="left: 450px; top: 280px;">
+                    <div class="node-title">Action A: Deflect</div>
+                    <div class="node-desc">"Works for me. Must be environment problem"</div>
+                    <div class="path-label path-a">EGO PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • DevOps wastes 4hrs investigating<br>
+                        • No environment issues found<br>
+                        • Hardcoded paths discovered<br>
+                        • 2 days before customer demo
+                    </div>
+                </div>
+                
+                <div class="node" data-id="s3-d1-b" data-parent="s3-d1" style="left: 950px; top: 280px;">
+                    <div class="node-title">Action B: Own It</div>
+                    <div class="node-desc">"Let me test in staging. I might have missed something"</div>
+                    <div class="path-label path-b">GROWTH PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Discovers dependency issue in 20min<br>
+                        • Fixes it properly<br>
+                        • Learns Docker & dependencies<br>
+                        • Demo stays on schedule
+                    </div>
+                </div>
+                
+                <div class="node node-decision" data-id="s3-d2a" data-parent="s3-d1-a" style="left: 300px; top: 480px;">
+                    <div class="node-title">Decision Point 2A</div>
+                    <div class="node-desc">Issue found, demo in 2 days. Fix approach?</div>
+                </div>
+                
+                <div class="node outcome-damage" data-id="s3-end-aa" data-parent="s3-d2a" style="left: 100px; top: 620px;">
+                    <div class="node-title">⚠️ A→A: Hacky Quick Fix</div>
+                    <div class="node-desc">Rush fix that works just for demo</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 Demo succeeds initially<br>
+                        ⏱️ Same issue in prod 1 week later<br>
+                        💸 $5k support costs<br>
+                        😞 Customer onboarding delayed 1 day<br>
+                        📉 Pattern of shortcuts documented
+                    </div>
+                </div>
+                
+                <div class="node outcome-recovery" data-id="s3-end-ab" data-parent="s3-d2a" style="left: 400px; top: 620px;">
+                    <div class="node-title">🩹 A→B: Request Delay</div>
+                    <div class="node-desc">Ask to delay demo, fix properly with Docker</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 No incident costs<br>
+                        ⏱️ 2-week demo delay<br>
+                        📊 Revenue pushed but no prod issues<br>
+                        📚 Learns proper deployment<br>
+                        ✅ Partial credit for transparency
+                    </div>
+                </div>
+                
+                <div class="node node-decision" data-id="s3-d2b" data-parent="s3-d1-b" style="left: 950px; top: 480px;">
+                    <div class="node-title">Decision Point 2B</div>
+                    <div class="node-desc">Problem solved. How prevent recurrence?</div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s3-end-ba" data-parent="s3-d2b" style="left: 750px; top: 620px;">
+                    <div class="node-title">✓ B→B1: Reactive Only</div>
+                    <div class="node-desc">Fix this bug, continue current workflow</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ +1hr, demo on schedule<br>
+                        ⚠️ Makes 2 more env errors next month<br>
+                        📊 Pattern continues
+                    </div>
+                </div>
+                
+                <div class="node outcome-excellence" data-id="s3-end-bb" data-parent="s3-d2b" style="left: 1050px; top: 620px;">
+                    <div class="node-title">🏆 B→B2: Process Change</div>
+                    <div class="node-desc">Setup Docker properly, create staging checklist</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ +1.5hrs total, demo on schedule<br>
+                        ✅ Zero future env issues<br>
+                        📚 Shares Docker guide with new hires<br>
+                        🌟 "Learns from mistakes"<br>
+                        🎯 Deployment reliability expert
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCENARIO 4: Clever Code -->
+        <div class="scenario" id="scenario-3">
+            <div class="scenario-header">
+                <h2>🧠 Scenario 4: The Unreadable "Clever" Code</h2>
+                <p><strong>Situation:</strong> Alex writes data transformation with nested ternaries, single-letter vars, no comments - "real programmers write concise code"</p>
+                <p><strong>Key Learning:</strong> Code is read 10x more than written - clarity matters more than cleverness</p>
+            </div>
+            
+            <div class="tree-container">
+                <svg class="connections" data-scenario="3"></svg>
+                
+                <div class="node node-start" data-id="s4-start" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 STARTING POINT</div>
+                    <div class="node-desc">40-line function with nested ternaries, single-letter variables, zero comments. Works but unreadable.</div>
+                </div>
+                
+                <div class="node node-decision" data-id="s4-d1" data-parent="s4-start" style="left: 700px; top: 140px;">
+                    <div class="node-title">Decision Point 1</div>
+                    <div class="node-desc">Teammate needs to add feature to Alex's code, asks for explanation</div>
+                </div>
+                
+                <div class="node" data-id="s4-d1-a" data-parent="s4-d1" style="left: 450px; top: 280px;">
+                    <div class="node-title">Action A: Dismissive</div>
+                    <div class="node-desc">"Pretty self-explanatory if you understand the algorithm"</div>
+                    <div class="path-label path-a">EGO PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Teammate spends 3hrs reverse-engineering<br>
+                        • Introduces bug from misunderstanding<br>
+                        • Bug causes billing errors<br>
+                        • 50 customers affected
+                    </div>
+                </div>
+                
+                <div class="node" data-id="s4-d1-b" data-parent="s4-d1" style="left: 950px; top: 280px;">
+                    <div class="node-title">Action B: Professional</div>
+                    <div class="node-desc">"That code is hard to read. Let me refactor with better names and comments"</div>
+                    <div class="path-label path-b">GROWTH PATH</div>
+                    <div class="node-metrics">
+                        <strong>Consequences:</strong><br>
+                        • Alex spends 30min refactoring<br>
+                        • Code now maintainable<br>
+                        • Teammate adds feature in 45min<br>
+                        • Zero bugs introduced
+                    </div>
+                </div>
+                
+                <div class="node node-decision" data-id="s4-d2a" data-parent="s4-d1-a" style="left: 300px; top: 480px;">
+                    <div class="node-title">Decision Point 2A</div>
+                    <div class="node-desc">Billing errors found. How to address?</div>
+                </div>
+                
+                <div class="node outcome-damage" data-id="s4-end-aa" data-parent="s4-d2a" style="left: 100px; top: 620px;">
+                    <div class="node-title">🔥 A→A: Blame Teammate</div>
+                    <div class="node-desc">Point finger at person who modified code</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $3k billing corrections<br>
+                        ⏱️ 8hrs wasted debugging<br>
+                        😞 Team morale damaged<br>
+                        ⚠️ Formally reprimanded<br>
+                        🔒 All code under mandatory review<br>
+                        📉 Loss of autonomy
+                    </div>
+                </div>
+                
+                <div class="node outcome-recovery" data-id="s4-end-ab" data-parent="s4-d2a" style="left: 400px; top: 620px;">
+                    <div class="node-title">🩹 A→B: Apologize & Refactor</div>
+                    <div class="node-desc">Apologize, refactor all similar code for readability</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $3k corrections<br>
+                        ⏱️ 16hrs total (8 debug + 8 refactor)<br>
+                        ✅ Teammate appreciates effort<br>
+                        🤝 Relationship repaired<br>
+                        📈 Demonstrates capacity for growth
+                    </div>
+                </div>
+                
+                <div class="node node-decision" data-id="s4-d2b" data-parent="s4-d1-b" style="left: 950px; top: 480px;">
+                    <div class="node-title">Decision Point 2B</div>
+                    <div class="node-desc">Code readable now. Apply this learning how?</div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s4-end-ba" data-parent="s4-d2b" style="left: 750px; top: 620px;">
+                    <div class="node-title">✓ B→B1: One-Time Fix</div>
+                    <div class="node-desc">Fix this function, move forward</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ +30min, teammate productive<br>
+                        ⚠️ Writes 3 more "clever" functions<br>
+                        📊 Slow learning curve<br>
+                        🔁 Pattern repeats
+                    </div>
+                </div>
+                
+                <div class="node outcome-excellence" data-id="s4-end-bb" data-parent="s4-d2b" style="left: 1050px; top: 620px;">
+                    <div class="node-title">🏆 B→B2: Culture Change</div>
+                    <div class="node-desc">Study style guide, request readability in all PRs, adopt linter</div>
+                    <div class="node-metrics">
+                        <strong>Metrics:</strong><br>
+                        💰 $0 incident cost<br>
+                        ⏱️ +2hrs learning investment<br>
+                        ✅ All future code maintainable<br>
+                        🌟 "Clean code" reputation in 6 weeks<br>
+                        🎤 Presents at team lunch-and-learn<br>
+                        👑 Code quality champion
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="insights">
+            <h3>💡 Key Insights Across All Scenarios</h3>
+            <ul>
+                <li><strong>Compounding Effects:</strong> Each poor decision makes recovery exponentially harder and more expensive</li>
+                <li><strong>Ego is the Most Expensive Bug:</strong> Defensive reactions cost 10-100x more than admitting mistakes</li>
+                <li><strong>Asking for Help = Strength:</strong> 15-30 minutes of mentorship prevents days/weeks of crisis</li>
+                <li><strong>Recovery is Possible:</strong> Even after mistakes, accountability creates a path back to trust</li>
+                <li><strong>Surface Fixes vs. Systematic Learning:</strong> Excellence path requires going beyond the immediate problem</li>
+                <li><strong>Career Acceleration:</strong> B→B2 path consistently leads to recognition, autonomy, and leadership opportunities</li>
+                <li><strong>Team Trust is Fragile:</strong> One A→A path can undo months of good work</li>
+                <li><strong>Technical Debt Compounds:</strong> Quick wins create long-term losses in velocity and quality</li>
+            </ul>
+        </div>
     </div>
-  </div>
-</nav>
 
-<!-- ========================
-     Module Header
-======================== -->
-<main class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
-    <h1>TARDIS Engineering Onboarding: Decision Flowchart</h1>
-    <a href="tardis.html" class="btn" style="margin-top: 0; font-size: 0.9rem; padding: 0.5rem 1rem;">← Back</a>
-  </div>
-  <p>
-    Explore the branching decision tree that maps out the various pathways 
-    new engineers can take through each scenario. This flowchart shows how 
-    different choices lead to different outcomes and feedback.
-  </p>
-</main>
-
-<!-- ========================
-     Full-width Flowchart
-======================== -->
-<section style="width: 100%; padding: 0 1.5rem 3rem 1.5rem;">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <div style="
-      background:#f0f0f0; 
-      border:2px dashed #999; 
-      border-radius:8px; 
-      padding:6rem 2rem;
-      text-align:center;
-      color:#666;
-    ">
-      <p style="font-size:1.3rem; font-weight:500; margin-bottom:1rem;">Interactive Flowchart</p>
-      <p style="font-size:1rem;">Flowchart content will be embedded here</p>
-      <p style="font-size:0.9rem; margin-top:1rem; color:#888;">
-        HTML flowchart integration pending
-      </p>
-    </div>
-  </div>
-  
-  <p style="max-width: 1100px; margin: 1rem auto 0 auto; font-size: 0.9rem; color: #555; text-align: center;">
-    Click on decision points to explore different branches. Each path shows 
-    the consequences of different choices in the onboarding scenarios.
-  </p>
-</section>
-
-<!-- ========================
-     Footer
-======================== -->
-<footer class="footer">
-  <p>&copy; 2026 Amanda Miller</p>
-</footer>
-
+    <script>
+        let currentScenario = 0;
+        
+        function showScenario(index) {
+            // Hide all scenarios
+            document.querySelectorAll('.scenario').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            
+            // Show selected scenario
+            document.getElementById(`scenario-${index}`).classList.add('active');
+            document.querySelectorAll('.tab')[index].classList.add('active');
+            
+            currentScenario = index;
+            
+            // Redraw connections for this scenario
+            setTimeout(() => drawConnections(index), 100);
+        }
+        
+        function drawConnections(scenarioIndex) {
+            const svg = document.querySelector(`svg[data-scenario="${scenarioIndex}"]`);
+            if (!svg) return;
+            
+            svg.innerHTML = '';
+            
+            const scenario = document.getElementById(`scenario-${scenarioIndex}`);
+            const nodes = scenario.querySelectorAll('[data-parent]');
+            
+            nodes.forEach(node => {
+                const parentId = node.getAttribute('data-parent');
+                const parent = scenario.querySelector(`[data-id="${parentId}"]`);
+                
+                if (parent) {
+                    const parentRect = parent.getBoundingClientRect();
+                    const nodeRect = node.getBoundingClientRect();
+                    const containerRect = svg.getBoundingClientRect();
+                    
+                    // Calculate centers
+                    const x1 = parentRect.left + parentRect.width / 2 - containerRect.left;
+                    const y1 = parentRect.bottom - containerRect.top;
+                    const x2 = nodeRect.left + nodeRect.width / 2 - containerRect.left;
+                    const y2 = nodeRect.top - containerRect.top;
+                    
+                    // Determine color based on outcome type
+                    let color = '#667eea';
+                    if (node.classList.contains('outcome-excellence')) color = '#28a745';
+                    else if (node.classList.contains('outcome-adequate')) color = '#ffc107';
+                    else if (node.classList.contains('outcome-recovery')) color = '#17a2b8';
+                    else if (node.classList.contains('outcome-damage')) color = '#fd7e14';
+                    else if (node.classList.contains('outcome-career-ending')) color = '#dc3545';
+                    else if (node.classList.contains('node-decision')) color = '#4facfe';
+                    
+                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    const midY = (y1 + y2) / 2;
+                    const d = `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`;
+                    
+                    line.setAttribute('d', d);
+                    line.setAttribute('stroke', color);
+                    line.setAttribute('stroke-width', '3');
+                    line.setAttribute('fill', 'none');
+                    line.setAttribute('opacity', '0.7');
+                    
+                    svg.appendChild(line);
+                }
+            });
+        }
+        
+        window.addEventListener('load', () => {
+            setTimeout(() => drawConnections(0), 100);
+        });
+        
+        window.addEventListener('resize', () => {
+            drawConnections(currentScenario);
+        });
+    </script>
 </body>
 </html>
