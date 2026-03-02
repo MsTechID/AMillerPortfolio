@@ -239,7 +239,7 @@
         }
         
         .insights {
-            margin-top: 30px;
+            margin-top: 80px;
             padding: 20px;
             background: #e7f3ff;
             border-radius: 10px;
@@ -300,120 +300,219 @@
             <button class="tab" onclick="showScenario(3)">Scenario 4: Clever Code</button>
         </div>
         
-        <!-- SCENARIO 1: Untested Login Module -->
-        <div class="scenario active" id="scenario-0">
+        <!-- SCENARIO 1: Unit Testing Protocol -->
+        <div id="scenario-0" class="scenario active">
             <div class="scenario-header">
                 <h2>🔐 Scenario 1: The Untested Login Module</h2>
-                <p><strong>Situation:</strong> Alex writes a login module, manually tests it once, commits without automated tests</p>
-                <p><strong>Key Learning:</strong> Testing isn't optional - untested code is unfinished code</p>
+                <p><strong>Situation:</strong> You finished a login module for a project sprint with 2 days left. You manually tested it once. Your project lead asks if your module is ready. You want to do more unit tests, but you don't know how.</p>
+                <p><strong>Key Learning:</strong> Testing best practices, asking for help, owning mistakes, documentation habits</p>
             </div>
             
-            <div class="tree-container">
+            <div class="tree-container" style="height: 1250px;">
                 <svg class="connections" data-scenario="0"></svg>
                 
                 <!-- START -->
                 <div class="node node-start" data-id="s1-start" style="left: 700px; top: 20px;">
                     <div class="node-title">🎯 STARTING POINT</div>
-                    <div class="node-desc">Login module works in manual test. Senior dev reviews PR - no tests found.</div>
+                    <div class="node-desc">Login module complete, manually tested once. 2 days left in sprint. Project lead asks: "Is your module ready?" You want to do unit tests but don't know how.</div>
                 </div>
                 
-                <!-- DECISION 1 -->
-                <div class="node node-decision" data-id="s1-d1" data-parent="s1-start" style="left: 700px; top: 140px;">
-                    <div class="node-title">Decision Point 1</div>
-                    <div class="node-desc">Senior dev: "Where are the tests?"</div>
+                <!-- QUESTION 1 -->
+                <div class="node node-decision" data-id="s1-q1" data-parent="s1-start" style="left: 700px; top: 140px;">
+                    <div class="node-title">Question 1</div>
+                    <div class="node-desc">What's your next move?</div>
                 </div>
                 
-                <div class="node" data-id="s1-d1-a" data-parent="s1-d1" style="left: 450px; top: 280px;">
-                    <div class="node-title">Action A: Defensive</div>
-                    <div class="node-desc">"The code works fine, I tested it myself"</div>
-                    <div class="path-label path-a">EGO PATH</div>
+                <div class="node" data-id="s1-q1-a" data-parent="s1-q1" style="left: 350px; top: 270px;">
+                    <div class="node-title">Action A: Skip Tests</div>
+                    <div class="node-desc">"Yep, it's all done! (I'll test it later...)"</div>
+                    <div class="path-label path-a">SHORTCUT PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Approved reluctantly<br>
-                        • Goes to production<br>
-                        • Special characters crash system<br>
-                        • 200 customers affected, 3hr outage
+                        <strong>Risk:</strong><br>
+                        • What if you forget to test?<br>
+                        • What if there's a major flaw?<br>
+                        • Project lead reviews for demo
                     </div>
                 </div>
                 
-                <div class="node" data-id="s1-d1-b" data-parent="s1-d1" style="left: 950px; top: 280px;">
-                    <div class="node-title">Action B: Humble</div>
-                    <div class="node-desc">"You're right. Can you show me the testing framework?"</div>
-                    <div class="path-label path-b">GROWTH PATH</div>
+                <div class="node" data-id="s1-q1-b" data-parent="s1-q1" style="left: 1050px; top: 270px;">
+                    <div class="node-title">Action B: Be Honest</div>
+                    <div class="node-desc">"I need to finish some tests first"</div>
+                    <div class="path-label path-b">HONEST PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Senior dev pairs for 30 min<br>
-                        • Alex writes 8 unit tests<br>
-                        • Discovers 2 bugs before production<br>
-                        • Zero production issues
+                        <strong>Result:</strong><br>
+                        • Always good to complete tests<br>
+                        • Keeps technical debt low<br>
+                        • Project lead waits but understands
                     </div>
                 </div>
                 
-                <!-- DECISION 2A (from defensive) -->
-                <div class="node node-decision" data-id="s1-d2a" data-parent="s1-d1-a" style="left: 300px; top: 480px;">
-                    <div class="node-title">Decision Point 2A</div>
-                    <div class="node-desc">Production incident occurred. How to respond?</div>
+                <!-- QUESTION 2A (from path A) -->
+                <div class="node node-decision" data-id="s1-q2a" data-parent="s1-q1-a" style="left: 150px; top: 420px;">
+                    <div class="node-title">Question 2A</div>
+                    <div class="node-desc">You got busy and didn't do tests. Project lead notices: "Where are the tests?"</div>
                 </div>
                 
-                <div class="node outcome-career-ending" data-id="s1-end-aa" data-parent="s1-d2a" style="left: 100px; top: 620px;">
-                    <div class="node-title">🔥 A→A: Deflect Blame</div>
-                    <div class="node-desc">Blame senior dev or requirements</div>
+                <div class="node outcome-damage" data-id="s1-q2a-a" data-parent="s1-q2a" style="left: 30px; top: 570px;">
+                    <div class="node-title">🔥 A→A: Deflect</div>
+                    <div class="node-desc">"The code works fine. I tested it myself"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $15k emergency fix<br>
-                        ⏱️ 2-day deadline slip<br>
-                        😞 47% satisfaction drop<br>
-                        🚫 Performance improvement plan<br>
-                        📉 Assigned only low-priority tasks
+                        <strong>Approved reluctantly:</strong><br>
+                        💥 Module goes to production<br>
+                        💥 Special chars crash system<br>
+                        💥 3hr outage, 200 customers<br>
+                        💰 $15,000 cost
                     </div>
                 </div>
                 
-                <div class="node outcome-recovery" data-id="s1-end-ab" data-parent="s1-d2a" style="left: 400px; top: 620px;">
+                <div class="node outcome-recovery" data-id="s1-q2a-b" data-parent="s1-q2a" style="left: 270px; top: 570px;">
                     <div class="node-title">🩹 A→B: Own It</div>
-                    <div class="node-desc">Apologize, ask to learn TDD practices</div>
+                    <div class="node-desc">"You're right. Can you show me how to use the testing framework?"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 Still $15k + 2-day slip<br>
-                        ✅ Senior dev mentors Alex<br>
-                        📈 Regains trust in 4 weeks<br>
-                        🌱 "Shows growth potential"<br>
-                        ✨ Assigned to next important feature
+                        <strong>Good choice:</strong><br>
+                        ✅ Senior dev mentors you<br>
+                        ✅ Discover 2 bugs<br>
+                        ⏱️ Demo: 2-day delay<br>
+                        📊 Knowledge: Moderate
                     </div>
                 </div>
                 
-                <!-- DECISION 2B (from humble) -->
-                <div class="node node-decision" data-id="s1-d2b" data-parent="s1-d1-b" style="left: 950px; top: 480px;">
-                    <div class="node-title">Decision Point 2B</div>
-                    <div class="node-desc">Tests caught bugs. How to handle this learning?</div>
+                <!-- QUESTION 3A (from A→A disaster) -->
+                <div class="node node-decision" data-id="s1-q3a" data-parent="s1-q2a-a" style="left: 150px; top: 760px;">
+                    <div class="node-title">Question 3A</div>
+                    <div class="node-desc">Production failure. $15k cost, 200 angry customers. Team is upset. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s1-end-ba" data-parent="s1-d2b" style="left: 750px; top: 620px;">
-                    <div class="node-title">✓ B→B1: Fix & Move On</div>
-                    <div class="node-desc">Fix bugs, don't document learnings</div>
+                <div class="node outcome-career-ending" data-id="s1-end-aaa" data-parent="s1-q3a" style="left: 30px; top: 940px;">
+                    <div class="node-title">💀 A→A→A: Blame Others</div>
+                    <div class="node-desc">"The project manager approved it"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ On schedule<br>
-                        😊 No customer impact<br>
-                        ⚠️ Repeats edge case errors in next 2 modules<br>
-                        📊 Pattern not broken
+                        Demo: 2-day delay<br>
+                        Knowledge: Low<br>
+                        Team confidence: NEGATIVE<br>
+                        💰 $15,000 cost<br>
+                        ⏱️ +48 hours<br>
+                        <strong>Performance improvement plan</strong><br>
+                        <strong>Low-priority tasks only</strong>
                     </div>
                 </div>
                 
-                <div class="node outcome-excellence" data-id="s1-end-bb" data-parent="s1-d2b" style="left: 1050px; top: 620px;">
-                    <div class="node-title">🏆 B→B2: Systematic Growth</div>
-                    <div class="node-desc">Document learnings, share in standup, create checklist</div>
+                <div class="node outcome-recovery" data-id="s1-end-aab" data-parent="s1-q3a" style="left: 270px; top: 940px;">
+                    <div class="node-title">🩹 A→A→B: Take Ownership</div>
+                    <div class="node-desc">"I'm sorry, I should have asked for help. Can someone show me testing protocol?"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ On schedule<br>
-                        😊 Zero issues<br>
-                        🎯 Creates reusable auth template<br>
-                        🌟 "Multiplier" in quarterly review<br>
-                        👑 Go-to auth expert in 2 months
+                        Demo: 2-day delay<br>
+                        Knowledge: Moderate<br>
+                        💰 $15,000 cost<br>
+                        ⏱️ +48 hours<br>
+                        ✅ Senior dev mentors<br>
+                        ✅ Team forgives in 4 weeks<br>
+                        📈 "Shows growth potential"
+                    </div>
+                </div>
+                
+                <!-- QUESTION 2B (from path B) -->
+                <div class="node node-decision" data-id="s1-q2b" data-parent="s1-q1-b" style="left: 1050px; top: 420px;">
+                    <div class="node-title">Question 2B</div>
+                    <div class="node-desc">You tried testing framework but don't know how. 2 days until demo. Asking for help seems embarrassing.</div>
+                </div>
+                
+                <div class="node outcome-damage" data-id="s1-q2b-a" data-parent="s1-q2b" style="left: 800px; top: 570px;">
+                    <div class="node-title">⚠️ B→A: Figure It Out</div>
+                    <div class="node-desc">"It's better if I figure it out myself"</div>
+                    <div class="node-metrics">
+                        ⏱️ Took 1.5 days to learn<br>
+                        ✅ Found 2 bugs<br>
+                        Demo: 1-day delay<br>
+                        Customer conf: Moderate<br>
+                        Team conf: Low<br>
+                        ⏱️ +14 hours<br>
+                        📊 Knowledge: Moderate
+                    </div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s1-q2b-b" data-parent="s1-q2b" style="left: 1200px; top: 570px;">
+                    <div class="node-title">✓ B→B: Ask for Help</div>
+                    <div class="node-desc">"I better ask for help so I make the deadline"</div>
+                    <div class="path-label path-b">SMART PATH</div>
+                    <div class="node-metrics">
+                        ✅ Senior dev pairs (30 min)<br>
+                        ✅ Found 2 critical bugs<br>
+                        Demo: On time<br>
+                        Customer conf: High<br>
+                        Team conf: Moderate<br>
+                        ⏱️ +0.5 hours<br>
+                        📊 Knowledge: Moderate
+                    </div>
+                </div>
+                
+                <!-- QUESTION 3BA (from B→A struggle path) -->
+                <div class="node node-decision" data-id="s1-q3ba" data-parent="s1-q2b-a" style="left: 800px; top: 760px;">
+                    <div class="node-title">Question 3BA</div>
+                    <div class="node-desc">You struggled through and caught bugs. What's next?</div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s1-end-baa" data-parent="s1-q3ba" style="left: 650px; top: 940px;">
+                    <div class="node-title">⚠️ B→A→A: Move On</div>
+                    <div class="node-desc">"Fix the bugs and move on"</div>
+                    <div class="node-metrics">
+                        Demo: 1-day delay<br>
+                        Knowledge: Moderate<br>
+                        ⏱️ +14 hours<br>
+                        ⚠️ Same mistakes next 2 modules<br>
+                        ⚠️ Forgot protocol without docs
+                    </div>
+                </div>
+                
+                <div class="node outcome-excellence" data-id="s1-end-bab" data-parent="s1-q3ba" style="left: 950px; top: 940px;">
+                    <div class="node-title">🏆 B→A→B: Document</div>
+                    <div class="node-desc">"Document my learning, make a checklist for next time"</div>
+                    <div class="node-metrics">
+                        Demo: 1-day delay<br>
+                        Knowledge: HIGH<br>
+                        ⏱️ +14 hrs initial<br>
+                        ✅ Shared in standup<br>
+                        ✅ Created reusable template<br>
+                        🌟 Auth expert in 2 months
+                    </div>
+                </div>
+                
+                <!-- QUESTION 3BB (from B→B smart path) -->
+                <div class="node node-decision" data-id="s1-q3bb" data-parent="s1-q2b-b" style="left: 1200px; top: 760px;">
+                    <div class="node-title">Question 3BB</div>
+                    <div class="node-desc">Senior dev helped, caught 2 bugs. Feeling confident. What's next?</div>
+                </div>
+                
+                <div class="node outcome-adequate" data-id="s1-end-bba" data-parent="s1-q3bb" style="left: 1050px; top: 940px;">
+                    <div class="node-title">✓ B→B→A: Continue</div>
+                    <div class="node-desc">"Fix the bugs and move on"</div>
+                    <div class="node-metrics">
+                        Demo: On time<br>
+                        Knowledge: Moderate<br>
+                        ⏱️ +0.5 hours<br>
+                        ⚠️ Similar mistakes next 2 modules<br>
+                        ⚠️ Forgot details without docs
+                    </div>
+                </div>
+                
+                <div class="node outcome-excellence" data-id="s1-end-bbb" data-parent="s1-q3bb" style="left: 1350px; top: 940px;">
+                    <div class="node-title">🏆 B→B→B: Systematic</div>
+                    <div class="node-desc">"Document my learning, make a checklist for next time"</div>
+                    <div class="path-label path-excellence">EXCELLENCE</div>
+                    <div class="node-metrics">
+                        Demo: On time<br>
+                        Knowledge: HIGH<br>
+                        Customer conf: High<br>
+                        Team conf: High<br>
+                        ⏱️ +3 hrs (with docs)<br>
+                        ✅ Shared in standup<br>
+                        ✅ Created reusable template<br>
+                        🌟 Auth expert in 2 months<br>
+                        👑 Go-to testing person
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         
         <!-- SCENARIO 2: Copy-Paste Authentication -->
