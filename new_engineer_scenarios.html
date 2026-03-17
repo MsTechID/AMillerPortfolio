@@ -32,22 +32,6 @@
             font-size: 18px;
         }
         
-        .back-button {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background: #0f3d3a;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        
-        .back-button:hover {
-            background: #000;
-        }
-        
         .scenario-tabs {
             display: flex;
             gap: 10px;
@@ -103,7 +87,7 @@
         .tree-container {
             position: relative;
             width: 100%;
-            height: 900px;
+            height: 1400px;
             margin-bottom: 30px;
         }
         
@@ -239,7 +223,7 @@
         }
         
         .insights {
-            margin-top: 80px;
+            margin-top: 30px;
             padding: 20px;
             background: #e7f3ff;
             border-radius: 10px;
@@ -263,7 +247,6 @@
 </head>
 <body>
     <div class="container">
-        <a href="tardis.html" class="back-button">← Back to TARDIS Project</a>
         <h1>New Software Engineer: Decision Cascades</h1>
         <p class="subtitle">How choices at each decision point compound to shape career trajectories</p>
         
@@ -300,329 +283,380 @@
             <button class="tab" onclick="showScenario(3)">Scenario 4: Clever Code</button>
         </div>
         
-        <!-- SCENARIO 1: Unit Testing Protocol -->
-        <div id="scenario-0" class="scenario active">
+        <!-- SCENARIO 1: Untested Login Module -->
+        <div class="scenario active" id="scenario-0">
             <div class="scenario-header">
                 <h2>🔐 Scenario 1: The Untested Login Module</h2>
-                <p><strong>Situation:</strong> You finished a login module for a project sprint with 2 days left. You manually tested it once. Your project lead asks if your module is ready. You want to do more unit tests, but you don't know how.</p>
-                <p><strong>Key Learning:</strong> Testing best practices, asking for help, owning mistakes, documentation habits</p>
+                <p><strong>Situation:</strong> You have been working on a login module for a project sprint that has 2 days left. You just finished it, but you only manually tested it once.</p>
+                <p><strong>Key Learning:</strong> Testing isn't optional, asking for help is strength, and documenting your learning creates lasting value</p>
             </div>
             
-            <div class="tree-container" style="height: 1250px;">
+            <div class="tree-container">
                 <svg class="connections" data-scenario="0"></svg>
                 
-                <!-- START -->
-                <div class="node node-start" data-id="s1-start" style="left: 700px; top: 20px;">
-                    <div class="node-title">🎯 STARTING POINT</div>
-                    <div class="node-desc">Login module complete, manually tested once. 2 days left in sprint. Project lead asks: "Is your module ready?" You want to do unit tests but don't know how.</div>
+                <!-- Q1: START -->
+                <div class="node node-start" data-id="s1-q1" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 Q1: STARTING POINT</div>
+                    <div class="node-desc">You have been working on a login module for a project sprint that has 2 days left. You just finished it, but you only manually tested it once. Your project lead is asking you if your module is ready. You want to do more unit tests, but you do not know how. What's your next move?</div>
+                    <div class="node-metrics">
+                        <strong>Initial State:</strong><br>
+                        Demo: Unknown | Knowledge: Unknown<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: +0 hrs | Tech Debt: Unknown
+                    </div>
                 </div>
                 
-                <!-- QUESTION 1 -->
-                <div class="node node-decision" data-id="s1-q1" data-parent="s1-start" style="left: 700px; top: 140px;">
-                    <div class="node-title">Question 1</div>
-                    <div class="node-desc">What's your next move?</div>
-                </div>
-                
-                <div class="node" data-id="s1-q1-a" data-parent="s1-q1" style="left: 350px; top: 270px;">
-                    <div class="node-title">Action A: Skip Tests</div>
+                <!-- Q1 Choice A: "Yep, it's all done!" -->
+                <div class="node" data-id="s1-q1-a" data-parent="s1-q1" style="left: 350px; top: 240px;">
+                    <div class="node-title">Choice A: Premature Completion</div>
                     <div class="node-desc">"Yep, it's all done! (I'll test it later...)"</div>
-                    <div class="path-label path-a">SHORTCUT PATH</div>
+                    <div class="path-label path-a">RISKY PATH</div>
                     <div class="node-metrics">
-                        <strong>Risk:</strong><br>
-                        • What if you forget to test?<br>
-                        • What if there's a major flaw?<br>
-                        • Project lead reviews for demo
+                        <strong>Consequence:</strong><br>
+                        Hmm... Are you sure that was the best idea? What if you don't remember to do the tests? What if there's a major flaw? Your project lead is glad to get your module, and reviews it to get ready for the demo.
                     </div>
                 </div>
                 
-                <div class="node" data-id="s1-q1-b" data-parent="s1-q1" style="left: 1050px; top: 270px;">
-                    <div class="node-title">Action B: Be Honest</div>
+                <!-- Q1 Choice B: "I need to finish some tests first" -->
+                <div class="node" data-id="s1-q1-b" data-parent="s1-q1" style="left: 1050px; top: 240px;">
+                    <div class="node-title">Choice B: Honest Assessment</div>
                     <div class="node-desc">"I need to finish some tests first"</div>
-                    <div class="path-label path-b">HONEST PATH</div>
+                    <div class="path-label path-b">GROWTH PATH</div>
                     <div class="node-metrics">
-                        <strong>Result:</strong><br>
-                        • Always good to complete tests<br>
-                        • Keeps technical debt low<br>
-                        • Project lead waits but understands
+                        <strong>Consequence:</strong><br>
+                        Nice work! It is always a good idea to get all your tests done before you hand over your work. This keeps the technical debt low. Your project lead is still waiting for the module, but she understands the importance of doing proper testing.<br><br>
+                        Demo: Unknown | Knowledge: Low<br>
+                        Added Time: +0 hrs
                     </div>
                 </div>
                 
-                <!-- QUESTION 2A (from path A) -->
-                <div class="node node-decision" data-id="s1-q2a" data-parent="s1-q1-a" style="left: 150px; top: 420px;">
-                    <div class="node-title">Question 2A</div>
-                    <div class="node-desc">You got busy and didn't do tests. Project lead notices: "Where are the tests?"</div>
+                <!-- Q2A: From "Yep it's all done" - Project lead notices no tests -->
+                <div class="node node-decision" data-id="s1-q2a" data-parent="s1-q1-a" style="left: 350px; top: 460px;">
+                    <div class="node-title">Q2A: Tests Missing</div>
+                    <div class="node-desc">You got busy and didn't do the tests. Your project lead notices that you don't have any tests written into the code. She says, "Where are the tests?" What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-damage" data-id="s1-q2a-a" data-parent="s1-q2a" style="left: 30px; top: 570px;">
-                    <div class="node-title">🔥 A→A: Deflect</div>
+                <!-- Q3A: From "The code works fine" -->
+                <div class="node node-decision" data-id="s1-q3a" data-parent="s1-q2a" style="left: 100px; top: 660px;">
+                    <div class="node-title">Q3A: Defensive Response</div>
                     <div class="node-desc">"The code works fine. I tested it myself"</div>
+                    <div class="path-label path-a">EGO PATH</div>
                     <div class="node-metrics">
-                        <strong>Approved reluctantly:</strong><br>
-                        💥 Module goes to production<br>
-                        💥 Special chars crash system<br>
-                        💥 3hr outage, 200 customers<br>
-                        💰 $15,000 cost
+                        <strong>Consequence:</strong><br>
+                        Your project manager reluctantly approves of the code to move the project forward. Your module goes into the final product. Unfortunately... someone used special characters in your login module and crashed the system. This caused a 3 hour outage with 200 customers affected.<br><br>
+                        Demo: 2-day delay | Knowledge: Low<br>
+                        Added Time: +48 hrs<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Low<br>
+                        Tech Debt: $15,000
                     </div>
                 </div>
                 
-                <div class="node outcome-recovery" data-id="s1-q2a-b" data-parent="s1-q2a" style="left: 270px; top: 570px;">
-                    <div class="node-title">🩹 A→B: Own It</div>
+                <!-- Q3B: From "Can you show me how to use the testing framework?" -->
+                <div class="node outcome-recovery" data-id="s1-q3b" data-parent="s1-q2a" style="left: 500px; top: 660px;">
+                    <div class="node-title">Q3B: Ask for Help</div>
                     <div class="node-desc">"You're right. Can you show me how to use the testing framework?"</div>
+                    <div class="path-label path-b">RECOVERY PATH</div>
                     <div class="node-metrics">
-                        <strong>Good choice:</strong><br>
-                        ✅ Senior dev mentors you<br>
-                        ✅ Discover 2 bugs<br>
-                        ⏱️ Demo: 2-day delay<br>
-                        📊 Knowledge: Moderate
+                        <strong>Consequence:</strong><br>
+                        Great Job! It's hard to ask for help, but getting the job done right is the most important. A senior developer shows you how to access and use the testing framework. You discover two bugs that are caught before production.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Added Time: +0.5 hrs<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate
                     </div>
                 </div>
                 
-                <!-- QUESTION 3A (from A→A disaster) -->
-                <div class="node node-decision" data-id="s1-q3a" data-parent="s1-q2a-a" style="left: 150px; top: 760px;">
-                    <div class="node-title">Question 3A</div>
-                    <div class="node-desc">Production failure. $15k cost, 200 angry customers. Team is upset. What's your next move?</div>
+                <!-- Q2B: From "I need to finish tests" - Don't know testing framework -->
+                <div class="node node-decision" data-id="s1-q2b" data-parent="s1-q1-b" style="left: 1050px; top: 460px;">
+                    <div class="node-title">Q2B: Testing Framework Unknown</div>
+                    <div class="node-desc">You tried to use the testing framework, but you don't know how. You only have two days left before the demo goes live. It would be embarrassing to ask for help figuring out how to run the tests, but you're almost out of time. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-career-ending" data-id="s1-end-aaa" data-parent="s1-q3a" style="left: 30px; top: 940px;">
-                    <div class="node-title">💀 A→A→A: Blame Others</div>
-                    <div class="node-desc">"The project manager approved it"</div>
-                    <div class="node-metrics">
-                        Demo: 2-day delay<br>
-                        Knowledge: Low<br>
-                        Team confidence: NEGATIVE<br>
-                        💰 $15,000 cost<br>
-                        ⏱️ +48 hours<br>
-                        <strong>Performance improvement plan</strong><br>
-                        <strong>Low-priority tasks only</strong>
-                    </div>
-                </div>
-                
-                <div class="node outcome-recovery" data-id="s1-end-aab" data-parent="s1-q3a" style="left: 270px; top: 940px;">
-                    <div class="node-title">🩹 A→A→B: Take Ownership</div>
-                    <div class="node-desc">"I'm sorry, I should have asked for help. Can someone show me testing protocol?"</div>
-                    <div class="node-metrics">
-                        Demo: 2-day delay<br>
-                        Knowledge: Moderate<br>
-                        💰 $15,000 cost<br>
-                        ⏱️ +48 hours<br>
-                        ✅ Senior dev mentors<br>
-                        ✅ Team forgives in 4 weeks<br>
-                        📈 "Shows growth potential"
-                    </div>
-                </div>
-                
-                <!-- QUESTION 2B (from path B) -->
-                <div class="node node-decision" data-id="s1-q2b" data-parent="s1-q1-b" style="left: 1050px; top: 420px;">
-                    <div class="node-title">Question 2B</div>
-                    <div class="node-desc">You tried testing framework but don't know how. 2 days until demo. Asking for help seems embarrassing.</div>
-                </div>
-                
-                <div class="node outcome-damage" data-id="s1-q2b-a" data-parent="s1-q2b" style="left: 800px; top: 570px;">
-                    <div class="node-title">⚠️ B→A: Figure It Out</div>
+                <!-- Q3C: From "It's better if I figure it out myself" -->
+                <div class="node outcome-adequate" data-id="s1-q3c" data-parent="s1-q2b" style="left: 850px; top: 660px;">
+                    <div class="node-title">Q3C: Figure It Out Alone</div>
                     <div class="node-desc">"It's better if I figure it out myself"</div>
+                    <div class="path-label path-a">DELAYED PATH</div>
                     <div class="node-metrics">
-                        ⏱️ Took 1.5 days to learn<br>
-                        ✅ Found 2 bugs<br>
-                        Demo: 1-day delay<br>
-                        Customer conf: Moderate<br>
-                        Team conf: Low<br>
-                        ⏱️ +14 hours<br>
-                        📊 Knowledge: Moderate
+                        <strong>Consequence:</strong><br>
+                        Well... While figuring it out yourself may help you learn, your team is depending on you to get it done. You took a day and a half to figure out the testing framework and debug your module. This caused your module, and the project demo, to be delayed.<br><br>
+                        Demo: 1-day Delay | Knowledge: Moderate<br>
+                        Added Time: +14 hrs<br>
+                        Customer Confidence: Moderate<br>
+                        Team Confidence: Low
                     </div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s1-q2b-b" data-parent="s1-q2b" style="left: 1200px; top: 570px;">
-                    <div class="node-title">✓ B→B: Ask for Help</div>
+                <!-- Q3D: From "I better ask for help so I make the deadline" -->
+                <div class="node outcome-recovery" data-id="s1-q3d" data-parent="s1-q2b" style="left: 1250px; top: 660px;">
+                    <div class="node-title">Q3D: Ask for Help</div>
                     <div class="node-desc">"I better ask for help so I make the deadline"</div>
                     <div class="path-label path-b">SMART PATH</div>
                     <div class="node-metrics">
-                        ✅ Senior dev pairs (30 min)<br>
-                        ✅ Found 2 critical bugs<br>
-                        Demo: On time<br>
-                        Customer conf: High<br>
-                        Team conf: Moderate<br>
-                        ⏱️ +0.5 hours<br>
-                        📊 Knowledge: Moderate
+                        <strong>Consequence:</strong><br>
+                        Smart thinking! There's no shame in asking for help when you need it, especially when it helps the team meet their goals. You find a senior developer to show you the testing framework, and they pair with you for 30 minutes. You learned a lot and feel confident about testing now.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Added Time: +0.5 hrs<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate
                     </div>
                 </div>
                 
-                <!-- QUESTION 3BA (from B→A struggle path) -->
-                <div class="node node-decision" data-id="s1-q3ba" data-parent="s1-q2b-a" style="left: 800px; top: 760px;">
-                    <div class="node-title">Question 3BA</div>
-                    <div class="node-desc">You struggled through and caught bugs. What's next?</div>
+                <!-- Post-Q3A: After production incident -->
+                <div class="node node-decision" data-id="s1-post-q3a" data-parent="s1-q3a" style="left: 100px; top: 900px;">
+                    <div class="node-title">Crisis Point</div>
+                    <div class="node-desc">You made a mistake, and cost the company $15,000 and created 200 dissatisfied customers. On top of that, your team is upset that your failure to follow testing protocol made the company look bad. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s1-end-baa" data-parent="s1-q3ba" style="left: 650px; top: 940px;">
-                    <div class="node-title">⚠️ B→A→A: Move On</div>
+                <!-- End: Blame project manager -->
+                <div class="node outcome-career-ending" data-id="s1-end-blame" data-parent="s1-post-q3a" style="left: -50px; top: 1100px;">
+                    <div class="node-title">🔥 Deflect Blame</div>
+                    <div class="node-desc">"The project manager is the one who approved it"</div>
+                    <div class="node-metrics">
+                        <strong>Outcome:</strong><br>
+                        Your project manager and team are disappointed in you. You made them look bad, and cost the customer a lot of money. You are put on a performance improvement plan. From now on, you are only assigned low-priority tasks.<br><br>
+                        Demo: 2-day delay | Knowledge: Low<br>
+                        Added Time: +48 hrs<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Negative<br>
+                        Tech Debt: $15,000
+                    </div>
+                </div>
+                
+                <!-- End: Apologize and own it -->
+                <div class="node outcome-recovery" data-id="s1-end-own" data-parent="s1-post-q3a" style="left: 250px; top: 1100px;">
+                    <div class="node-title">🩹 Own Your Mistake</div>
+                    <div class="node-desc">"I'm sorry, I should have asked for help. Can someone show me the testing protocol?"</div>
+                    <div class="node-metrics">
+                        <strong>Outcome:</strong><br>
+                        That's Right! You made a mistake, so apologizing and owning it is the best thing to do. A senior developer mentors you in testing practices. In 4 weeks, your team has forgiven you. In your first performance review it says "Shows growth potential".<br><br>
+                        Demo: 2-day delay | Knowledge: Moderate<br>
+                        Added Time: +48 hrs<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Moderate<br>
+                        Tech Debt: $15,000
+                    </div>
+                </div>
+                
+                <!-- Post-Q3B: After catching bugs via help -->
+                <div class="node node-decision" data-id="s1-post-q3b" data-parent="s1-q3b" style="left: 500px; top: 900px;">
+                    <div class="node-title">Learning Opportunity</div>
+                    <div class="node-desc">Good thing your project lead called you out on your missing tests, or that could have cost the team a lot. You learned enough about the testing protocol to catch those bugs. What's your next move?</div>
+                </div>
+                
+                <!-- End: Fix bugs and move on (from Q3B) -->
+                <div class="node outcome-adequate" data-id="s1-end-q3b-moveon" data-parent="s1-post-q3b" style="left: 350px; top: 1100px;">
+                    <div class="node-title">✓ Fix & Move On</div>
                     <div class="node-desc">"Fix the bugs and move on"</div>
                     <div class="node-metrics">
-                        Demo: 1-day delay<br>
-                        Knowledge: Moderate<br>
-                        ⏱️ +14 hours<br>
-                        ⚠️ Same mistakes next 2 modules<br>
-                        ⚠️ Forgot protocol without docs
+                        <strong>Outcome:</strong><br>
+                        Nice job catching those bugs. There were no problems, the customer was happy, and you went on just fine. Until... On your next two modules, you made some more edge case errors. Without documenting your learning, you forgot how to run the tests.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Added Time: +0.5 hrs<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate
                     </div>
                 </div>
                 
-                <div class="node outcome-excellence" data-id="s1-end-bab" data-parent="s1-q3ba" style="left: 950px; top: 940px;">
-                    <div class="node-title">🏆 B→A→B: Document</div>
+                <!-- End: Document learning (from Q3B) -->
+                <div class="node outcome-excellence" data-id="s1-end-q3b-doc" data-parent="s1-post-q3b" style="left: 650px; top: 1100px;">
+                    <div class="node-title">🏆 Document Learning</div>
                     <div class="node-desc">"Document my learning, make a checklist for next time"</div>
                     <div class="node-metrics">
-                        Demo: 1-day delay<br>
-                        Knowledge: HIGH<br>
-                        ⏱️ +14 hrs initial<br>
-                        ✅ Shared in standup<br>
-                        ✅ Created reusable template<br>
-                        🌟 Auth expert in 2 months
+                        <strong>Outcome:</strong><br>
+                        Great Idea! Documenting your learning is a great way to avoid the same mistakes in the future. You shared it in standup, impressing seniors and juniors alike. You use your new knowledge to create a reusable authorization template. Two months in, and you are the go-to auth expert.<br><br>
+                        Demo: On Time | Knowledge: High<br>
+                        Added Time: +3 hrs<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: High
                     </div>
                 </div>
                 
-                <!-- QUESTION 3BB (from B→B smart path) -->
-                <div class="node node-decision" data-id="s1-q3bb" data-parent="s1-q2b-b" style="left: 1200px; top: 760px;">
-                    <div class="node-title">Question 3BB</div>
-                    <div class="node-desc">Senior dev helped, caught 2 bugs. Feeling confident. What's next?</div>
+                <!-- Post-Q3C: After figuring it out alone (delayed) -->
+                <div class="node node-decision" data-id="s1-post-q3c" data-parent="s1-q3c" style="left: 850px; top: 900px;">
+                    <div class="node-title">Learning Opportunity</div>
+                    <div class="node-desc">At least all your struggle through the testing framework helped you find two major bugs in your module. You learned enough about the testing protocol to catch those bugs. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s1-end-bba" data-parent="s1-q3bb" style="left: 1050px; top: 940px;">
-                    <div class="node-title">✓ B→B→A: Continue</div>
+                <!-- End: Fix bugs and move on (from Q3C) -->
+                <div class="node outcome-adequate" data-id="s1-end-q3c-moveon" data-parent="s1-post-q3c" style="left: 700px; top: 1100px;">
+                    <div class="node-title">✓ Fix & Move On</div>
                     <div class="node-desc">"Fix the bugs and move on"</div>
                     <div class="node-metrics">
-                        Demo: On time<br>
-                        Knowledge: Moderate<br>
-                        ⏱️ +0.5 hours<br>
-                        ⚠️ Similar mistakes next 2 modules<br>
-                        ⚠️ Forgot details without docs
+                        <strong>Outcome:</strong><br>
+                        Nice job catching those bugs. There were no problems, the customer was happy, and you went on just fine. Until... On your next two modules, you made some more edge case errors. Without documenting your learning, you forgot how to run the tests.<br><br>
+                        Demo: 1-day Delay | Knowledge: Moderate<br>
+                        Added Time: +14 hrs<br>
+                        Customer Confidence: Moderate<br>
+                        Team Confidence: Moderate
                     </div>
                 </div>
                 
-                <div class="node outcome-excellence" data-id="s1-end-bbb" data-parent="s1-q3bb" style="left: 1350px; top: 940px;">
-                    <div class="node-title">🏆 B→B→B: Systematic</div>
+                <!-- End: Document learning (from Q3C) -->
+                <div class="node outcome-excellence" data-id="s1-end-q3c-doc" data-parent="s1-post-q3c" style="left: 1000px; top: 1100px;">
+                    <div class="node-title">🏆 Document Learning</div>
                     <div class="node-desc">"Document my learning, make a checklist for next time"</div>
-                    <div class="path-label path-excellence">EXCELLENCE</div>
                     <div class="node-metrics">
-                        Demo: On time<br>
-                        Knowledge: HIGH<br>
-                        Customer conf: High<br>
-                        Team conf: High<br>
-                        ⏱️ +3 hrs (with docs)<br>
-                        ✅ Shared in standup<br>
-                        ✅ Created reusable template<br>
-                        🌟 Auth expert in 2 months<br>
-                        👑 Go-to testing person
+                        <strong>Outcome:</strong><br>
+                        Great Idea! Documenting your learning is a great way to avoid the same mistakes in the future. You shared it in standup, impressing seniors and juniors alike. You use your new knowledge to create a reusable authorization template. Two months in, and you are the go-to auth expert.<br><br>
+                        Demo: 1-day Delay | Knowledge: Moderate<br>
+                        Added Time: +14 hrs<br>
+                        Customer Confidence: Moderate<br>
+                        Team Confidence: Low
+                    </div>
+                </div>
+                
+                <!-- Post-Q3D: After asking for help (on time) -->
+                <div class="node node-decision" data-id="s1-post-q3d" data-parent="s1-q3d" style="left: 1250px; top: 900px;">
+                    <div class="node-title">Learning Opportunity</div>
+                    <div class="node-desc">From what you learned from the senior dev you paired with, you were able to run the tests and catch two critical bugs. You're feeling pretty confident about testing now, you caught the bugs and feel good about fixing them. What's your next move?</div>
+                </div>
+                
+                <!-- End: Fix bugs and move on (from Q3D) -->
+                <div class="node outcome-adequate" data-id="s1-end-q3d-moveon" data-parent="s1-post-q3d" style="left: 1100px; top: 1100px;">
+                    <div class="node-title">✓ Fix & Move On</div>
+                    <div class="node-desc">"Fix the bugs and move on"</div>
+                    <div class="node-metrics">
+                        <strong>Outcome:</strong><br>
+                        Nice job catching those bugs. There were no problems, the customer was happy, and you went on just fine. Until... On your next two modules, you made some more edge case errors. Without documenting your learning, you forgot how to run the tests.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Added Time: +0.5 hrs<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate
+                    </div>
+                </div>
+                
+                <!-- End: Document learning (from Q3D) -->
+                <div class="node outcome-excellence" data-id="s1-end-q3d-doc" data-parent="s1-post-q3d" style="left: 1400px; top: 1100px;">
+                    <div class="node-title">🏆 Document Learning</div>
+                    <div class="node-desc">"Document my learning, make a checklist for next time"</div>
+                    <div class="node-metrics">
+                        <strong>Outcome:</strong><br>
+                        Great Idea! Documenting your learning is a great way to avoid the same mistakes in the future. You shared it in standup, impressing seniors and juniors alike. You use your new knowledge to create a reusable authorization template. Two months in, and you are the go-to auth expert.<br><br>
+                        Demo: On Time | Knowledge: High<br>
+                        Added Time: +3 hrs<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: High
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         
         <!-- SCENARIO 2: Copy-Paste Authentication -->
         <div class="scenario" id="scenario-1">
             <div class="scenario-header">
                 <h2>🔒 Scenario 2: The Copy-Paste Authentication Code</h2>
-                <p><strong>Situation:</strong> Alex copies 150 lines of auth code from Stack Overflow instead of using company library</p>
+                <p><strong>Situation:</strong> You were in need of some authorization code for an API call. You were in a hurry so you copied 150 lines of code from Stack Overflow to get it done quickly instead of taking time to figure out how to use the company library.</p>
                 <p><strong>Key Learning:</strong> Asking for help is strength - 15 minutes of mentorship prevents catastrophic security breaches</p>
             </div>
             
             <div class="tree-container">
                 <svg class="connections" data-scenario="1"></svg>
                 
-                <div class="node node-start" data-id="s2-start" style="left: 700px; top: 20px;">
-                    <div class="node-title">🎯 STARTING POINT</div>
-                    <div class="node-desc">Alex needs auth for API endpoint. Copies Stack Overflow code instead of using company library.</div>
+                <!-- Q1: START -->
+                <div class="node node-start" data-id="s2-q1" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 Q1: STARTING POINT</div>
+                    <div class="node-desc">You were in need of some authorization code for an API call. You were in a hurry so you copied 150 lines of code from Stack Overflow to get it done quickly instead of taking time to figure out how to use the company library. In the code review, your code is flagged for an unfamiliar authorization pattern. What's your next move?</div>
                 </div>
                 
-                <div class="node node-decision" data-id="s2-d1" data-parent="s2-start" style="left: 700px; top: 140px;">
-                    <div class="node-title">Decision Point 1</div>
-                    <div class="node-desc">Code review flags unfamiliar auth pattern</div>
-                </div>
-                
-                <div class="node" data-id="s2-d1-a" data-parent="s2-d1" style="left: 450px; top: 280px;">
-                    <div class="node-title">Action A: Ego-Driven</div>
-                    <div class="node-desc">"I found a better way. Old library too complicated"</div>
+                <!-- Q1 Choice A: "I found a better way" -->
+                <div class="node" data-id="s2-q1-a" data-parent="s2-q1" style="left: 350px; top: 220px;">
+                    <div class="node-title">Choice A: Ego-Driven</div>
+                    <div class="node-desc">"I found a better way. The old library is too complicated."</div>
                     <div class="path-label path-a">EGO PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Code merged after insisting<br>
-                        • Works initially<br>
-                        • Security audit finds SQL injection<br>
-                        • 1,200 customer records exposed
+                        <strong>Consequence:</strong><br>
+                        After making your argument, the project lead merges the code. While it works initially, a security audit finds an SQL injection! 1,200 customer records were exposed because of your mistake.<br><br>
+                        Demo: On Time | Knowledge: Low<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Low<br>
+                        Added Time: 0 | Tech Debt: $50,000
                     </div>
                 </div>
                 
-                <div class="node" data-id="s2-d1-b" data-parent="s2-d1" style="left: 950px; top: 280px;">
-                    <div class="node-title">Action B: Ask for Help</div>
-                    <div class="node-desc">"I wasn't sure how to use our auth library. Can someone show me?"</div>
+                <!-- Q1 Choice B: "Can someone show me?" -->
+                <div class="node" data-id="s2-q1-b" data-parent="s2-q1" style="left: 1050px; top: 220px;">
+                    <div class="node-title">Choice B: Ask for Help</div>
+                    <div class="node-desc">"I wasn't sure how to use the authorization library. Can someone show me?"</div>
                     <div class="path-label path-b">GROWTH PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Senior dev shows library in 15 min<br>
-                        • Alex learns company patterns<br>
-                        • Secure code from day one<br>
-                        • Reusable knowledge gained
+                        <strong>Consequence:</strong><br>
+                        Great Job! Asking for help is the right thing to do, especially with security matters like this. Bad things can happen if authorizations are done wrong. You pair with a senior developer who shows you the ropes of the authorization library in only 15 minutes!<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: 15 mins | Tech Debt: 0
                     </div>
                 </div>
                 
-                <div class="node node-decision" data-id="s2-d2a" data-parent="s2-d1-a" style="left: 300px; top: 480px;">
-                    <div class="node-title">Decision Point 2A</div>
-                    <div class="node-desc">Security breach discovered. Immediate response?</div>
+                <!-- Q2A: Security breach discovered -->
+                <div class="node node-decision" data-id="s2-q2a" data-parent="s2-q1-a" style="left: 350px; top: 460px;">
+                    <div class="node-title">Q2A: Security Breach Discovered</div>
+                    <div class="node-desc">The security breach was discovered, even though it has already exposed a lot of customer records. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-career-ending" data-id="s2-end-aa" data-parent="s2-d2a" style="left: 100px; top: 620px;">
-                    <div class="node-title">🔥 A→A: Hide/Minimize</div>
-                    <div class="node-desc">Try to hide severity from management</div>
+                <!-- Q2A Choice: Hide it -->
+                <div class="node outcome-career-ending" data-id="s2-end-hide" data-parent="s2-q2a" style="left: 100px; top: 660px;">
+                    <div class="node-title">🔥 Hide the Breach</div>
+                    <div class="node-desc">"Well, if I don't tell the management, maybe I won't get in trouble."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $50k+ incident + $100k fines<br>
-                        ⏱️ 2-week project halt<br>
-                        ⚖️ Legal involvement required<br>
-                        📧 Customer notifications<br>
-                        🚫 Terminated within 30 days
+                        <strong>Outcome:</strong><br>
+                        Because you didn't alert anyone of the security breach, 15,000 more customer's records were leaked. Once it's discovered, legal involvement and customer notifications were required. This causes a 2-week halt on the project, $100K in fines, and an investigation into the cause. Once your actions were discovered, it doesn't take long before you're terminated from this position due to failure to follow company policy.<br><br>
+                        Demo: 2-week delay | Knowledge: Low<br>
+                        Customer Confidence: Negative<br>
+                        Team Confidence: Negative<br>
+                        Added Time: 0 | Tech Debt: $150,000<br>
+                        <strong style="color: #dc3545;">TERMINATED</strong>
                     </div>
                 </div>
                 
-                <div class="node outcome-damage" data-id="s2-end-ab" data-parent="s2-d2a" style="left: 400px; top: 620px;">
-                    <div class="node-title">🔥 A→B: Alert & Own It</div>
-                    <div class="node-desc">Immediately alert security, take responsibility, work overtime</div>
+                <!-- Q2A Choice: Alert security -->
+                <div class="node outcome-damage" data-id="s2-end-alert" data-parent="s2-q2a" style="left: 500px; top: 660px;">
+                    <div class="node-title">🩹 Alert Security Team</div>
+                    <div class="node-desc">"I better tell the security team about this right away before it causes more damage"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $50k incident cost<br>
-                        ⏱️ 1-week halt, contained faster<br>
-                        😞 Customer trust damaged<br>
-                        ⚠️ Keeps job with serious warning<br>
-                        📚 Mandatory security training<br>
-                        ⏳ 6-month probation
+                        <strong>Outcome:</strong><br>
+                        That's Right! Telling the security team is the right move. You let them know your mistake, which helped them contain the breach quickly - only a one-week halt and no more damage was done. You also worked overtime to correct your API authorization the right way. However, because of the insecure practices you used, technical debt incurred, and the damage in customer trust, you are given a formal warning with a 6-month probation, and mandatory security training.<br><br>
+                        Demo: 1-week delay | Knowledge: Moderate<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Low<br>
+                        Added Time: +12 hrs | Tech Debt: $50,000
                     </div>
                 </div>
                 
-                <div class="node node-decision" data-id="s2-d2b" data-parent="s2-d1-b" style="left: 950px; top: 480px;">
-                    <div class="node-title">Decision Point 2B</div>
-                    <div class="node-desc">Now understand library. Next steps?</div>
+                <!-- Q2B: Now understand library -->
+                <div class="node node-decision" data-id="s2-q2b" data-parent="s2-q1-b" style="left: 1050px; top: 460px;">
+                    <div class="node-title">Q2B: Ready to Rewrite</div>
+                    <div class="node-desc">Now that you understand the auth library, you feel more confident and are ready to rewrite the code. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s2-end-ba" data-parent="s2-d2b" style="left: 750px; top: 620px;">
-                    <div class="node-title">✓ B→B1: Fix This One</div>
-                    <div class="node-desc">Rewrite endpoint, move on</div>
+                <!-- Q2B Choice: Rewrite and move on -->
+                <div class="node outcome-adequate" data-id="s2-end-moveon" data-parent="s2-q2b" style="left: 850px; top: 660px;">
+                    <div class="node-title">✓ Rewrite & Move On</div>
+                    <div class="node-desc">"Re-write the endpoint and move on"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ +30 min total time<br>
-                        🔒 This endpoint secure<br>
-                        ⚠️ Needs help on next auth task<br>
-                        📊 Dependency continues
+                        <strong>Outcome:</strong><br>
+                        You re-write the endpoint and it is definitely secure this time. You erased the technical debt that could have compounded, and you only spent an extra 30 minutes learning and fixing the code. However, the next time an auth task comes around, you don't remember how to use the library and ask for help again. Some team members wonder why you always need help with this.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: +0.5 hrs | Tech Debt: 0
                     </div>
                 </div>
                 
-                <div class="node outcome-excellence" data-id="s2-end-bb" data-parent="s2-d2b" style="left: 1050px; top: 620px;">
-                    <div class="node-title">🏆 B→B2: Deep Learning</div>
-                    <div class="node-desc">Review other auth code, request security training</div>
+                <!-- Q2B Choice: Deep learning -->
+                <div class="node outcome-excellence" data-id="s2-end-expert" data-parent="s2-q2b" style="left: 1250px; top: 660px;">
+                    <div class="node-title">🏆 Deep Learning</div>
+                    <div class="node-desc">"Fix the code. Then, check out some other auth code. Also, take the voluntary security training course."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ +2.5 hrs upfront investment<br>
-                        🔒 Can handle auth independently<br>
-                        📚 Updates team wiki with examples<br>
-                        🌟 Seen as security-conscious<br>
-                        🎯 Becomes auth resource for team
+                        <strong>Outcome:</strong><br>
+                        Great Idea! After re-writing the endpoint, you take some time reviewing other auth code, allowing you to put your new learning into practice. This really solidifies your understanding of both the library, and auth code security. The security training really made you feel like an auth expert, so you update the team Wiki with examples from what you learned. Your team members see you as security conscious, and you become the go-to auth resource.<br><br>
+                        Demo: On Time | Knowledge: High<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: High<br>
+                        Added Time: +2.5 hrs | Tech Debt: 0
                     </div>
                 </div>
             </div>
@@ -632,108 +666,114 @@
         <div class="scenario" id="scenario-2">
             <div class="scenario-header">
                 <h2>💻 Scenario 3: The "Works on My Machine" Bug</h2>
-                <p><strong>Situation:</strong> Alex's data processing module works locally but fails in staging - hardcoded paths and missing dependencies</p>
+                <p><strong>Situation:</strong> You just finished up a module, right on schedule for the deadline. You send it off, but QA reports that some features are broken in staging. You know it works, but you didn't have time to do the proper stage testing.</p>
                 <p><strong>Key Learning:</strong> Code is read/run in many environments - "works for me" is never enough</p>
             </div>
             
             <div class="tree-container">
                 <svg class="connections" data-scenario="2"></svg>
                 
-                <div class="node node-start" data-id="s3-start" style="left: 700px; top: 20px;">
-                    <div class="node-title">🎯 STARTING POINT</div>
-                    <div class="node-desc">Data processing module works on Alex's laptop. Commits without testing staging.</div>
+                <!-- Q1: START -->
+                <div class="node node-start" data-id="s3-q1" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 Q1: STARTING POINT</div>
+                    <div class="node-desc">You just finished up a module, right on schedule for the deadline. You send it off, but QA reports that some features are broken in staging. You know it works, but you didn't have time to do the proper stage testing. What's your next move?</div>
                 </div>
                 
-                <div class="node node-decision" data-id="s3-d1" data-parent="s3-start" style="left: 700px; top: 140px;">
-                    <div class="node-title">Decision Point 1</div>
-                    <div class="node-desc">QA reports feature broken in staging</div>
-                </div>
-                
-                <div class="node" data-id="s3-d1-a" data-parent="s3-d1" style="left: 450px; top: 280px;">
-                    <div class="node-title">Action A: Deflect</div>
-                    <div class="node-desc">"Works for me. Must be environment problem"</div>
+                <!-- Q1 Choice A: "Works for me" -->
+                <div class="node" data-id="s3-q1-a" data-parent="s3-q1" style="left: 350px; top: 220px;">
+                    <div class="node-title">Choice A: Deflect</div>
+                    <div class="node-desc">"It works for me. Must be an environment problem"</div>
                     <div class="path-label path-a">EGO PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • DevOps wastes 4hrs investigating<br>
-                        • No environment issues found<br>
-                        • Hardcoded paths discovered<br>
-                        • 2 days before customer demo
+                        <strong>Consequence:</strong><br>
+                        DevOps spends 4 hours investigating, but finds no environment issues. They did, however, find hardcoded paths showing that you did not stage test it properly. They are pretty angry that you wasted their time by not being honest.<br><br>
+                        Demo: On Time | Knowledge: Low<br>
+                        Customer Confidence: Moderate<br>
+                        Team Confidence: Low<br>
+                        Added Time: 4 hours | Tech Debt: Unknown
                     </div>
                 </div>
                 
-                <div class="node" data-id="s3-d1-b" data-parent="s3-d1" style="left: 950px; top: 280px;">
-                    <div class="node-title">Action B: Own It</div>
-                    <div class="node-desc">"Let me test in staging. I might have missed something"</div>
+                <!-- Q1 Choice B: "Let me test it" -->
+                <div class="node" data-id="s3-q1-b" data-parent="s3-q1" style="left: 1050px; top: 220px;">
+                    <div class="node-title">Choice B: Own It</div>
+                    <div class="node-desc">"Let me test it in staging. I might have missed something."</div>
                     <div class="path-label path-b">GROWTH PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Discovers dependency issue in 20min<br>
-                        • Fixes it properly<br>
-                        • Learns Docker & dependencies<br>
-                        • Demo stays on schedule
+                        <strong>Consequence:</strong><br>
+                        Great Job! You didn't have time to test it, but admitting your mistake and following procedure is the right thing to do. You discover the dependency issue in 20 minutes and learned a bit about Docker and dependencies in the process.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: 20 mins | Tech Debt: 0
                     </div>
                 </div>
                 
-                <div class="node node-decision" data-id="s3-d2a" data-parent="s3-d1-a" style="left: 300px; top: 480px;">
-                    <div class="node-title">Decision Point 2A</div>
-                    <div class="node-desc">Issue found, demo in 2 days. Fix approach?</div>
+                <!-- Q2A: DevOps found the problem -->
+                <div class="node node-decision" data-id="s3-q2a" data-parent="s3-q1-a" style="left: 350px; top: 460px;">
+                    <div class="node-title">Q2A: Problem Found, Demo in 2 Days</div>
+                    <div class="node-desc">DevOps has found the problem, but the time wasted means you only have 2 days until the demo is supposed to go live. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-damage" data-id="s3-end-aa" data-parent="s3-d2a" style="left: 100px; top: 620px;">
-                    <div class="node-title">⚠️ A→A: Hacky Quick Fix</div>
-                    <div class="node-desc">Rush fix that works just for demo</div>
+                <!-- Q2A Choice: Rush fix -->
+                <div class="node outcome-damage" data-id="s3-end-rush" data-parent="s3-q2a" style="left: 100px; top: 660px;">
+                    <div class="node-title">⚠️ Rush Fix for Demo</div>
+                    <div class="node-desc">"I'll do a rush fix just so it works for the demo and fix it later."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 Demo succeeds initially<br>
-                        ⏱️ Same issue in prod 1 week later<br>
-                        💸 $5k support costs<br>
-                        😞 Customer onboarding delayed 1 day<br>
-                        📉 Pattern of shortcuts documented
+                        <strong>Outcome:</strong><br>
+                        Well, the demo succeeds initially, but the same issue shows up in production 1 week later, delaying customer onboarding and costing $5K in customer support costs. Your pattern of shortcuts is officially documented and your team seems disappointed in you.<br><br>
+                        Demo: 1 week delay | Knowledge: Low<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Negative<br>
+                        Added Time: +4 hours | Tech Debt: $5,000
                     </div>
                 </div>
                 
-                <div class="node outcome-recovery" data-id="s3-end-ab" data-parent="s3-d2a" style="left: 400px; top: 620px;">
-                    <div class="node-title">🩹 A→B: Request Delay</div>
-                    <div class="node-desc">Ask to delay demo, fix properly with Docker</div>
+                <!-- Q2A Choice: Delay demo -->
+                <div class="node outcome-recovery" data-id="s3-end-delay" data-parent="s3-q2a" style="left: 500px; top: 660px;">
+                    <div class="node-title">🩹 Request Demo Delay</div>
+                    <div class="node-desc">"I think we should delay the demo so I can fix this properly."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 No incident costs<br>
-                        ⏱️ 2-week demo delay<br>
-                        📊 Revenue pushed but no prod issues<br>
-                        📚 Learns proper deployment<br>
-                        ✅ Partial credit for transparency
+                        <strong>Outcome:</strong><br>
+                        That's Right! You made a mistake, but fixing it properly is the right way to go. The demo is delayed by two weeks but, once it's in production, there are no issues. You are mandated to work with a senior developer to ensure you understand proper deployment, but your team gives you credit for your transparency.<br><br>
+                        Demo: 2 week delay | Knowledge: Moderate<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: +5 hrs | Tech Debt: 0
                     </div>
                 </div>
                 
-                <div class="node node-decision" data-id="s3-d2b" data-parent="s3-d1-b" style="left: 950px; top: 480px;">
-                    <div class="node-title">Decision Point 2B</div>
-                    <div class="node-desc">Problem solved. How prevent recurrence?</div>
+                <!-- Q2B: Found mistake, ready to fix -->
+                <div class="node node-decision" data-id="s3-q2b" data-parent="s3-q1-b" style="left: 1050px; top: 460px;">
+                    <div class="node-title">Q2B: Ready to Fix</div>
+                    <div class="node-desc">You found your mistake and learned a bit in the process. Now you're ready to fix the code. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s3-end-ba" data-parent="s3-d2b" style="left: 750px; top: 620px;">
-                    <div class="node-title">✓ B→B1: Reactive Only</div>
-                    <div class="node-desc">Fix this bug, continue current workflow</div>
+                <!-- Q2B Choice: Fix and continue -->
+                <div class="node outcome-adequate" data-id="s3-end-continue" data-parent="s3-q2b" style="left: 850px; top: 660px;">
+                    <div class="node-title">✓ Fix & Continue Workflow</div>
+                    <div class="node-desc">"Fix the bug and continue my current workflow"</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ +1hr, demo on schedule<br>
-                        ⚠️ Makes 2 more env errors next month<br>
-                        📊 Pattern continues
+                        <strong>Outcome:</strong><br>
+                        You took an hour to fix the bug, but the demo was still on time and there were no production issues. However, you continue to make environmental errors because what you learned didn't stick.<br><br>
+                        Demo: On Time | Knowledge: Moderate<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: +1.5 hrs | Tech Debt: 10 hrs
                     </div>
                 </div>
                 
-                <div class="node outcome-excellence" data-id="s3-end-bb" data-parent="s3-d2b" style="left: 1050px; top: 620px;">
-                    <div class="node-title">🏆 B→B2: Process Change</div>
-                    <div class="node-desc">Setup Docker properly, create staging checklist</div>
+                <!-- Q2B Choice: Setup Docker and checklist -->
+                <div class="node outcome-excellence" data-id="s3-end-expert" data-parent="s3-q2b" style="left: 1250px; top: 660px;">
+                    <div class="node-title">🏆 Process Improvement</div>
+                    <div class="node-desc">"Fix the bug. Then, set up Docker properly and create a staging checklist."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ +1.5hrs total, demo on schedule<br>
-                        ✅ Zero future env issues<br>
-                        📚 Shares Docker guide with new hires<br>
-                        🌟 "Learns from mistakes"<br>
-                        🎯 Deployment reliability expert
+                        <strong>Outcome:</strong><br>
+                        Great Idea! You took an hour to fix the bug, but the demo was on time and there were no production issues. When you were done, you asked a senior developer to help you set up Docker on your laptop so you can test staging any time. You also set up a staging checklist and Docker guide that you share with new hires. The management is impressed, and you become known as the deployment reliability expert.<br><br>
+                        Demo: On Time | Knowledge: High<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: High<br>
+                        Added Time: +3 hrs | Tech Debt: 0
                     </div>
                 </div>
             </div>
@@ -743,110 +783,114 @@
         <div class="scenario" id="scenario-3">
             <div class="scenario-header">
                 <h2>🧠 Scenario 4: The Unreadable "Clever" Code</h2>
-                <p><strong>Situation:</strong> Alex writes data transformation with nested ternaries, single-letter vars, no comments - "real programmers write concise code"</p>
+                <p><strong>Situation:</strong> You just wrote a 40-line data transformation function with nested ternaries, single-letter variables, and no comments. You are so proud, thinking "real programmers write concise code". However, when your teammate needs to add a feature, they are baffled and not sure where to start.</p>
                 <p><strong>Key Learning:</strong> Code is read 10x more than written - clarity matters more than cleverness</p>
             </div>
             
             <div class="tree-container">
                 <svg class="connections" data-scenario="3"></svg>
                 
-                <div class="node node-start" data-id="s4-start" style="left: 700px; top: 20px;">
-                    <div class="node-title">🎯 STARTING POINT</div>
-                    <div class="node-desc">40-line function with nested ternaries, single-letter variables, zero comments. Works but unreadable.</div>
+                <!-- Q1: START -->
+                <div class="node node-start" data-id="s4-q1" style="left: 700px; top: 20px;">
+                    <div class="node-title">🎯 Q1: STARTING POINT</div>
+                    <div class="node-desc">You just wrote a 40-line data transformation function with nested ternaries, single-letter variables, and no comments. You are so proud, thinking "real programmers write concise code". However, when your teammate needs to add a feature, they are baffled and not sure where to start. They ask if you could explain your code to them so they can work with it. What's your next move?</div>
                 </div>
                 
-                <div class="node node-decision" data-id="s4-d1" data-parent="s4-start" style="left: 700px; top: 140px;">
-                    <div class="node-title">Decision Point 1</div>
-                    <div class="node-desc">Teammate needs to add feature to Alex's code, asks for explanation</div>
-                </div>
-                
-                <div class="node" data-id="s4-d1-a" data-parent="s4-d1" style="left: 450px; top: 280px;">
-                    <div class="node-title">Action A: Dismissive</div>
-                    <div class="node-desc">"Pretty self-explanatory if you understand the algorithm"</div>
+                <!-- Q1 Choice A: "Self-explanatory" -->
+                <div class="node" data-id="s4-q1-a" data-parent="s4-q1" style="left: 350px; top: 240px;">
+                    <div class="node-title">Choice A: Dismissive</div>
+                    <div class="node-desc">"It's pretty self-explanatory if you understand the algorithm"</div>
                     <div class="path-label path-a">EGO PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Teammate spends 3hrs reverse-engineering<br>
-                        • Introduces bug from misunderstanding<br>
-                        • Bug causes billing errors<br>
-                        • 50 customers affected
+                        <strong>Consequence:</strong><br>
+                        Your teammate is taken aback by your smugness, so they don't push the issue. Instead, they spend 3 hours reverse-engineering your code so they can work with it. They think they have it figured out, but a misunderstanding of your code caused a bug to be introduced. This bug causes a billing error that affects 50 customers.<br><br>
+                        Feature: Delayed | Knowledge: Low<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Low<br>
+                        Added Time: +3 hours | Tech Debt: $3,000
                     </div>
                 </div>
                 
-                <div class="node" data-id="s4-d1-b" data-parent="s4-d1" style="left: 950px; top: 280px;">
-                    <div class="node-title">Action B: Professional</div>
-                    <div class="node-desc">"That code is hard to read. Let me refactor with better names and comments"</div>
+                <!-- Q1 Choice B: "Let me refactor" -->
+                <div class="node" data-id="s4-q1-b" data-parent="s4-q1" style="left: 1050px; top: 240px;">
+                    <div class="node-title">Choice B: Professional</div>
+                    <div class="node-desc">"You're right, that code's a bit hard to read. Let me refactor with better names and comments."</div>
                     <div class="path-label path-b">GROWTH PATH</div>
                     <div class="node-metrics">
-                        <strong>Consequences:</strong><br>
-                        • Alex spends 30min refactoring<br>
-                        • Code now maintainable<br>
-                        • Teammate adds feature in 45min<br>
-                        • Zero bugs introduced
+                        <strong>Consequence:</strong><br>
+                        Great Job! You take 30 minutes to refactor your code, ensuring proper comments and logically named variables. This makes your code more comprehensible to your team, and more maintainable in the long term. Your teammate thanks you for taking the time to rewrite your code, and is able to add the feature in just 45 minutes.<br><br>
+                        Feature: On Time | Knowledge: Moderate<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: 30 mins | Tech Debt: 0
                     </div>
                 </div>
                 
-                <div class="node node-decision" data-id="s4-d2a" data-parent="s4-d1-a" style="left: 300px; top: 480px;">
-                    <div class="node-title">Decision Point 2A</div>
-                    <div class="node-desc">Billing errors found. How to address?</div>
+                <!-- Q2A: Billing error found -->
+                <div class="node node-decision" data-id="s4-q2a" data-parent="s4-q1-a" style="left: 350px; top: 480px;">
+                    <div class="node-title">Q2A: Billing Error Investigation</div>
+                    <div class="node-desc">This billing error cost the company $3K, and they want to know who's responsible. They bring you and your teammate together to ask what happened with the code. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-damage" data-id="s4-end-aa" data-parent="s4-d2a" style="left: 100px; top: 620px;">
-                    <div class="node-title">🔥 A→A: Blame Teammate</div>
-                    <div class="node-desc">Point finger at person who modified code</div>
+                <!-- Q2A Choice: Blame teammate -->
+                <div class="node outcome-damage" data-id="s4-end-blame" data-parent="s4-q2a" style="left: 100px; top: 680px;">
+                    <div class="node-title">🔥 Blame Teammate</div>
+                    <div class="node-desc">"It was them. They're the one who introduced the bug."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $3k billing corrections<br>
-                        ⏱️ 8hrs wasted debugging<br>
-                        😞 Team morale damaged<br>
-                        ⚠️ Formally reprimanded<br>
-                        🔒 All code under mandatory review<br>
-                        📉 Loss of autonomy
+                        <strong>Outcome:</strong><br>
+                        Your teammate tells a different story - the one about the confusing code you wrote, and how its readability affected their modifications. You and your teammate spend another 5 hours debugging, as you have to explain how your code works again and again. The management decides to formally reprimand you and puts all your code under mandatory review until further notice.<br><br>
+                        Feature: Delayed | Knowledge: Low<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Negative<br>
+                        Added Time: +8 hours | Tech Debt: $3,000
                     </div>
                 </div>
                 
-                <div class="node outcome-recovery" data-id="s4-end-ab" data-parent="s4-d2a" style="left: 400px; top: 620px;">
-                    <div class="node-title">🩹 A→B: Apologize & Refactor</div>
-                    <div class="node-desc">Apologize, refactor all similar code for readability</div>
+                <!-- Q2A Choice: Apologize -->
+                <div class="node outcome-recovery" data-id="s4-end-apologize" data-parent="s4-q2a" style="left: 500px; top: 680px;">
+                    <div class="node-title">🩹 Own Your Mistake</div>
+                    <div class="node-desc">"I'm sorry, it was me. My code wasn't as readable as it should be. I will rewrite it."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $3k corrections<br>
-                        ⏱️ 16hrs total (8 debug + 8 refactor)<br>
-                        ✅ Teammate appreciates effort<br>
-                        🤝 Relationship repaired<br>
-                        📈 Demonstrates capacity for growth
+                        <strong>Outcome:</strong><br>
+                        That's Right! Even though it takes you even longer now to refactor your code, then debug it with your teammate, your honesty helps to repair the relationship. You try to make sure your code going forward is more readable, especially for others that may need to work with it later. Management notes your demonstrated capacity for growth as a positive in your next performance review.<br><br>
+                        Feature: Delayed | Knowledge: Moderate<br>
+                        Customer Confidence: Low<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: +16 hrs | Tech Debt: $3,000
                     </div>
                 </div>
                 
-                <div class="node node-decision" data-id="s4-d2b" data-parent="s4-d1-b" style="left: 950px; top: 480px;">
-                    <div class="node-title">Decision Point 2B</div>
-                    <div class="node-desc">Code readable now. Apply this learning how?</div>
+                <!-- Q2B: Code readable, feature successful -->
+                <div class="node node-decision" data-id="s4-q2b" data-parent="s4-q1-b" style="left: 1050px; top: 480px;">
+                    <div class="node-title">Q2B: Feature Successful</div>
+                    <div class="node-desc">You took the time to make this code readable and, because you did, no new bugs were introduced and the feature went into production flawlessly. What's your next move?</div>
                 </div>
                 
-                <div class="node outcome-adequate" data-id="s4-end-ba" data-parent="s4-d2b" style="left: 750px; top: 620px;">
-                    <div class="node-title">✓ B→B1: One-Time Fix</div>
-                    <div class="node-desc">Fix this function, move forward</div>
+                <!-- Q2B Choice: Move on -->
+                <div class="node outcome-adequate" data-id="s4-end-moveon" data-parent="s4-q2b" style="left: 850px; top: 680px;">
+                    <div class="node-title">✓ Move On</div>
+                    <div class="node-desc">"Move on and try not to do it again."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ +30min, teammate productive<br>
-                        ⚠️ Writes 3 more "clever" functions<br>
-                        📊 Slow learning curve<br>
-                        🔁 Pattern repeats
+                        <strong>Outcome:</strong><br>
+                        You tell your teammate that you will try to make your code more readable in the future but, when you really get into your work, you forget all about this promise. You write three more "clever" functions that are difficult for your teammates to understand, causing frustration among your team.<br><br>
+                        Feature: On Time | Knowledge: Moderate<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: Moderate<br>
+                        Added Time: +30 mins | Tech Debt: +10 hrs
                     </div>
                 </div>
                 
-                <div class="node outcome-excellence" data-id="s4-end-bb" data-parent="s4-d2b" style="left: 1050px; top: 620px;">
-                    <div class="node-title">🏆 B→B2: Culture Change</div>
-                    <div class="node-desc">Study style guide, request readability in all PRs, adopt linter</div>
+                <!-- Q2B Choice: Study style guide -->
+                <div class="node outcome-excellence" data-id="s4-end-expert" data-parent="s4-q2b" style="left: 1250px; top: 680px;">
+                    <div class="node-title">🏆 Culture Change</div>
+                    <div class="node-desc">"Study style guide and request readability evaluation in all performance reviews."</div>
                     <div class="node-metrics">
-                        <strong>Metrics:</strong><br>
-                        💰 $0 incident cost<br>
-                        ⏱️ +2hrs learning investment<br>
-                        ✅ All future code maintainable<br>
-                        🌟 "Clean code" reputation in 6 weeks<br>
-                        🎤 Presents at team lunch-and-learn<br>
-                        👑 Code quality champion
+                        <strong>Outcome:</strong><br>
+                        Great Idea! After studying the style guide, and adopting a linter, your code continues to improve in readability. In your performance reviews, they are impressed that all your code has been written to be maintainable. You get the reputation of having "clean code" within 6 weeks, and even present your biggest takeaways from the style guide at a lunch-and-learn.<br><br>
+                        Demo: On Time | Knowledge: High<br>
+                        Customer Confidence: High<br>
+                        Team Confidence: High<br>
+                        Added Time: +2 hrs | Tech Debt: 0
                     </div>
                 </div>
             </div>
