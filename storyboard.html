@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Storyboard | Amanda Miller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+<style>
+  section.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* PDF viewer frame */
+  .pdf-frame {
+    width: 100%;
+    height: 80vh;
+    min-height: 520px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    display: block;
+  }
+
+  /* Shown when the browser will not render the PDF inline */
+  .pdf-fallback {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .pdf-fallback img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+  }
+
+  /* On narrow screens, skip the inline viewer and show the
+     thumbnail plus an open button instead. */
+  @media (max-width: 820px) {
+    .pdf-frame { display: none; }
+  }
+  @media (min-width: 821px) {
+    .pdf-fallback-mobile { display: none; }
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ========================
+     Navigation
+======================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">Amanda Miller</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tardis.html">TARDIS Project</a>
+      <a href="ai-and-me.html">AI and Me Project</a>
+      <a href="about.html">About</a>
+      <a href="https://www.linkedin.com/in/amanda-r-miller/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========================
+     Main Content
+======================== -->
+<main>
+
+  <!-- ===== Overview ===== -->
+  <section style="background:var(--panel-light);" class="fade-in">
+    <div class="container">
+      <h1>Video Storyboard</h1>
+      <p style="max-width:70ch;">
+        The scene by scene plan behind <em>Set Up Your Password Manager</em>, the
+        Bitwarden onboarding tutorial. Twenty four scenes across three task blocks,
+        with narration, on screen action, on screen text and design notes for each.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-large"
+           href="Storyboard_Password_Manager_Video.pdf"
+           target="_blank"
+           rel="noopener">Open PDF in a new tab</a>
+        <a class="btn btn-large"
+           href="Storyboard_Password_Manager_Video.docx">Download Word version</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PDF Viewer ===== -->
+  <section style="background:var(--panel-mid);" class="fade-in">
+    <div class="container">
+      <h2>Preview</h2>
+
+      <!-- Desktop: inline viewer -->
+      <object class="pdf-frame"
+              data="Storyboard_Password_Manager_Video.pdf"
+              type="application/pdf"
+              aria-label="Video storyboard PDF preview">
+        <div class="pdf-fallback">
+          <img src="Storyboard_Thumbnail.png"
+               alt="First page of the video storyboard">
+          <p>Your browser can't display the PDF inline.</p>
+          <a class="btn btn-large"
+             href="Storyboard_Password_Manager_Video.pdf"
+             target="_blank"
+             rel="noopener">Open the PDF</a>
+        </div>
+      </object>
+
+      <!-- Phones and small tablets -->
+      <div class="pdf-fallback pdf-fallback-mobile">
+        <img src="Storyboard_Thumbnail.png"
+             alt="First page of the video storyboard">
+        <p>Open the full storyboard to read it.</p>
+        <a class="btn btn-large"
+           href="Storyboard_Password_Manager_Video.pdf"
+           target="_blank"
+           rel="noopener">Open the PDF</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Back ===== -->
+  <section style="background:var(--panel-light); padding:3rem 0;" class="fade-in">
+    <div class="container" style="text-align:center;">
+      <a class="btn btn-large" href="index.html">Back to portfolio</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========================
+     Footer
+======================== -->
+<footer class="footer">
+  <p>&copy; 2026 Amanda Miller</p>
+</footer>
+
+<script>
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
+
+</body>
+</html>
